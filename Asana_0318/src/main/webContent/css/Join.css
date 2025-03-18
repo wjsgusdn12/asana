@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+}
+
+.mark {
+	margin-top: 18px;
+	margin-left: 15px;
+}
+
+.title {
+	margin-top: 56px;
+	margin-left: 824px;
+}
+
+.login {
+	background-color: hsl(5, 85%, 77%);
+	width: 347px;
+	height: 99px;
+	cursor: pointer;
+	border-radius: 37px;
+	margin-left: 849px;
+	margin-top: 87px;
+}
+
+.login>button {
+	background-color: transparent;
+	font-size: 34px;
+	margin-left: 122px;
+	margin-top: 33px;
+	font-weight: 530;
+	border: none;
+	cursor: pointer;
+}
+
+.join {
+	background-color: hsl(5, 85%, 77%);
+	width: 347px;
+	height: 99px;
+	cursor: pointer;
+	border-radius: 37px;
+	margin-left: 849px;
+	margin-top: 60px;
+}
+
+.join>button {
+	background-color: transparent;
+	font-size: 34px;
+	margin-left: 106px;
+	margin-top: 31px;
+	font-weight: 530;
+	border: none;
+	cursor: pointer;
+}
+
+.circle1 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 393px;
+}
+
+.circle2 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 137px;
+}
+
+.circle3 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 137px;
+}
+
+.circle1_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.circle2_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.circle3_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.move {
+	margin-top: 50px;
+}

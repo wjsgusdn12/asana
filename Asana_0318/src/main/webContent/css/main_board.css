@@ -1,0 +1,329 @@
+@charset "EUC-KR";
+
+#main_outline #header3_item>span:hover {
+	fill:black;
+	color:black;
+}
+
+#header3_item:hover{
+	cursor:pointer;
+	background-color:#f0f0f0;
+	border-radius:3px;
+	border-bottom:1px solid black;
+	color:black;
+	fill:black;
+}
+
+body {
+	width: 1921px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.transparent_screen{
+	background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  
+	
+}
+.project_img{
+	width: 30px;
+    height: 30px;
+    border-radius: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#main_content .page_tool_bar{
+	align-items: center;
+    display: flex;
+	width:1679px;
+	height:57px;
+	padding: 0 24px;
+}
+#main_content .page_tool_bar_left{
+	width:1355px;
+	height:28px;
+	padding: 0 8px 0 0;
+}
+
+#main_content .work_add{
+	width:106px;
+	height:28px;
+	display: flex;
+	align-items: center;
+}
+
+#main_content .work_add > .work_add_left{
+	display:none;
+	width:85px;
+	height:28px;
+	border:1px solid #6d6e6f;
+	border-radius:6px 0 0 6px;
+	
+}
+
+#main_content .work_add > .work_add_right{
+	display:none;
+	width:22px;
+	height:28px;
+	border:1px solid #6d6e6f;
+	border-radius:0 6px 6px 0;
+	border-left:none;
+	
+}
+
+#main_content .work_add > .work_add_left > svg{
+	margin-left: 6px;
+	width:12px;
+	fill:#afabac;
+}
+
+#main_content .work_add > .work_add_left > span{
+	width: 70px;
+	font-size: 12px;
+    line-height: 28px;
+}
+#main_content .work_add > .work_add_right > svg{
+	margin-left: 3px;
+	width:12px;
+	fill:#afabac;
+	
+}
+
+
+#main_content .filtering_menu{
+	display: none;
+    align-items: center;
+    gap: 16px;
+	width:276px;
+	height:28px;
+}
+
+#main_content .filtering_menu_child >svg{
+	fill:#6d6e6f;
+	width:12px;
+}
+#main_content .filtering_menu_child {
+	font-size: 12px;
+    line-height: 28px;
+}
+
+#main_content .scrollable_withCompositingLayer{
+	display:flex;
+	width:1679px;
+    height: 771px;
+    padding: 16px 12px 0;
+	background: #f9f8f8;
+	border-top: 1px solid #edeae9;
+}
+
+#main_content .boardcolumn_boardBody{
+	
+	width:304px;
+	height:560px;
+	padding:0 12px;
+}
+#main_content .boardcolumn_header{
+	gap: 17px;
+    display: flex;
+    align-items: center;
+	width:280px;
+	height:36px;
+}
+
+#main_content .boardcolumn_header_title{
+	width: 53px;
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+#main_content .boardcolumn_header_count{
+	color: #a2a0a2;
+    font-size: 14px;
+    width: 191px;
+	
+}
+
+#main_content .boardcolumn_header_plusIcon{
+	width: 25px;
+}
+
+#main_content .boardcolumn_header_plusIcon > svg{
+	fill: #a2a0a2;
+    width: 16px;
+	
+}
+
+#main_content .boardcolumn_header_MoreIcon{
+	width: 25px;
+	
+}
+
+#main_content .boardcolumn_header_MoreIcon > svg{
+	fill: #a2a0a2;
+    width: 16px;
+	
+}
+
+
+#main_content .board_card_layout{
+	background: white;
+	border: 1px solid #edeae9;
+    border-radius: 6px;
+	width:278px;
+	height:91px;
+	margin-bottom: 6px;
+}
+
+#main_content .board_card_layout_header{
+	display: flex;
+    align-items: center;
+	width:246px;
+	height:22px;
+	margin:12px 16px;
+	
+}
+
+#main_content .board_card_layout_header_miliestoneIcon{
+	width: 25px;
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > svg{
+	width:18px;
+}
+
+
+#main_content .board_card_layout_header_miliestoneIcon > .milestone_type{
+	width: 18px;
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > .milestone_type > .CompoundIcon-outer{
+	Fill: transparent;
+    Stroke: #d1395a;
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > svg > .CompoundIcon-inner{
+	Fill: transparent;
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > .work_type > .CompoundIcon-outer{
+	fill: white;
+    stroke: #a2a0a2;
+	
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > .work_type > .CompoundIcon-inner{
+	fill: #a2a0a2;
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > .approval_type > .CompoundIcon-outer{
+	fill: white;
+    stroke: #a2a0a2;
+	
+}
+
+#main_content .board_card_layout_header_miliestoneIcon > .approval_type > .CompoundIcon-inner{
+	fill: #a2a0a2;
+}
+
+
+
+
+
+
+
+
+#main_content .board_card_layout_header_title{
+	font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    width: 160px;
+}
+
+
+#main_content .boardcardLayout_assigneeduedateactions{
+	display: flex;
+    align-items: center;
+	width:240px;
+	height:25px;
+	margin:12px 16px 16px;
+	
+}
+
+#main_content .boardcardLayout_assigneeduedateactions_profile_img{
+	width: 30px;
+}
+
+#main_content .boardcardLayout_assigneeduedateactions_profile_img > img{
+	height:24px;
+	width: 24px;
+    border-radius: 50%;
+}
+
+#main_content .boardcardLayout_assigneeduedateactions_deadline{
+	color: #eb7586;
+    font-size: 12px;
+    width: 130px;
+}
+
+#main_content .boardcardLayout_assigneeduedateactions_deadline .manager_generation_div{
+	width:24px;
+	height:24px;
+	border-radius:50%;
+	border:1px dashed black;
+	display: flex;
+    justify-content: center;
+}
+
+#main_content .boardcardLayout_assigneeduedateactions_deadline .manager_generation_div > svg{
+	width:13px;
+}
+
+#main_content .board_card_layout_body{
+	width:291px;
+	height:518px;
+	overflow-y: scroll;
+    overflow-x: hidden;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

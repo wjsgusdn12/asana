@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.mark {
+	margin-top: 18px;
+	margin-left: 15px;
+}
+
+.title {
+	margin-top: 14px;
+	top: 105%;
+	left: 46%;
+	position: absolute;
+}
+
+.kakao_login {
+	width: 568px;
+	height: 40px;
+	display: flex;
+	border-color: #fee500;
+	background-color: #fee500;
+	align-items: center;
+	justify-content: center;
+	margin-left: 654px;
+	margin-top: 80px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.kakao_logo {
+	width: 20px;
+	height: 20px;
+	fill: none;
+	margin-right: 4px;
+}
+
+.naver_login {
+	width: 568px;
+	height: 40px;
+	display: flex;
+	border-color: #31c800;
+	background-color: #31c800;
+	align-items: center;
+	justify-content: center;
+	margin-left: 654px;
+	margin-top: 147px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.naver_login>img {
+	margin-right: 4px;
+	width: 28px;
+	height: 28px;
+}
+
+.naver_login>span {
+	margin-top: 5px;
+}
+
+.line_left {
+	width: 271px;
+	border: 1px solid #6d6e6f;
+	position: absolute;
+	top: 246%;
+	left: 656px;
+}
+
+.line_right {
+	width: 254px;
+	border: 1px solid #6d6e6f;
+	position: absolute;
+	top: 246%;
+	right: 36.5%;
+}
+
+.line_in_span {
+	position: absolute;
+	right: 50%;
+	top: 240%;
+}
+
+.join_email {
+	border: 1px solid #e0e6e8;
+	position: absolute;
+	top: 292%;
+	left: 44.4%;
+	transform: translate(-50%, -50%);
+	width: 390px;
+	height: 50px;
+	border-right: none;
+}
+
+.join_btn {
+	position: absolute;
+	top: 292%;
+	left: 59%;
+	transform: translate(-50%, -50%);
+	width: 173px;
+	height: 50px;
+	border: none;
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.circle1 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 393px;
+}
+
+.circle2 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 137px;
+}
+
+.circle3 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 137px;
+}
+
+.circle1_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.circle2_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.circle3_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.move {
+	position: absolute;
+	top: 428%;
+	left: -33px;
+}

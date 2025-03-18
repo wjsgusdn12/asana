@@ -1,0 +1,214 @@
+@charset "EUC-KR";
+
+body {
+	width: 1921px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#main_outline #header {
+	padding: 0 24px;
+	background-color: #fff;
+	position: relative;
+	height: 114px;
+}
+
+#main_outline #header>#header1 {
+	padding-top: 12px;
+	position: relative;
+	height: 44px;
+}
+
+#main_outline #header>#header2 {
+	position: relative;
+	height: 36px;
+}
+
+#main_outline #header>#header3 {
+	position: relative;
+	display: flex;
+	height: 34px;
+	gap: 5px;
+}
+
+#main_outline #header1>#employment {
+	position: absolute;
+	font-size: 14px;
+	width: 80px;
+}
+
+#main_outline #employment>svg {
+	width: 12px;
+	height: 12px;
+}
+
+#main_outline #share_button {
+	position: absolute;
+	width: 60px;
+	right: 130px;
+	width: 58px;
+	height: 28px;
+	background-color: rgb(75, 137, 220);
+	border-radius: 6px;
+	padding: 2px 0 0 7px;
+}
+
+#main_outline #share_button>span {
+	color: white;
+	font-size: 12px;
+}
+
+#main_outline #share_button>svg {
+	width: 12px;
+	height: 12px;
+	fill: white;
+}
+
+#main_outline #horizontal_line {
+	height: 25px;
+	position: absolute;
+	right: 123px;
+	width: 1px;
+	border-left: 1px solid rgb(211, 211, 211);
+}
+
+#main_outline #customized {
+	position: absolute;
+	right: 20px;
+	width: 97.3px;
+	height: 28px;
+	background: rgb(255, 255, 255);
+	border: 1px solid rgb(211, 211, 211);
+	padding-left: 5px;
+	border-radius: 6px;
+}
+
+#main_outline #customized>img {
+	width: 12px;
+	height: 12px;
+}
+
+#main_outline #customized>span {
+	font-size: 12px;
+}
+
+#main_outline #blue_box {
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	border-radius: 5px;
+	margin-right: 10px; /*여기서 마진을 준다고 해서 뒤에 협엽툴 겹치는걸 방지해 주지 않는건가 ?*/
+	background: rgb(237, 250, 255);
+}
+
+#main_outline #project_title {
+	position: absolute;
+	left: 40px;
+	width: 200px;
+}
+
+#main_outline #project_title>span {
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 500;
+	padding-right: 10px;
+}
+
+#main_outline #project_title>svg {
+	width: 16px;
+	height: 16px;
+	fill: rgb(135, 136, 138);
+}
+
+#main_outline #dangerous {
+	position: absolute;
+	left: 250px;
+	width: 60px;
+	height: 20px;
+	background: rgb(255, 234, 216);
+	padding: 0 0 6px 0;
+	border-radius: 5px;
+}
+
+#main_outline #dangerous>svg {
+	fill: rgb(242, 184, 135);
+	width: 12px;
+}
+
+#main_outline #dangerous>span {
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb(242, 184, 135);
+}
+
+#main_outline #project_title>.first_icon {
+	padding-right: 3px;
+}
+
+#main_outline #header2>img {
+	position: absolute;
+}
+
+#main_outline #header3_item {
+	left: 10px;
+	width: 60px;
+	height: 34px;
+}
+
+#main_outline #header3_item>svg {
+	padding: 10px 0 0 0;
+	width: 12px;
+	fill: rgb(135, 136, 138);
+}
+
+#main_outline #header3_item>span {
+	font-size: 14px;
+	line-height: 22px;
+	color: rgb(135, 136, 138);
+}
+
+#main_outline #header3_item:nth-child(4) {
+	width: 80px;
+}
+
+
+#main_outline .profile_div {
+	margin-right: 10px;
+    display: flex;
+	right: 173px;
+    position: absolute;
+    width: 70px;
+}
+#main_outline .main_header_profile_img:nth-child(1) {
+    z-index: 3;
+}
+#main_outline .main_header_profile_img:nth-child(2) {
+    z-index: 2;
+}
+#main_outline .main_header_profile_img:nth-child(3) {
+    z-index: 1;
+}
+#main_outline .main_header_profile_img > img {
+    border: 1px solid #fff;
+    margin-left: -8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#main_outline #header3_item:nth-child(7)>svg {
+	width: 16px;
+}

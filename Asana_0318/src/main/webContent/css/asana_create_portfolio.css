@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+.project_info_form{
+	height: 450px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.portfolio_info_form{
+	height: 460px;
+    display: flex;
+    gap: 45px;
+    flex-direction: column;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.whole-div {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-div {
+	width: 100%;
+	height: 64px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px 0px 20px;
+}
+
+.under-div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Icon {
+	width: 20px;
+	height: 20px;
+	fill: gray;
+}
+
+.Icon:hover{
+	fill:black;
+}
+
+.Icon-Back {
+	margin-left: 30px;
+}
+
+.Icon-Cancle {
+	margin-right: 30px;
+}
+
+.Icon-Back:hover{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:25px;
+	height:25px;
+	cursor:pointer;
+	background-color:#f9f8f8;
+	border-radius:5px;
+	fill:black;
+}
+
+.Icon-Cancle:hover{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:25px;
+	height:25px;
+	cursor:pointer;
+	background-color:#f9f8f8;
+	border-radius:5px;
+	fill:black;
+}
+
+.content {
+	width: 74%;
+	height: 74%;
+	display: flex;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	width: 49%;
+	height: 88%;
+	justify-content: space-evenly;
+}
+
+.main-image {
+	width: 100%;
+	height: 91%;
+}
+
+.font32 {
+	font-size: 32px;
+}
+
+.font12 {
+	color: gray;
+	font-size: 12px;
+}
+
+.selectBox {
+	width: 86%;
+	height: 36px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	outline: none;
+}
+
+.selectBox:hover {
+	border: 1px solid gray;
+	background-color: #f7f7f7;
+	cursor: pointer;
+}
+
+.listBox {
+	width: 44%;
+	height: 80px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border: 1px solid blue;
+	background-color: #f1f2fc;
+}
+
+.LogoImage {
+	width: 36px;
+	height: 36px;
+}
+
+.BoxImage {
+	width: 36px;
+	height: 36px;
+	margin: 0px 20px;
+}
+
+.CreateButton {
+	width: 400px;
+	height: 36px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 15px;
+	background-color: white;
+	color: lightgray;
+	border: 1px solid lightgray;
+}
+
+.CreateButton.on {
+	cursor: pointer;
+	background-color: #4573D2;
+	color: white;
+	border: none;
+}
+
+.title {
+	width: 86%;
+	height: 36px;
+	background-color: #f9f8f8;
+	border: none;
+	outline: none;
+}
+
+.title.on {
+	position: relative;
+	border-bottom: 1px solid lightgray;
+}
+
+.title:focus {
+	border: 3px solid steelblue;
+}
+
+.no-title-text {
+	width: 86%;
+	border-top: 1px solid red;
+}

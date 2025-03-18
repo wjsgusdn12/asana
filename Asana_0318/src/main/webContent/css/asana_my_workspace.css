@@ -1,0 +1,770 @@
+@charset "UTF-8";
+
+.invite_input_text_area{
+	font-size: 17px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 0 30px 0;
+}
+
+.input_email_div {
+	width: auto;
+	height: 25px;
+	display: flex;
+	gap: 5px;
+	background-color: #e9e9e9;
+	justify-content: space-evenly;
+	font-size: 15px;
+	align-items: center;
+	border-radius: 5px;
+	margin: 3px;
+	padding:0px 10px 0px 10px;
+}
+
+/* 프로젝트 etc 팝업창 */
+.project_etc_popup_list{
+	width: 200px;
+    height: 150px;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 200px;
+    margin-top: -25px;
+    display:none;
+    margin-bottom:50px;
+}
+.project_etc_popup_list.on{
+	display:block;
+}
+/* 프로젝트 etc 팝업창 요소 칸 */
+.project_etc_popup_list_content{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:25%;
+	font-size:15px;
+}
+.project_etc_popup_list_content:hover{
+	cursor:pointer;
+	background-color:#f0f0f0;
+	
+}
+/* 프로젝트 etc 팝업창 요소 svg */
+.project_etc_share_icon,
+.project_etc_add_star_icon,
+.project_etc_add_fix_icon{
+	width: 20px;
+    height: 20px;
+    fill: gray;
+    margin: 0px 10px 0px 10px;
+}
+/* 프로젝트 etc 팝업창 공유,별표,고정,삭제 요소 */
+.project_etc_share,
+.project_etc_add_star,
+.project_etc_add_fix{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100%;
+}
+/* 프로젝트 etc 팝업창 삭제 요소 */
+.project_etc_delete{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100%;
+	color:red;
+	padding-left: 10px;
+}
+/* 프로젝트 etc 팝업창 별표제거,고정삭제 요소 */
+.project_etc_remove_star{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100%;
+	display:none;
+}
+.project_etc_remove_fix{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100%;
+	display:none;
+}
+/* 내작업공간 화면 프로젝트 박스 프로젝트 리스트의 etc svg */
+.Icon16.project_list_etc{
+	width:17px;
+	height:100%;
+	fill:gray;
+	
+}
+.Icon16.project_list_etc:hover{
+	width:20px;
+	height:20px;
+	background-color:#EAEAEA;
+	border-radius:5px;
+	cursor:pointer;
+	fill:black;
+}
+/* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */
+.star-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.star-center-on {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon20-star {
+	width: 17px;
+	height: 17px;
+	fill: gray;
+}
+
+.icon20-star-on {
+	width: 17px;
+	height: 17px;
+	display: none;
+	fill: #fcbd01;
+}
+
+.star-center.on>.icon20-star-on {
+	display: inline;
+}
+
+.star-center.on>.icon20-star {
+	display: none;
+}
+
+.star-center:not(.on)>.icon20-star-on {
+	display: none;
+}
+
+.star-center:not(.on)>.icon20-star {
+	display: inline;
+}
+
+.star-center:hover {
+	cursor: pointer;
+	background-color: #EAEAEA;
+	border-radius: 5px;
+}
+/* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */
+
+/********************************* 초대 팝업창 창 *************************************/
+.invite_email_remove_button_outline{
+	fill:lightgray;
+}
+.invite_email_remove_button_inline{
+	fill:black;
+}
+.invite_email_remove_button:hover{
+	cursor:pointer;
+	border-radius:50%;
+}
+.popup_EmailInput:hover{
+	outline:3px solid #3f66ba;
+}
+.popup_ProjectInput:focus{
+	outline:3px solid #3f66ba;
+}
+.popup_invite_whole-div {
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30, 31, 33, .75);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.popup_Invite {
+	background-color: white;
+	width: 560px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.popup_InviteTitle {
+	width: 560px;
+	height: 64px;
+	padding: 0px 24px;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid lightgray;
+}
+
+.popup_InviteContent {
+	width: 560px;
+	height: auto;
+	padding: 24px;
+}
+
+.popup_invite_XIcon {
+	width: 16px;
+	height: 16px;
+	fill: gray;
+}
+
+.popup_invite_x_icon_div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 27px;
+	width: 27px;
+}
+
+.popup_invite_XIcon:hover, .popup_invite_x_icon_div:hover {
+	cursor: pointer;
+	background-color: #EAEAEA;
+	border-radius: 5px;
+}
+
+.popup_EmailInput {
+	width: 512px;
+	min-height: auto;
+	min-height: 120px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+
+.popup_ProjectInput {
+	width: 510px;
+	height: 34px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+
+.popup_invite_text {
+	font-size: 12px;
+	color: gray;
+	margin-bottom: 10px;
+}
+
+.popup_invite_button {
+	width: 68px;
+	height: 36px;
+	padding: 0 12px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	background-color: white;
+	color: gray;
+	margin-left: 445px;
+}
+.popup_invite_button.on{
+	cursor:pointer;
+	background-color:#3f66ba;
+	color:white;
+}
+/********************************* 초대 팝업창 창 *************************************/
+/* 상단바 생성 팝업창 기본 오프 처리*/
+.create_something_popup {
+	width: 165px;
+	height: 200px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+	font-size:15px;
+	position: fixed;
+	z-index: 100;
+	margin: 2px 0 0 135px;
+	display:flex;
+	flex-direction: column;
+	padding: 5px;
+	justify-content: center;
+	display:none;
+}
+
+/* 상단바 생성 팝업창 온 처리 */
+.create_something_popup.on{
+	display:block;
+}
+
+/* 상단바 팝업창 생성 리스트 */
+.popup_create_work,
+.popup_create_project,
+.popup_create_message,
+.popup_create_portfolio,
+.popup_create_invite{
+	width:100%;
+	height:20%;
+	display:flex;
+	align-items:center;
+}
+
+/* 상단바 생성리스트 svg */
+.topbar_popup_approve,
+.topbar_popup_project,
+.topbar_popup_message,
+.topbar_popup_portfolio,
+.topbar_popup_invite{
+	width:17px;
+	height:17px;
+	fill:gray;
+	margin:0px 10px 0px 5px;
+}
+
+/* 상단바 생성 팝업창 호버 */
+.popup_create_work:hover,
+.popup_create_project:hover,
+.popup_create_message:hover,
+.popup_create_portfolio:hover,
+.popup_create_invite:hover{
+	cursor:pointer;
+	background-color:#EAEAEA;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.top-div {
+	width: 100%;
+	height: 49px;
+	background-color: #353535;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.under-div {
+	width: 100%;
+	height: 95%;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.sidebar {
+	width: 240px;
+	height: 95%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #353535;
+	color: white;
+}
+
+.main {
+	width: 100%;
+    height: 97.5%;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.main-top {
+	width: 100%;
+	height: 82px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+}
+
+.top-right {
+	display: flex;
+	margin-right: 20px;
+}
+
+.main-second {
+	width: 100%;
+	height: 120px;
+	background-color: #e8e5e4;
+}
+
+.title {
+	width: 100%;
+	height: 143px;
+	padding-left: 360px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.circle-small {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #cfcbcb;
+	color: white;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+}
+
+.font20 {
+	font-size: 20px;
+	margin: 5px;
+}
+
+.StarIcon {
+	width: 20px;
+	height: 20px;
+	fill: gray;
+	margin: 5px 0px 0px 5px;
+}
+
+.invite-blue-button {
+	width: 58px;
+	height: 28px;
+	border-radius: 5px;
+	background-color: #4573D2;
+	color: white;
+	margin: 0px 15px;
+	border: none;
+	cursor:pointer;
+}
+
+.UsersFillMiniIcon {
+	width: 14px;
+	height: 14px;
+	fill: white;
+	margin-right: 3px;
+}
+
+.title-text {
+	font-size: 24px;
+}
+
+.title-comment {
+	border: none;
+	outline: none;
+}
+
+.title-circle {
+	background-color: #cfcbcb;
+	color: white;
+	font-size: 75px;
+	width: 128px;
+	height: 128px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin-bottom: 21px;
+	border: 5px solid white;
+}
+
+.title-left {
+	margin-bottom: 79px;
+	position: absolute;
+	z-index: 5;
+}
+
+.Create-project {
+	margin: 50px 0 0 835px;
+}
+
+.create-button {
+	width: 106px;
+	height: 36px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid lightgray;
+}
+.create-button:hover{
+	cursor:pointer;
+	border:1px solid gray;
+	background-color:#f0f0f0;
+}
+
+.create-button-small {
+	width: 81.3px;
+	height: 28px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid lightgray;
+}
+.create-button-small:hover{
+	cursor:pointer;
+	border:1px solid gray;
+	background-color:#f0f0f0;
+}
+
+.content {
+	width: 100%;
+	height: auto;
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.content-left {
+	width: 49%;
+	height: auto;
+	padding: 16px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.content-right {
+	
+}
+
+.right-1 {
+	width: 320px;
+	height: 120px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.right-2 {
+	width: 320px;
+	height: 254px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.top-title {
+	width: 100%;
+	height: 46px;
+	padding-bottom: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top-title-right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.font20 {
+	font-size: 20px;
+}
+.glasses-icon-svg {
+	width: 20px;
+	height: 20px;
+	fill: gray;
+}
+.glasses-icon {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 30px;
+	height: 30px;
+	fill: gray;
+}
+.glasses-icon:hover{
+	background-color:#f0f0f0;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+.top-name {
+	display: flex;
+	font-size: 12px;
+	color: gray;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightgray;
+	justify-content: space-between;
+}
+
+.margin180 {
+	margin-right: 385px;
+}
+
+.up-down-icon {
+	width: 12px;
+	height: 12px;
+	fill: gray;
+}
+
+.project-list {
+	width: 50%;
+	height: 61px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+	border-top: 1px solid lightgray;
+}
+
+.MiniIcon24 {
+	width: 24px;
+	height: 24px;
+	fill: white;
+}
+
+.under-list {
+	width: 100%;
+	height: 61px;
+	display: flex;
+}
+
+.Icon16 {
+	width: 16px;
+	height: 16px;
+	fill: gray;
+}
+
+.list-image {
+	position: relative;
+	width: 140px;
+	height: 61px;
+	display:flex;
+	align-items:center;
+	
+}
+
+.user {
+	width: 49%;
+	height: 420px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	margin: 10px 0 0px 0px;
+}
+
+.user-list {
+	width: 100%;
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px 30px 8px 30px;
+}
+
+.user-list-in {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 40px;
+	height: 70px;
+}
+.user-list-in:hover,
+.under-list:hover{
+	background-color:#f0f0f0;
+	border-radius:10px;
+	cursor:pointer;
+}
+
+.dot-circle {
+	margin-right: 15px;
+	width: 64px;
+	height: 64px;
+	border: 1px dashed gray;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.project-in {
+	display: flex;
+	padding: 24px 24px 0px;
+	height: 52px;
+	font-size: 20px;
+	justify-content: space-between;
+}
+
+.select {
+	background-color: #f9f8f8;
+	border: none;
+	outline: none;
+	color: gray;
+	background-color: white;
+}
+
+.MiniIcon15Plus {
+	width: 15px;
+	height: 15px;
+	fill: gray;
+}
+
+.img {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.project-list2 {
+	width: 53%;
+	height: 61px;
+	border-top: 1px solid lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 56px;
+}
+
+.img-small {
+	width: 30px;
+	height: 30px;
+	border:2px solid white;
+	border-radius: 50%;
+}
+.dot-small{
+	width:10px;
+	height:10px;
+	fill:gray;
+}
+.dot-small-circle{
+	width:25px;
+	height:25px;
+	color:gray;
+	border:1px solid gray;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.center{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content>#main {
+    height: 920px;
+}
+
+#content {
+    background-color: #f9f8f8;
+    display: flex;
+}

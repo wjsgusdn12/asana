@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+	width:1887px;
+}
+.outer_main{
+	background-color:rgba(30, 31, 33, .75);
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.member_alarm_main{
+	transform:translate(-50%,-50%);
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:560px;
+	height:345px;
+	border-radius:12px;
+	background-color:white;
+}
+.member_alarm_header{
+	display: flex;
+    align-items: center;
+	gap: 360px;
+	width:560px;
+	height:64px;
+	padding:0 24px;
+	border-bottom:1px solid #edeae9;
+}
+.member_alarm_header > span{
+	font-size: 20px;
+    line-height: 28px;
+    font-weight:500;
+    color:#1e1f21;
+}
+.member_alarm_header > svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+}
+
+.member_alarm_content{
+	width:560px;
+	height:281px; 
+	overflow-y:scroll;
+	overflow-x: hidden
+}
+.member_alarm_inventory{
+	width:560px;
+	height:19px;
+	padding:0 0 0 232px;
+	margin:16px 0 ;
+}
+.member_alarm_inventory > span{
+	font-size:14px;
+	color:#6d6e6f;
+}
+.member_alarm_inventory > span:nth-child(1){
+	margin: 0 35px 0 0;
+}
+.member_alarm_inventory > span:nth-child(2){
+	margin: 0 35px 0 0;
+}
+.member_alarm_user{
+	display: flex;
+    align-items: center;
+	width:560px;
+	height:20px;
+	padding:0 32px;
+}
+.member_alarm_user > span{
+	font-size:14px;
+	line-height:20px;
+	font-weight:500;
+	color:#1e1f21;
+
+}
+.member_alarm_user_check{
+	align-items: center;
+	width:560px;
+	height:50px;
+	padding:0 32px;
+	display:flex;
+}
+.member_alarm_user_check_01 > img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+.member_alarm_user_check_02{
+	width:158px;
+	height:41px;
+	padding:0 12px;
+}
+.member_alarm_user_check_02 > span:nth-child(1){
+	font-size:14px;
+	line-height:22px;
+	color:#1e1f21;
+}
+.member_alarm_user_check_02 > span:nth-child(3){
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+}
+.member_alarm_user_check_03{
+	padding: 0 0 0 57px;
+	width:300px;
+	height:12px;
+
+}
+.member_alarm_user_check_03 > input{
+	widht:12px;
+	height:12px;
+
+}
+.member_alarm_user_check_03 > input:nth-child(1){
+	margin-right: 80px;
+}
+.member_alarm_user_check_03 > input:nth-child(2){
+	margin-right: 80px;
+}
+.second{
+	margin-top:25px;
+
+}
+
+
+
+
+</style>
+<body>
+<div class="outer_main">
+	<div class="member_alarm_main">
+		<div class="member_alarm_header">
+			<span>멤버 알림 설정</span>
+			<svg class="Icon XIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M18.1,16L27,7.1c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L16,13.9l-8.9-9C6.5,4.3,5.6,4.3,5,4.9S4.4,6.4,5,7l8.9,8.9L5,24.8c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l8.9-8.9l8.9,8.9c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L18.1,16z"></path></svg>
+		</div>
+		<div class="member_alarm_content">
+			<div class="member_alarm_inventory">
+				<span>상태 업데이트</span>
+				<span>메시지</span>
+				<span>작업 추가됨</span>
+			</div>
+			<div class="member_alarm_user">
+				<span>내 알림</span>
+			</div>
+			<div class="member_alarm_user_check">
+				<div class="member_alarm_user_check_01">
+					<img src="img01/짱구1.jpg"></img>
+				</div>
+				<div class="member_alarm_user_check_02">
+					<span>지숭</span>
+					<br/>
+					<span>asanajisoo02@gmail.com</span>
+				</div>
+				<div class="member_alarm_user_check_03">
+					<input type="checkbox" name="member_alarm_setting" value="status"/>
+					<input type="checkbox" name="member_alarm_setting" value="message"/>
+					<input type="checkbox" name="member_alarm_setting" value="work"/>
+				</div>
+			</div>
+			<div class="member_alarm_user second">
+				<span>사용자</span>
+			</div>
+			<div class="member_alarm_user_check">
+				<div class="member_alarm_user_check_01">
+					<img src="img01/짱구2.jpg"></img>
+				</div>
+				<div class="member_alarm_user_check_02">
+					<span>길주</span>
+					<br/>
+					<span>wjdrlfwn217@gmail.com</span>
+				</div>
+				<div class="member_alarm_user_check_03">
+					<input type="checkbox" name="member_alarm_setting" value="status"/>
+					<input type="checkbox" name="member_alarm_setting" value="message"/>
+					<input type="checkbox" name="member_alarm_setting" value="work"/>
+				</div>
+			</div>
+			<div class="member_alarm_user_check">
+				<div class="member_alarm_user_check_01">
+					<img src="img01/철수.png"></img>
+				</div>
+				<div class="member_alarm_user_check_02">
+					<span>현우</span>
+					<br/>
+					<span>hyunwooasana@gmail.com</span>
+				</div>
+				<div class="member_alarm_user_check_03">
+					<input type="checkbox" name="member_alarm_setting" value="status"/>
+					<input type="checkbox" name="member_alarm_setting" value="message"/>
+					<input type="checkbox" name="member_alarm_setting" value="work"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

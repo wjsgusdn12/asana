@@ -1,0 +1,478 @@
+@charset "UTF-8";
+
+.invite_input_text_area{
+	font-size: 17px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 0 30px 0;
+}
+
+.input_email_div {
+	width: auto;
+	height: 25px;
+	display: flex;
+	gap: 5px;
+	background-color: #e9e9e9;
+	justify-content: space-evenly;
+	font-size: 15px;
+	align-items: center;
+	border-radius: 5px;
+	margin: 3px;
+	padding:0px 10px 0px 10px;
+}
+
+.profile_page_work_check{
+	width:17px;
+	height:17px;
+	border-radius:50%;
+	border:1px solid gray;
+}
+.profile_page_work_check:hover{
+	cursor:pointer;
+	border:1px solid rgb(0,111,0);
+}
+.profile_page_work_check.on{
+	border:1px solid rgb(0,111,0);
+}
+.profile_page_work_check_outline{
+	width:17px;
+	height:17px;
+	fill:white;
+}
+.profile_page_work_check_outline:hover{
+	fill:rgb(210, 255, 210);
+}
+.profile_page_work_check_outline.on{
+	fill:#58a182;
+}
+.profile_page_work_check_inline{
+	width:7px;
+	height:7px;
+	fill:black;
+}
+.profile_page_work_check_inline:hover{
+	fill:rgb(0,111,0);
+}
+.profile_page_work_check_inline.on{
+	fill:white;
+}
+/********************************* 초대 팝업창 창 *************************************/
+.invite_email_remove_button_outline{
+	fill:lightgray;
+}
+.invite_email_remove_button_inline{
+	fill:black;
+}
+.invite_email_remove_button:hover{
+	cursor:pointer;
+	border-radius:50%;
+}
+.popup_EmailInput:hover{
+	outline:3px solid #3f66ba;
+}
+.popup_ProjectInput:focus{
+	outline:3px solid #3f66ba;
+}
+.popup_invite_whole-div {
+	z-index: 999;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(30, 31, 33, .75);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.popup_Invite {
+	background-color: white;
+	width: 560px;
+	height: 410px;
+	border-radius: 10px;
+}
+
+.popup_InviteTitle {
+	width: 560px;
+	height: 64px;
+	padding: 0px 24px;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid lightgray;
+}
+
+.popup_InviteContent {
+	width: 560px;
+	height: 346px;
+	padding: 24px;
+}
+
+.popup_invite_XIcon {
+	width: 16px;
+	height: 16px;
+	fill: gray;
+}
+
+.popup_invite_x_icon_div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 27px;
+	width: 27px;
+}
+
+.popup_invite_XIcon:hover, .popup_invite_x_icon_div:hover {
+	cursor: pointer;
+	background-color: #EAEAEA;
+	border-radius: 5px;
+}
+
+.popup_EmailInput {
+	width: 512px;
+	min-height: 100px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+
+.popup_ProjectInput {
+	width: 510px;
+	height: 34px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+
+.popup_invite_text {
+	font-size: 12px;
+	color: gray;
+	margin-bottom: 10px;
+}
+
+.popup_invite_button {
+	width: 68px;
+	height: 36px;
+	padding: 0 12px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	background-color: white;
+	color: gray;
+	margin-left: 445px;
+}
+.popup_invite_button.on{
+	cursor:pointer;
+	background-color:#3f66ba;
+	color:white;
+}
+/********************************* 초대 팝업창 창 *************************************/
+/* 상단바 생성 팝업창 기본 오프 처리*/
+.create_something_popup {
+	width: 165px;
+	height: 200px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+	font-size:15px;
+	position: fixed;
+	z-index: 100;
+	margin: 2px 0 0 135px;
+	display:flex;
+	flex-direction: column;
+	padding: 5px;
+	justify-content: center;
+	display:none;
+}
+
+/* 상단바 생성 팝업창 온 처리 */
+.create_something_popup.on{
+	display:block;
+}
+
+/* 상단바 팝업창 생성 리스트 */
+.popup_create_work,
+.popup_create_project,
+.popup_create_message,
+.popup_create_portfolio,
+.popup_create_invite{
+	width:100%;
+	height:20%;
+	display:flex;
+	align-items:center;
+}
+
+/* 상단바 생성리스트 svg */
+.topbar_popup_approve,
+.topbar_popup_project,
+.topbar_popup_message,
+.topbar_popup_portfolio,
+.topbar_popup_invite{
+	width:17px;
+	height:17px;
+	fill:gray;
+	margin:0px 10px 0px 5px;
+}
+
+/* 상단바 생성 팝업창 호버 */
+.popup_create_work:hover,
+.popup_create_project:hover,
+.popup_create_message:hover,
+.popup_create_portfolio:hover,
+.popup_create_invite:hover{
+	cursor:pointer;
+	background-color:#EAEAEA;
+}
+
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		overflow:hidden;
+	}
+	body{
+		width:99.9vw;
+		height:99.9vh;
+	}
+	.top-div{
+		width:100%;
+		height:49px;
+		background-color:#353535;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		color:white;
+	}
+	.under-div{
+		width: 100%;
+	    height: 100%;
+	    display: flex;
+	}
+	.sidebar{
+		width: 14.279vw;
+		height:100%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		background-color:#353535;
+		color:white;
+	}
+	.main{
+		width: 100%;
+	    height: 100%;
+	    background-color: #f9f8f8;
+	    display: flex;
+	    justify-content: flex-start;
+	    padding: 27px 238px;
+	    gap: 25px;
+	    align-items: center;
+	    overflow-y: scroll;
+	    flex-wrap: wrap;
+	}
+	.main-top{
+		width:100%;
+		height:19%;
+		display:flex;
+	}
+	.main-under{
+		width:100%;
+		height:54.5%;
+		padding:0px 24px;
+		border:1px solid lightgray;
+		border-radius:10px;
+		background-color:white;
+	}
+	.Profile-img{
+		width:165px;
+		height:160px;
+		border-radius:50%;
+		margin-top: 5px;
+	}
+	.font32{
+		font-size:32px;
+		margin-top: 21px;
+	}
+	.profile_page_edit_button {
+	    width: 80px;
+	    height: 28px;
+	    background-color: #4573D2;
+	    color: white;
+	    border-radius: 5px;
+	    border: none;
+	    outline: none;
+	    font-size: 12px;
+	    margin-top: 55px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	.profile_page_edit_button:hover{
+		cursor:pointer;
+	}
+	.margin23{
+		margin-left: 27px;
+	}
+	.main-bottom{
+		width:100%;
+		height:450px;
+		margin-bottom: 100px;
+		border:1px solid lightgray;
+		border-radius:10px;
+		background-color:white;
+	}
+	.under-top{
+		width: 104%;
+	    height: 77px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    font-size: 20px;
+	    padding-left: 23px;
+	    border-bottom: 1px solid lightgray;
+	    margin-left: -23px;
+	    margin-bottom: 25px;
+	}
+	.under-under{
+		width:100%;
+		height:400px;
+		
+	}
+	.my-work-button{
+		outline:none;
+		border:none;
+		width:97px;
+		height:28px;
+		background-color:white;
+		border-radius:5px;
+		border:1px solid gray;
+		font-size:12px;
+		margin-right: 25px;
+	}
+	.my-work-button:hover{
+		cursor:pointer;
+		background-color:#f0f0f0;
+		border:1px solid black;
+	}
+	.under-content{
+		width:100%;
+		height:39px;
+		border-bottom:1px solid lightgray;
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+	}
+	.under-content:hover{
+		cursor:pointer;
+		background-color:#f0f0f0;
+	}
+	.icon15{
+		width:15px;
+		height:15px;
+		fill:gray;
+		margin-left: 8px;
+	}
+	.icon20{
+		width:20px;
+		height:20px;
+		fill:gray;
+		margin-right: 5px;
+	}
+	.project-box{
+		width:75px;
+		height:24px;
+		border-radius:3px;
+		font-size:14px;
+		margin-right:5px;
+		color:white;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding-top : 19px;
+	}
+	.profile_page_center{
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	gap: 7px;
+	}
+	.date{
+		font-size:12px;
+		color:gray;
+	}
+	.bottom-top{
+		width:100%;
+		font-size:20px;
+		padding:23px;
+	}
+	.bottom-under{
+		width:100%;
+		height: 375px;
+		padding:0px 24px 24px 24px;
+		overflow-y: scroll;
+	}
+	.bottom-content{
+		width:100%;
+		height:36px;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		font-size:14px;
+	}
+	.bottom-content:hover{
+		cursor:pointer;
+		background-color:#f0f0f0;
+	}
+	.project-logo{
+		fill:white;
+		width:20px;
+		height:20px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		border-radius:5px;
+		margin-right:5px;
+	}
+	.project-logo-mini{
+		fill:white;
+		width:12px;
+		height:12px;
+	}
+	.list-image {
+	position: relative;
+	height: 61px;
+	display:flex;
+	align-items:center;
+	
+}
+.img-small {
+	width: 30px;
+	height: 30px;
+	border:2px solid white;
+	border-radius: 50%;
+}
+.dot-small-circle{
+	width:25px;
+	height:25px;
+	color:gray;
+	border:1px solid gray;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.dot-small{
+	width:10px;
+	height:10px;
+	fill:gray;
+}
+
+#content {
+    background-color: #f9f8f8;
+    display: flex;
+}

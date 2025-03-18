@@ -1,0 +1,2876 @@
+/* @charset "UTF-8";
+.top-div{
+    width:100vw;
+    height:49px;
+    background-color:#353535;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.under-div{
+    width: 100vw;
+    height: 95vh;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.sidebar{
+    width:240px;
+    height:95vh;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#353535;
+}
+#main{
+    width: 88vw;
+    height: 100vh;
+}
+.main_top{
+    width: 1697px;
+    height: 72px;
+    border-bottom: 1px solid #edeae9;
+}
+.page_toolbar{
+    width: 839px;
+    height: 58px;
+    border-bottom: 1px solid #edeae9;
+}
+.main_page{
+    width: 839px;
+    height: 821px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.top_time{
+    width: 824px;
+    height: 37px;
+    border-bottom: 1px solid #edeae9;
+}
+.top_list{
+    width: 824px;
+    border: 1px solid #edeae9;
+}
+.top_list_approv,.top_list_milestone{
+    width: 824px;
+    border: 1px solid #edeae9;
+}
+.content{
+    width: 824px;
+    height: 355px;
+    cursor: pointer;
+}
+.top_title{
+    font-size: 20px;
+    color: rgb(30,31,33);
+    margin-left: 24px;
+    margin-top: 10px;
+}
+.main_top > .span{
+    display: flex;
+    margin-left: 6px;
+    margin-top: 3px;
+}
+.span > .span1{
+    float: left;
+    margin-left: 17px;
+    margin-top: 7px;
+    font-size: 14px;
+    color: rgb(30,31,33);
+    cursor: pointer;
+}
+.span > .span2{
+    float: left;
+    margin-left: 23px;
+    margin-top: 7px;
+    font-size: 14px; 
+    color: rgb(30,31,33);
+    cursor: pointer;
+}
+.span > .me_message{
+    margin-top: 7px;
+    margin-left: 24px;
+    font-size: 14px;
+    color: rgb(30,31,33);
+}
+.span > .line{
+    width: 1px;
+    height: 16px;
+    border: 1px solid rgb(237,234,233);
+    margin-top: 8px;
+    margin-left: 25px;
+}
+.page_toolbar{
+    display: flex;
+    align-items: center;
+}
+.filtering{
+    margin-left: 31px;
+    margin-bottom: 21px;
+}
+.filtering button{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.filtering button > svg{
+    width: 14px;
+    height: 14px;
+    fill: rgb(30,31,33);
+}
+.filtering button > .span_filtering{
+    font-size: 12px;
+    margin-left: 3px;
+    width: 32px;
+}
+.order_by{
+    margin-left: 27px;
+    margin-bottom: 21px;
+}
+.order_by button{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.order_by button > svg{
+    width: 12px;
+    height: 15px;
+    fill: rgb(30,31,33);
+}
+.order_by button >.span_order_by{
+    margin-left: 3px;
+    width: 54px;
+    font-size: 12px;
+}
+.alarm> button{
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: -21px;
+    border: none;
+    background-color: transparent;
+    width: 57px;
+}
+.alarm{
+    margin-left: 559px;
+    margin-bottom: 21px;
+}
+.more{
+    margin-left: 20px;
+    margin-bottom: 21px;
+}
+.more > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.more button > svg{
+    width: 12px;
+    height: 12px;
+}
+.top_time > .time{
+    margin-left: 24px;
+    font-size: 14px;
+    padding-top: 8px;
+}
+.list_header,.list_header_approv,.list_header_milestone{
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+}
+.list_header > .star_wam{
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    fill: #6d6e6f;
+}
+.list_header_approv > .star_approv{
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    fill: #6d6e6f;
+}
+.list_header_milestone > .star_milestone{
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    fill: #6d6e6f;
+}
+.list_header > .wam_span{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.list_header_approv > .approv_span{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.milestone_span{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.approv_out{
+    fill: #fff;
+    stroke: #6d6e6f;
+    transition: fill .2s, stroke .2s;
+}
+.approv_in{
+    fill: #6d6e6f;
+    transition: fill .2s, stroke .2s;
+}
+.list_middle{
+    width: 792px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    margin-top: 22px;
+    cursor: pointer;
+    border: 1px solid #edeae9;
+    border-radius: 5px;
+}
+.list_middle > .wam_circle{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    background-color: #fff;
+}
+.wam_circle > svg > .wam_circle_out{
+    fill: transparent;
+    stroke: #6d6e6f;
+    transition: fill .2s, stroke .2s;
+}
+.wam_circle > svg > .wam_circle_out.on{
+    fill: green;
+}
+.wam_circle > svg > .wam_circle_in{
+    fill: #6d6e6f;
+    transition: fill .2s, stroke .2s;
+}
+.wam_circle > svg > .wam_circle_in.on{
+    fill: white;
+}
+.approv_check{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    background-color: #fff;
+}
+
+.milestone_check{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    background-color: #fff;
+}
+.milestone_check > svg > .milestone_out{
+    fill: transparent;
+    stroke: #de5f73;
+    transition: fill .2s, stroke .2s;
+}
+.milestone_check > svg > .milestone_out.on{
+    fill: green;
+    stroke: transparent;
+}
+.milestone_check > svg> .milestone_in{
+    fill: transparent;
+    transition: fill .2s, stroke .2s;
+}
+.milestone_check > svg> .milestone_in{
+    fill: white;
+}
+.list_middle_span{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.list_middle > .wam_deadline_date{
+    margin-left:745px;
+    font-size: 12px;
+    color: #ff6600;
+    position: absolute;
+}
+.approv_deadline_date{
+    margin-left:745px;
+    font-size: 12px;
+    color: #ff6600;
+    position: absolute;
+}
+.milestone_deadline_date{
+   	margin-left:745px;
+    font-size: 12px;
+    color: #ff6600;
+    position: absolute;
+}
+.top_time > .back{
+    margin-left: 22px;
+    padding-top: 9px;
+    font-size: 14px;
+}
+.content_header{
+    width: 792px;
+    height: 44px;
+    position: relative;
+}
+.GoalsMiniIcon{
+    fill:#6d6e6f;
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin-left: 16px;
+    margin-top: 4px;
+    fill: #6d6e6f;
+}
+.goal_span{
+    float: left;
+    margin-left: 7px;
+    font-size: 11px;
+    margin-top: 4px;
+    float: left;
+}
+.header_top{
+    margin-bottom: 3px;
+}
+.content_header > .message_icon{
+    width: 22px;
+    height: 14px;
+    fill: #6d6e6f;
+    margin-left: 15px;
+    margin-top: 26px;
+    position: absolute;
+}
+.content_header > .status_update{
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 26px;
+    position: absolute;
+}
+.main{
+    width: 824px;
+    height: 197px;
+    border-bottom: 1px solid #edeae9;
+}
+.main_profile{
+    margin-left: 15px;
+}
+.main_profile > img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 18px;
+}
+.profile_name{
+    float: left;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-top: 22px;
+}
+.profile_date{
+    float: left;
+    font-size: 10px;
+    margin-top: 23px;
+}
+.good_icon{
+    width: 13px;
+    height: 13px;
+    float: right;
+    margin-top: 19px;
+    margin-right: 27px;
+}
+.good_icon:hover{
+    cursor: pointer;
+}
+.good_icon_blue{
+    width: 13px;
+    height: 13px;
+    float: right;
+    margin-top: 19px;
+    margin-right: 28px;
+    fill: steelblue;
+    display: none;
+}
+.good_icon_blue:hover{
+    cursor: pointer;
+}
+.main_h{
+    margin-top: 48px;
+    margin-left: 51px;
+}
+.h5_2{
+    margin-top: 20px;
+}
+.h5_3{
+    margin-top: 20px;
+}
+.h5_4{
+    margin-top: 20px;
+}
+.h5_5{
+    margin-top: 20px;
+}
+.comment{
+    position: relative;
+}
+.comment_profile{
+    margin-top: -10px;
+    margin-left: 15px;
+    position: absolute;
+}
+.comment_profile > img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-top: 18px;
+}
+.comment > .profile_name{
+    font-size: 13px;
+    position: absolute;
+    margin-left: 54px;
+    margin-top: 15px;
+}
+.comment > .profile_date{
+    font-size: 11px;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 16px;
+}
+.comment_circle{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #6d6e6f;
+    width: 20px;
+    height: 20px;
+    margin-top: 19px;
+    margin-left: 31px;
+}
+.comment_circle > .icon{
+    width: 12px;
+    height: 12px;
+    fill: #fff;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.comment_text{
+    position: absolute;
+    margin-top: 52px;
+    margin-left: 53px;
+    font-size: 14px;
+}
+.content1{
+    width: 824px;
+    height: 288px;
+    border-top: 1px solid #edeae9;
+    cursor:pointer;
+}
+.content1 > .header{
+    width: 792px;
+    height: 42px;
+    position: relative;
+}
+.project{
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin-left: 16px;
+    margin-top: 13px;
+    fill: #f9aaef;
+}
+.project_name{
+    margin-left: 7px;
+    font-size: 12px;
+    margin-top: 13px;
+    float: left;
+}
+.content1 > .header > .message_icon{
+    width: 22px;
+    height: 14px;
+    fill: #6d6e6f;
+    margin-left: 15px;
+    margin-top: 33px;
+    position: absolute;
+}
+.content1 > .header > .title{
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 36px;
+    position: absolute;
+}
+.file_icon{
+    width: 16px;
+    height: 16px;
+    fill: #6d6e6f;
+    margin-left: 105px;
+    margin-top: 37px;
+    position: absolute;
+}
+.content1 > .main{
+    width: 824px;
+    height: 212px;
+    position: relative;
+}
+.content1 .main_profile{
+    position: absolute;
+    margin-top: -45px;
+}
+.content1 .profile_date{
+    margin-left: 79px;
+    margin-top: -21px;
+    position: absolute;
+}
+.content1 .profile_name{
+    margin-left: 52px;
+    margin-top: -23px;
+    position: absolute;
+}
+.contents{
+    margin-left: 267px;
+    margin-top: 52px;
+}
+.contents > img{
+    border-radius: 10px;
+}
+****************************************** 승인 ***************************************************
+#approv .alarm_approv{
+	width: 839px;
+    height: 904px;
+	position:absolute;
+	right: 0;
+    top: 49px;
+	background-color:white;
+	border-radius:4px;
+}
+#approv .milestone_header{
+	border:1px solid #edeae9;
+	display: flex;
+    align-items: center;
+	width:837px;
+	height:57px;
+	padding:0 24px;
+	margin-top: 82px;
+	margin-left: 2px;
+}
+#approv .milestone_header_left{
+	display: flex;
+    align-items: center;
+	width:392px;
+	height:56px;
+	padding:28px 0;
+}
+#approv .milestone_header_left > div{
+	padding: 0 6px;
+	height:28px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	font-size: 12px;
+    line-height: 28px;
+    margin-right: 8px;
+
+}
+#approv .milestone_header_left svg{
+	width:12px;
+	height:12px;
+}
+#approv .milestone_header_left_01{
+	width:58px;
+}
+#approv .milestone_header_left_01 > svg {
+	fill:#58a182;
+}
+#approv .milestone_header_left_02{
+	width:86px;
+}
+#approv .milestone_header_left_02 > svg {
+	fill:#f1bd6c;
+}
+#approv .milestone_header_left_03 {
+	width:58px;
+}
+#approv .milestone_header_left_03 > svg {
+	fill:#de5f73;
+}
+#approv .milestone_header_right{
+	display: flex;
+    align-items: center;
+    top: 90px;
+    gap: 3px;
+	position:absolute;
+	right:1px;
+	width:252px;
+	height:57px;
+}
+#approv .milestone_header_right > div{
+	width:32px;
+	height:32px;
+}
+#approv .milestone_header_right svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+
+}
+#approv .mywork_section{
+	padding: 0 8px;
+    position: absolute;
+    left: 256px;
+	width:125px;
+	height:28px;
+	font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color:#6d6e6f;
+}
+#approv .mywork_section > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+
+}
+#approv .milestone_content{
+	overflow: hidden;
+	overflow-y: scroll;
+	width: 834px;
+	height: 632px;
+	margin-left: 2px;
+}
+#approv .milestone_content_child01{
+	width:635px;
+	height: 110px;
+}
+#approv .milestone_content_child02{
+	width:652px;
+	height:439px;
+}
+#approv .milestone_content_child03{
+	width:845px;
+	height:45px;
+
+}
+#approv .milestone_content_child01_01{
+	width: 819px;
+	height:44px;
+	background-color:#f9f8f8;
+	display:flex;
+	padding: 0 24px;
+    align-items: center;
+    gap: 8px;
+	position: relative;
+}
+
+#approv .milestone_content_child01_01 > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#approv .deadline{
+	font-size:14px;
+	color:#c92f54;
+
+}
+
+#approv .milestone_content_child01_01 > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#1e1f21;
+
+}
+#approv .release_btn{
+	position: absolute;
+    right: 6px;
+	width:54px;
+	height:36px;
+	padding:0 12px;
+	margin:0 0 0 8px;
+}
+#approv .release_btn > span{
+	color:#6d6e6f;
+	font-size: 14px;
+    line-height: 36px;
+}
+
+#approv .milestone_content_child01_03{
+	margin: 12px 0 8px 0;
+	width:652px;
+	height:46px;
+	padding: 0 24px;
+}
+#approv .milestone_content_title > input{
+	border: none;
+	width:652px;
+	height:46px;
+	padding:6px 12px;
+	font-size:24px;
+	font-weight:500;
+	line-height:32px;
+}
+#approv .milestone_content_child01_03 span{
+	font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+#approv .rowstructure{
+	margin-top: 15px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+}
+#approv .rowstructure_title{
+	width: 152px;
+	height:36px
+}
+#approv .rowstructure_title > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#approv .manager_right{
+	align-items: center;
+	display: flex;
+	gap:8px;
+	width:717px;
+	height:36px;
+	position: relative;
+}
+#approv .manager_right img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+#approv .rowstructure:not:nth-child(2) > .manager_right span{
+	font-size:14px;
+	color:#1e1f21;
+}
+#approv .manager_right svg{
+	position: relative;
+    left: 11px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#approv .second{
+	width:28px;
+	height:28px;
+	border:1px solid #de5f73;;
+	border-radius:50%;
+}
+#approv .second > svg{
+	width:16px;
+	height:16px;
+	fill:#de5f73;;
+	position: relative;
+    top: 3px;
+    left: 5px;
+}
+#approv .rowstructure_02{
+	margin-top: 10px;
+	width:652px;
+	height:68px;
+	padding:0 24px;
+	display:flex;
+}
+#approv .rowstructure_02 >span{
+    font-size: 12px;
+    line-height: 18px;
+}
+#approv .rowstructure_02 > .rowstructure_title_02{
+	width:152px;
+	height:64px;
+}
+#approv .rowstructure_02 > .rowstructure_title_02 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+#approv .rowstructure_02 >.manager_right_02{
+	width:717px;
+	height:68px;
+}
+#approv .project_add_title{
+	padding-left: 3px;
+	margin-bottom: 8px;
+	display: flex;
+    align-items: center;
+    gap: 6px;
+	width:200px;
+	height:24px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+
+}
+#approv .manager_right_02 .HighlightSol_MiniIcon{
+	width:12px;
+	height:12px;
+	fill:#f26fb2;
+
+}
+#approv .manager_right_02 span{
+	font-size: 14px;
+    line-height: 24px;
+    color:#1e1f21;
+
+}
+#approv .section{
+	width: 52px;
+}
+#approv .section > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+
+}
+#approv .section > svg{
+	position: relative;
+    left: 11px;
+    width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+#approv .HighlightSol_CompoundIcon{
+	width:16px;
+	height:12px;
+
+}
+#approv .project_add_btn{
+	padding-left: 3px;
+	width:105px;
+	height:28px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+	font-size: 12px;
+    line-height: 28px;
+    color:#6d6e6f;
+}
+#approv .small_XThickMiniIcon{
+	width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+#approv .rowstructure_03{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+#approv .rowstructure_title_03{
+	width: 139.41px;
+}
+
+#approv .rowstructure_title_03 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+#approv .manager_right_03{
+	font-size: 12px;
+    line-height: 28px;
+    color: #6d6e6f;
+}
+#approv .rowstructure_04{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+#approv .rowstructure_title_04{
+	width: 139.41px;
+}
+#approv .rowstructure_title_04 > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#approv .rowstructure_05{
+	width:635px;
+	padding:0 24px;
+}
+#approv .rowstructure_05 > textarea{
+	border: none;
+	font-size:14px;
+	width:657px;
+	height:195px;
+    resize: none;
+}
+#approv .rowstructure_06{
+	width:652px;
+	height:45px;
+	padding:0 24px;
+	margin-bottom:20px;
+	margin-top:15px;
+}
+#approv .rowstructure_06 > button{
+	width:112px;
+	height:28px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	background-color:#f9f8f8;
+
+}
+#approv .rowstructure_06 > button > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+
+}
+#approv .rowstructure_06 > button > span{
+	font-size: 12px;
+    line-height: 28px;
+}
+#approv .comment{
+	width:823px;
+	height:129px;
+	background-color:#f9f8f8;
+	padding:0 24px;
+	margin-top: -36px;
+}
+#approv .comment_title{
+	padding-top: 15px;
+	padding-bottom: 8px;
+	width: 637px;
+	height: 57px;
+	border-bottom: 1px solid #edeae9;
+}
+#approv .comment_title > span{
+	font-size: 14px;
+    line-height: 22px;
+    font-weight:500;
+
+}
+#approv .comment_story{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:44px;
+	padding:4px 0;
+	margin-top: 3px;
+
+}
+#approv .profile_img> img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+#approv .profile_name{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+    font-weight:700;
+	margin-top: 0px;
+
+}
+#approv .comment_story > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+}
+#approv .milestone_update_date{
+	font-size: 12px;
+	color:#6d6e6f;
+}
+#approv .feedblockstroy{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:64px;
+	display:flex;
+
+}
+#approv .feedblockstroy_complete > svg{
+	width:32px;
+	height:32px;
+	fill:#58a182;
+
+}
+#approv .feedblockstroy_name{
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+    font-weight: 700;
+}
+#approv .feedblockstroy > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+}
+#approv .feedblockstroy_update_date{
+	font-size:12px;
+	color:#0d7f56;
+
+}
+#approv .milestone_footer{
+	border-top: 1px solid #edeae9;
+	width: 834px;
+	height: 170px;
+	background-color: #f9f8f8;
+	margin-left: 2px;
+}
+#approv .milestone_comment_content{
+	width: 701px;
+    height: 120px;
+	padding:8px 24px;
+	display:flex;
+}
+#approv .milestone_comment_content > div:nth-child(1){
+	width: 36px;
+    height: 48px;
+}
+#approv .milestone_comment_input{
+	width:824px;
+	height:96px;
+}
+#approv .milestone_comment_input > textarea{
+	display:none;
+	width:824px;
+	height:96px;
+}
+#approv .milestone_comment_input{
+	width:826px;
+	height:104px;
+}
+#approv .milestone_comment_input_child02 > textarea{
+	width: 703px;
+    height: 104px;
+	border:1px solid #565557;
+	border-radius:6px;
+	margin-left: 21px;
+    resize: none;
+}
+#approv .milestone_Participants{
+	padding: 4px 24px 5px 64px;
+    align-items: center;
+    gap: 9px;
+	width:700px;
+	height:49px;
+	display:flex;
+	margin-top: -1px;
+	margin-left: -36px;
+
+}
+#approv .milestone_Participants_child01{
+	width:65.28px;
+	height:15px;
+	margin:4px 4px 4px 0;
+	font-size:12px;
+	color:#a2a0a2;
+}
+#approv .collaboration_profile{
+	align-items: center;
+    gap: 6px;
+	width:134px;
+	height:30px;
+	display:flex;
+}
+#approv .collaboration_profile img{
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+}
+#approv .add_collaboration_profile{
+	padding: 0 0 0 5px;
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+	border:1px dashed #a2a0a2;
+}
+#approv .add_collaboration_profile >svg{
+	width:12px;
+	height:12px;
+}
+#approv .plus_icon > svg{
+	margin-left: 12px;
+	width:12px;
+	height:12px;
+	fill:#a2a0a2;
+}
+#approv .milestone_Participants_child03{
+	position: absolute;
+    right: 23px;
+	width:135px;
+	height:36px;
+}
+#approv .milestone_Participants_child03 > svg{
+	width:16px;
+	height:16px;
+	fill:#a2a0a2;
+}
+#approv .milestone_Participants_child03 >span{
+	font-weight: 500;
+	font-size: 14px;
+    line-height: 36px;
+    color:#a2a0a2;
+}
+****************************************** 승인 ***************************************************
+ ****************************************** 승인 버튼 ***************************************************
+.approve-check {
+    position: absolute;
+    z-index: 999;
+    margin: 185px 0px 0 0;
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    margin-top: -32px;
+    margin-left: 19px;
+ }
+ 
+.approve_check_in_white,.approve_check_in_green,.approve_check_in_yellow,.approve_check_in_red {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 25%;
+    gap: 5px;
+ }
+ 
+.approve_check_in_white:hover {
+    background-color: #f9f8f8;
+    cursor: pointer;
+ }
+ .approve_check_in_green:hover {
+    background-color: #f9f8f8;
+    cursor: pointer;
+ }
+ .approve_check_in_yellow:hover {
+    background-color: #f9f8f8;
+    cursor: pointer;
+ }
+ .approve_check_in_red:hover {
+    background-color: #f9f8f8;
+    cursor: pointer;
+ }
+.icon17-approve {
+    width: 17px;
+    height: 17px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0;
+ }
+ 
+.approve-wait-background {
+    fill: white;
+ }
+ 
+.approve-wait-main {
+    fill: gray;
+ }
+ 
+.approve-green {
+    width: 17px;
+    height: 17px;
+    fill: green;
+ }
+ 
+.approve-yellow {
+    width: 17px;
+    height: 17px;
+    fill: #f1bd6c;
+ }
+ 
+.approve-red {
+    width: 17px;
+    height: 17px;
+    fill: #de5f73;
+ }
+ .approve-green-same{
+    width: 18px;
+    height: 18px;
+    fill: green;
+ }
+ .green_move{
+    margin-left: 10px;
+    margin-top: 5px;
+    display: none;
+ }
+ .approve-yellow-same{
+    width: 18px;
+    height: 18px;
+    fill: #f1bd6c;
+ }
+ .yellow_move{
+    margin-left: 10px;
+    margin-top: 5px;
+    display: none;
+ }
+ .approve-red-same{
+    width: 18px;
+    height: 18px;
+    fill: #de5f73;
+ }
+ .red_move{
+    margin-left: 10px;
+    margin-top: 5px;
+    display: none;
+ }
+
+ ****************************************** 승인 버튼 ***************************************************
+****************************************** 마일스톤 ***************************************************
+#milestone .alarm_milestone{
+	width: 839px;
+    height: 904px;
+	position:absolute;
+	right: 0;
+    top: 49px;
+	background-color:white;
+	border-radius:4px;
+}
+#milestone .milestone_header{
+	border-bottom:1px solid #edeae9;
+	display: flex;
+    align-items: center;
+	width:839px;
+	height:58px;
+	padding:0 24px;
+	margin-top: 82px;
+	margin-left: -1px;
+}
+#milestone .complete_btn{
+	width:73px;
+	height:28px;
+	padding:0 8px;
+	background-color:#e0f4ec;
+	border-radius:6px;
+	border:1px solid #58a182;
+
+}
+#milestone .complete_btn > span{
+	color:#12714d;
+	font-size: 12px;
+    line-height: 28px;
+}
+
+#milestone .complete_btn > svg{
+	width:12px;
+	height:12px;
+	fill:#58a182;
+}
+#milestone .milestone_header_right{
+	display: flex;
+    align-items: center;
+    top: 9px;
+    gap: 3px;
+	position:absolute;
+	right:1px;
+	width:252px;
+	height:57px;
+	margin-top: 78px;
+}
+#milestone .milestone_header_right > div{
+	width:32px;
+	height:32px;
+}
+#milestone .milestone_header_right svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+}
+#milestone .milestone_content{
+	width: 839px;
+    height: 687px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#milestone .milestone_content_child01{
+	width:700px;
+	height: 148px;
+}
+#milestone .milestone_content_child02{
+	width:652px;
+	height:341px;
+}
+#milestone .milestone_content_child03{
+	width:845px;
+	height:45px;
+
+}
+#milestone .milestone_content_child01_01{
+	width:839px;
+	height:44px;
+	background-color:#f9f8f8;
+	display:flex;
+	padding: 0 24px;
+    align-items: center;
+    gap: 8px;
+	position: relative;
+}
+#milestone .milestone_content_child01_01 > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#milestone .milestone_content_child01_01 > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#1e1f21;
+}
+#milestone .release_btn{
+	position: absolute;
+    right: 6px;
+	width:54px;
+	height:36px;
+	padding:0 12px;
+	margin:0 0 0 8px;
+}
+#milestone .release_btn > span{
+	color:#6d6e6f;
+	font-size: 14px;
+    line-height: 36px;
+}
+#milestone .milestone_content_child01_02{
+	margin-top: 16px;
+	display: flex;
+    align-items: center;
+    gap: 8px;
+	width:652px;
+	height:22px;
+	padding:4px 24px;
+}
+#milestone .milestone_content_child01_02 > svg{
+	width:16px;
+	height:16px;
+	fill:#58a182;
+}
+#milestone .milestone_content_child01_02 > span{
+	font-size: 14px;
+	line-height: 22px;
+	color:#6d6e6f;
+}
+#milestone .milestone_content_child01_03{
+	margin: 12px 0 8px 0;
+	width:652px;
+	height:46px;
+	padding: 0 24px;
+}
+#milestone .milestone_content_title > input{
+	border: none;
+	width:652px;
+	height:46px;
+	padding:6px 12px;
+	font-size:24px;
+	font-weight:500;
+	line-height:32px;
+}
+#milestone .milestone_content_child01_03 span{
+	font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+#milestone .rowstructure{
+	margin-top: 15px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+}
+#milestone .rowstructure_title{
+	width: 152px;
+	height:36px
+}
+#milestone .rowstructure_title > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#milestone .manager_right{
+	align-items: center;
+	display: flex;
+	gap:8px;
+	width:717px;
+	height:36px;
+}
+#milestone .manager_right img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+#milestone .manager_right span{
+	font-size:14px;
+	color:#1e1f21;
+}
+#milestone .manager_right svg{
+	position: relative;
+    left: 11px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#milestone .second{
+	width:28px;
+	height:28px;
+	border:1px solid #6d6e6f;
+	border-radius:50%;
+}
+#milestone .second > svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+	position: relative;
+    top: 3px;
+    left: 5px;
+}
+#milestone .rowstructure_02{
+	width:652px;
+	height:68px;
+	padding:0 24px;
+	display:flex;
+}
+#milestone .rowstructure_02 >span{
+    font-size: 12px;
+    line-height: 18px;
+}
+#milestone .rowstructure_02 > .rowstructure_title_02{
+	width:152px;
+	height:64px;
+}
+#milestone .rowstructure_02 > .rowstructure_title_02 > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#milestone .rowstructure_02 >.manager_right_02{
+	width:717px;
+	height:68px;
+}
+#milestone .project_add_title{
+	padding-left: 3px;
+	margin-bottom: 8px;
+	display: flex;
+    align-items: center;
+    gap: 6px;
+	width:200px;
+	height:24px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+}
+#milestone .manager_right_02 .HighlightSol_MiniIcon{
+	width:12px;
+	height:12px;
+	fill:#f26fb2;
+}
+#milestone .manager_right_02 span{
+	font-size: 14px;
+    line-height: 24px;
+    color:#1e1f21;
+}
+#milestone .section{
+	width: 52px;
+}
+#milestone .section > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+
+}
+#milestone .section > svg{
+	position: relative;
+    left: 11px;
+    width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+#milestone .HighlightSol_CompoundIcon{
+	width:16px;
+	height:12px;
+}
+#milestone .project_add_btn{
+	padding-left: 3px;
+	width:105px;
+	height:28px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+	font-size: 12px;
+    line-height: 28px;
+    color:#6d6e6f;
+}
+#milestone .small_XThickMiniIcon{
+	width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+
+#milestone .rowstructure_03{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+#milestone .rowstructure_title_03{
+	width: 139.41px;
+}
+
+#milestone .rowstructure_title_03 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+#milestone .manager_right_03{
+	font-size: 12px;
+    line-height: 28px;
+    color: #6d6e6f;
+}
+#milestone .rowstructure_04{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+#milestone .rowstructure_title_04{
+	width: 139.41px;
+}
+#milestone .rowstructure_title_04 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+#milestone .rowstructure_05{
+	width:652px;
+	height:97px;
+	padding:0 24px;
+}
+#milestone .rowstructure_05 > textarea{
+	border: none;
+	font-size:14px;
+	width:652px;
+	height:97px;
+	resize: none;
+}
+#milestone .rowstructure_06{
+	width:652px;
+	height:45px;
+	padding:0 24px;
+	margin-bottom:20px;
+	margin-top:15px;
+}
+#milestone .rowstructure_06 > button{
+	width:112px;
+	height:28px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	background-color:#f9f8f8;
+}
+#milestone .rowstructure_06 > button > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+
+}
+#milestone .rowstructure_06 > button > span{
+	font-size: 12px;
+    line-height: 28px;
+}
+#milestone .milestone_content_child02 > .comment{
+	width:839px;
+	height:170px;
+	background-color:#f9f8f8;
+	padding:0 24px;
+}
+#milestone .comment_title{
+	padding-top: 16px;
+    padding-bottom: 8px;
+	width:652px;
+	height: 57px;
+	border-bottom:1px solid #edeae9;
+}
+#milestone .comment_title > span{
+	font-size: 14px;
+    line-height: 22px;
+    font-weight:500;
+}
+#milestone .comment_story{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:44px;
+	padding:4px 0;
+
+}
+#milestone .profile_img> img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+#milestone .profile_name{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+    font-weight:700;
+    margin-top: 0;
+}
+#milestone .comment_story > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+}
+#milestone .milestone_update_date{
+	font-size: 12px;
+	color:#6d6e6f;
+}
+#milestone .feedblockstroy{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:64px;
+	display:flex;
+}
+#milestone .feedblockstroy_complete > svg{
+	width:32px;
+	height:32px;
+	fill:#58a182;
+}
+#milestone .feedblockstroy_name{
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+    font-weight: 700;
+}
+#milestone .feedblockstroy > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+}
+#milestone .feedblockstroy_update_date{
+	font-size:12px;
+	color:#0d7f56;
+}
+#milestone .milestone_footer{
+	border-top:1px solid #edeae9;
+	width:839px;
+	height:114px;
+	background-color:#f9f8f8;
+}
+#milestone .milestone_comment_content{
+	width: 700px;
+    height: 64px;
+	padding:8px 24px;
+	display:flex;
+}
+#milestone .milestone_comment_content > div:nth-child(1){
+	width: 36px;
+    height: 48px;
+}
+#milestone .milestone_comment_input{
+	width:824px;
+	height:96px;
+}
+#milestone .milestone_comment_input > textarea{
+	display:none;
+	width:824px;
+	height:96px;
+}
+#milestone .milestone_comment_input{
+	width:826px;
+	height:104px;
+}
+#milestone .milestone_comment_input_child02 > textarea{
+	width: 531px;
+    height: 48px;
+	border:1px solid #565557;
+	border-radius:6px;	
+    resize: none;
+}
+#milestone .milestone_Participants{
+	padding: 4px 24px 5px 64px;
+    align-items: center;
+    gap: 9px;
+	width:700px;
+	height:49px;
+	display:flex;
+}
+#milestone .milestone_Participants_child01{
+	width:65.28px;
+	height:15px;
+	margin:4px 4px 4px 0;
+	font-size:12px;
+	color:#a2a0a2;
+}
+#milestone .collaboration_profile{
+	align-items: center;
+    gap: 6px;
+	width:134px;
+	height:30px;
+	display:flex;
+}
+#milestone .collaboration_profile img{
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+}
+#milestone .add_collaboration_profile{
+	padding: 0 0 0 5px;
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+	border:1px dashed #a2a0a2;
+}
+#milestone .add_collaboration_profile >svg{
+	width:12px;
+	height:12px;
+	fill: #6d6e6f;
+}
+#milestone .plus_icon > svg{
+	margin-left: 12px;
+	width:12px;
+	height:12px;
+	fill:#a2a0a2;
+}
+#milestone .milestone_Participants_child03{
+	position: absolute;
+    right: 23px;
+	width:135px;
+	height:36px;
+}
+#milestone .milestone_Participants_child03 > svg{
+	width:16px;
+	height:16px;
+	fill:#a2a0a2;
+}
+#milestone .milestone_Participants_child03 >span{
+	font-weight: 500;
+	font-size: 14px;
+    line-height: 36px;
+    color:#a2a0a2;
+}
+****************************************** 마일스톤 ***************************************************
+
+****************************************** 메시지 ****************************************************
+#full_main{
+    position: absolute;
+    top: 130px;
+    right: 0;
+}
+#full_main #main1{
+    width: 839px;
+    height: 821px;
+}
+#full_main .page_toolbar1{
+    width: 839px;
+    height: 58px;
+    border: 1px solid #edeae9;
+    position: relative;
+}
+#full_main .project_icon{
+    width: 16px;
+    height: 16px;
+    fill: #f9aaef;
+    margin-left: 20px;
+    margin-top: 16px;
+    position: absolute;
+}
+#full_main .project_name{
+    margin-left: 40px;
+    font-size: 14px;
+    margin-top: 16px;
+    color: #6d6e6f;
+    position: absolute;
+    cursor: pointer;
+}
+#full_main .max_message{
+    margin-left: 758px;
+    margin-top: 18px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+#full_main .message_link{
+    margin-left: 800px;
+    margin-top: 18px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+#full_main .main1_middle{
+    width: 839px;
+    height: 611px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#full_main .main1_top{
+    width: 839px;
+    height: 271px;
+}
+#full_main .main1_contents{
+    width: 839px;
+    height: 280px;
+}
+#full_main .main1_title{
+    width: 783px;
+    height: 28px;
+    margin-top: 50px;
+}
+#full_main .message_title{
+    margin-left: 19px;
+    margin-top: 63px;
+}
+#full_main .main1_start_date{
+    width: 791px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+}
+#full_main .main1_start_date > .profile_name{
+    width: 55px;
+    height: 22px;
+    display: flex;
+    background-color: #e8e5e4;
+    border-radius: 4px;
+    border: none;
+    margin-left: 22px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+#full_main .main1_start_date > .profile_name > img{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+#full_main .main1_start_date .name{
+    width: 23px;
+    height: 12px;
+    margin-top: 2px;
+    margin-left: 4px;
+}
+#full_main .date{
+    margin-left: 5px;
+    margin-top: 7px;
+    font-size: 14px;
+}
+#full_main .main1_content{
+    width: 839px;
+    height: 220px;
+}
+#full_main .main1_content > .profile{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+#full_main .main1_content > .profile > img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+#full_main .name_date{
+    display: flex;
+}
+#full_main .name_date > .name{
+    margin-left: 7px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+#full_main .name_date > .date{
+    margin-left: 6px;
+    margin-top: 6px;
+    font-size: 11px;
+}
+#full_main .profile > .good_icon{
+    width: 16px;
+    height: 16px;
+    margin-left: 632px;
+    margin-top: 3px;
+}
+#full_main .main1_content_text{
+    width: 739px;
+    height: 162px;
+}
+#full_main .main1_content_text > .img{
+    width: 126px;
+    height: 126px;
+    margin-left: 261px;
+    margin-top: 10px;
+}
+#full_main .main1_textarea{
+    background-color: #f9f8f8;
+    height: 193px;
+    display: flex;
+    position: relative;
+}
+#full_main .main1_textarea > .profile{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#full_main .main1_textarea > .profile > img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+#full_main .main1_textarea > .textarea{
+    margin-top: 21px;
+    margin-left: 14px;
+}
+#full_main .textarea_size{
+    height: 111px;
+    width: 695px;
+    border-radius: 4px;
+    resize: none;
+}
+#full_main .send{
+    display: inline-block;
+    position: absolute;
+    margin-top: 82px;
+    margin-left: 9px;
+}
+#full_main .send_bt{
+    width: 54px;
+    height: 28px;
+}
+#full_main .main1_textarea > .cooperation{
+    position: absolute;
+    margin-top: 149px;
+    margin-left: 18px;
+    font-size: 13px;
+    color: #6d6e6f;
+}
+#full_main .cooperation_profile{
+    position: absolute;
+    margin-top: 146px;
+    margin-left: 85px;
+}
+#full_main .cooperation_profile > img {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+#full_main .cooperation_person{
+    border: 1px dashed #1e1f21;
+    fill: #1e1f21;
+    background: 50%;
+    background-color: rgba(55, 23, 23, 0.03);
+    position: absolute;
+    width: 22px;
+    border-radius: 50%;
+    height: 22px;
+    margin-top: 147px;
+    margin-left: 119px;
+}
+#full_main .person_size{
+    width: 19px;
+    height: 17px;
+}
+#full_main .cooperation_person1{
+    border: 1px dashed #1e1f21;
+    fill: #1e1f21;
+    background: 50%;
+    background-color: rgba(55, 23, 23, 0.03);
+    position: absolute;
+    width: 22px;
+    border-radius: 50%;
+    height: 22px;
+    margin-top: 147px;
+    margin-left: 152px;
+}
+#full_main .cooperation_plus{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    margin-top: 149px;
+    margin-left: 188px;
+    cursor: pointer;
+}
+#full_main .bell_icon{
+    width: 15px;
+    height: 15px;
+}
+#full_main .enter{
+    margin-top: 145px;
+    margin-left: 756px;
+    position: absolute;
+    background-color: none;
+}
+#full_main .enter_bt{
+    width: 57px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    margin-left: -54px;
+    margin-top: -4px;
+}
+****************************************** 메시지 ****************************************************
+****************************************** 상태 업데이트 ****************************************************
+#status_update_full_main{
+    width: 839px;
+    height: 862px;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    display: none;
+}
+#status_update_full_main #status_update_main{
+    width: 839px;
+    height: 611px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#status_update_full_main .page_toolbar1{
+    width: 839px;
+    height: 58px;
+    border-top: 8px solid #de5f73;
+    position: relative;
+}
+#status_update_full_main .span01{
+    font-size: 20px;
+    line-height: 50px;
+    position: absolute;
+    margin-left: 20px;
+}
+#status_update_full_main .main1_right_icon{
+    align-items: center;
+    gap: 19px;
+    right: 29px;
+    width: 144px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    margin-left: 674px;
+    margin-top: 28px;
+}
+#status_update_full_main .main1_right_icon > svg{
+    width: 16px;
+    height: 16px;
+    fill: #6d6e6f;
+    margin-top: -35px;
+}
+#status_update_full_main .main1_profile{
+    margin-top: 39px;
+}
+#status_update_full_main .main1_profile > img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    float: left;
+    margin-top: -22px;
+    margin-left: 27px;
+}
+#status_update_full_main .main1_profile_span{
+    position: absolute;
+    margin-top: -17px;
+    margin-left: 61px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#status_update_full_main .main1_profile_li{
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 93px;
+    font-size: 11px;
+}
+#status_update_full_main .bogi_move{
+    margin-top: 30px;
+}
+#status_update_full_main .main1_bogi{
+    width: 663px;
+    height: 36px;
+    margin-top: 7px;
+}
+#status_update_full_main .bogi{
+    margin-top: 35px;
+    position: absolute;
+    margin-left: 29px;
+    font-size: 12px;
+}
+#status_update_full_main .bogi_svg{
+    background-color: #fef0f1;
+    color: #c92f54;
+    fill: #de5f73;
+    width: 95px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 171px;
+    margin-top: 35px;
+    position: absolute;
+    height: 14px;
+}
+#status_update_full_main .bogi_svg > svg{
+    width: 12px;
+    height: 12px;
+}
+#status_update_full_main .bogi_span{
+    position: absolute;
+    margin-top: -16px;
+    margin-left: 14px;
+}
+#status_update_full_main .bogi_goal{
+    cursor: pointer;
+
+}
+#status_update_full_main .goal{
+    width: 12px;
+    height: 12px;
+    margin-left: 141px;
+    margin-top: -15px;
+}
+#status_update_full_main .bogi_goal > .goal_span{
+    position: absolute;
+    margin-left: 158px;
+    margin-top: -14px;
+    width: 177px;
+    font-size: 13px;
+}
+#status_update_full_main .bogi > .line{
+    width: 48px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #edeae9;
+    margin-top: -10px;
+    margin-left: 139px;
+}
+#status_update_full_main .percent{
+    margin-left: 198px;
+    margin-top: -11px;
+    color: #6d6e6f;
+}
+#status_update_full_main .lightning{
+    width: 14px;
+    height: 14px;
+    fill: #f1bd6c;
+    margin-left: 221px;
+    margin-top: -14px;
+}
+#status_update_full_main .bogi > .name{
+    margin-top: -15px;
+    margin-left: 141px;
+}
+#status_update_full_main .bogi > .day{
+    font-size: 12px;
+    margin-top: -15px;
+    margin-left: 141px;
+}
+#status_update_full_main .main1_contents{
+    margin-top: 30px;
+    margin-left: 27px;
+    font-size: 20px;
+}
+#status_update_full_main .main1_contents > .contents1{
+    margin-top: 29px;
+}
+#status_update_full_main .main1_comments{
+    width: 791px;
+    height: 234px;
+    border-top: 1px solid #6d6e6f;
+    margin-left: 16px;
+    margin-top: 9px;
+}
+#status_update_full_main .main1_comments > .comment_profile{
+    margin-top: -6px;
+}
+#status_update_full_main .main1_profile_move > .profile_name{
+    margin-left: 51px;
+    margin-top: 19px;
+}
+#status_update_full_main .main1_profile_move > .profile_date{
+    margin-left: 6px;
+    margin-top: 21px;
+}
+#status_update_full_main .main1_message{
+    width: 838px;
+    height: 163px;
+    border-top: 1px solid #cfcbcb;
+    background-color: #f9f8f8;
+    margin-left: -16px;
+    bottom: 0;
+    position: fixed;
+    margin-left: 0;
+}
+#status_update_full_main .main1_profile_move{
+    height: 238px;
+}
+#status_update_full_main #textarea_message{
+    background-color: rgb(255, 252, 252);
+    margin-left: 63px;
+    resize: none;
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid #cfcbcb;
+    width: 685px;
+    height: 80px;
+}
+#status_update_full_main .status_update_send_bt{
+    position: absolute;
+    width: 56px;
+    height: 30px;
+    margin-top: 55px;
+    margin-left: 11px;
+    border-radius: 8px;
+    border: none;
+}
+#status_update_full_main .main1_message > .comment_profile{
+    margin-top: -100px;
+}
+#status_update_full_main .cooperation{
+    color: #6d6e6f;
+    font-size: 12px;
+    margin-left: 13px;
+    margin-top: 30px;
+    float: left;
+}
+#status_update_full_main .main1_last_profile{ 
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    float: left;
+}
+#status_update_full_main .user_icon{
+    width: 27px;
+    height: 27px;
+    border: 1px dashed #6d6e6f;
+    fill: #6d6e6f;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+    padding: 3px;
+    margin-top: 24px;
+    float: left;
+}
+#status_update_full_main .last_comment_profile{
+    float: left;
+}
+#status_update_full_main .last_comment_profile > img{
+    margin-left: 10px;
+    margin-top: 24px;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+}
+#status_update_full_main .last_comment_profile1{
+    float: left;
+}
+#status_update_full_main .last_comment_profile1 > img{
+    margin-left: 10px;
+    margin-top: 24px;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+}
+#status_update_full_main .bell{
+    width: 18px;
+    height: 18px;
+    fill: #6d6e6f;
+    float: right;
+    margin-top: 26px;
+    margin-right: 73px;
+}
+#status_update_full_main .out{
+    font-size: 14px;
+    width: 37px;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: -20px;  
+}
+****************************************** 상태 업데이트 ****************************************************
+********************************************* 작업 ********************************************************
+#alarm_wam{
+    display: none;
+}
+#alarm_wam .full_screen{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+#alarm_wam .milestone{
+	width: 839px;
+    height: 904px;
+	position:absolute;
+	right: 0;
+    top: 130px;
+	background-color:white;
+	border-radius:4px;
+}
+#alarm_wam .milestone_header{
+	border-bottom:1px solid #edeae9;
+	display: flex;
+    align-items: center;
+	width:839px;
+	height:57px;
+	padding:0 24px;
+}
+#alarm_wam .milestone_header_left{
+	display: flex;
+    align-items: center;
+	width:392px;
+	height:56px;
+	padding:28px 0;
+}
+
+#alarm_wam .complete_btn{
+	width:97px;
+	height:28px;
+	padding-left:5px;
+	background-color:#fff;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+
+}
+#alarm_wam .complete_btn > span{
+	color:#1e1f21;
+	font-size: 12px;
+    line-height: 28px;
+}
+
+#alarm_wam .complete_btn > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#alarm_wam .milestone_header_right{
+	display: flex;
+    align-items: center;
+    top: 9px;
+    gap: 3px;
+	position:absolute;
+	right:1px;
+	width:252px;
+	height:57px;
+}
+#alarm_wam .milestone_header_right > div{
+	width:32px;
+	height:32px;	
+}
+#alarm_wam .milestone_header_right svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+}
+#alarm_wam .mywork_section{
+	padding: 0 8px;
+    position: absolute;
+    left: 120px;
+	width:125px;
+	height:28px;
+	font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color:#6d6e6f;
+}
+#alarm_wam .mywork_section > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#alarm_wam .milestone_content{
+	overflow: hidden;
+    overflow-y: scroll;
+	width: 839px;
+    height: 691px;
+    position: relative;
+}
+#alarm_wam .milestone_content_child01{
+	width:635px;
+	height: 110px;
+}
+#alarm_wam .milestone_content_child02{
+	width:652px;
+	height:439px;
+}
+#alarm_wam .milestone_content_child03{
+	width:845px;
+	height:45px;
+
+}
+#alarm_wam .milestone_content_child01_01{
+	width:824px;
+	height:44px;
+	background-color:#f9f8f8;
+	display:flex;
+	padding: 0 24px;
+    align-items: center;
+    gap: 8px;
+}
+
+#alarm_wam .milestone_content_child01_01 > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#alarm_wam .deadline{
+	font-size:14px;
+	color:#c92f54;
+
+}
+
+#alarm_wam .milestone_content_child01_01 > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#1e1f21;
+
+}
+#alarm_wam .release_btn{
+	position: absolute;
+    right: 6px;
+	width:54px;
+	height:36px;
+	padding:0 12px;
+	margin:0 0 0 8px;
+}
+#alarm_wam .release_btn > span{
+	color:#6d6e6f;
+	font-size: 14px;
+    line-height: 36px;
+}
+
+#alarm_wam .milestone_content_child01_03{
+	margin: 12px 0 8px 0;
+	width:652px;
+	height:46px;
+	padding: 0 24px;
+}
+#alarm_wam .milestone_content_title > input{
+	border: none;
+	width:652px;
+	height:46px;
+	padding:6px 12px;
+	font-size:24px;
+	font-weight:500;
+	line-height:32px;
+}
+#alarm_wam .milestone_content_child01_03 span{
+	font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+#alarm_wam .rowstructure{
+	margin-top: 15px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+}
+#alarm_wam .rowstructure_title{
+	width: 152px;
+	height:36px
+}
+#alarm_wam .rowstructure_title > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#alarm_wam .manager_right{
+	position:relative;
+	align-items: center;
+	display: flex;
+	gap:8px;
+	width:717px;
+	height:36px;
+}
+#alarm_wam .manager_right img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+#alarm_wam .rowstructure:not:nth-child(2) > .manager_right span{
+	font-size:14px;
+	color:#1e1f21;
+}
+#alarm_wam .manager_right svg{
+	position: relative;
+    left: 11px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#alarm_wam .second{
+	width:28px;
+	height:28px;
+	border:1px solid #de5f73;;
+	border-radius:50%;
+
+}
+#alarm_wam .second > svg{
+	width:16px;
+	height:16px;
+	fill:#de5f73;;
+	position: relative;
+    top: 3px;
+    left: 5px;
+}
+#alarm_wam .rowstructure_02{
+	margin-top: 10px;
+	width:652px;
+	height:68px;
+	padding:0 24px;
+	display:flex;
+}
+#alarm_wam .rowstructure_02 >span{
+    font-size: 12px;
+    line-height: 18px;
+}
+#alarm_wam .rowstructure_02 > .rowstructure_title_02{
+	width:152px;
+	height:64px;
+}
+#alarm_wam .rowstructure_02 > .rowstructure_title_02 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+#alarm_wam .rowstructure_02 >.manager_right_02{
+	width:717px;
+	height:68px;
+}
+#alarm_wam .project_add_title{
+	padding-left: 3px;
+	margin-bottom: 8px;
+	display: flex;
+    align-items: center;
+    gap: 6px;
+	width:200px;
+	height:24px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+
+}
+#alarm_wam .manager_right_02 .HighlightSol_MiniIcon{
+	width:12px;
+	height:12px;
+	fill:#f26fb2;
+
+}
+#alarm_wam .manager_right_02 span{
+	font-size: 14px;
+    line-height: 24px;
+    color:#1e1f21;
+
+}
+#alarm_wam .section{
+	width: 52px;
+}
+#alarm_wam .section > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+
+}
+#alarm_wam .section > svg{
+	position: relative;
+    left: 11px;
+    width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+#alarm_wam .HighlightSol_CompoundIcon{
+	width:16px;
+	height:12px;
+}
+#alarm_wam .project_add_btn{
+	padding-left: 3px;
+	width:105px;
+	height:28px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+	font-size: 12px;
+    line-height: 28px;
+    color:#6d6e6f;
+}
+#alarm_wam .small_XThickMiniIcon{
+	width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+#alarm_wam .rowstructure_03{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+#alarm_wam .rowstructure_title_03{
+	width: 139.41px;
+}
+
+#alarm_wam .rowstructure_title_03 > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#alarm_wam .manager_right_03{
+	font-size: 12px;
+    line-height: 28px;
+    color: #6d6e6f;
+}
+#alarm_wam .rowstructure_04{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+#alarm_wam .rowstructure_title_04{
+	width: 139.41px;
+}
+#alarm_wam .rowstructure_title_04 > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+#alarm_wam .rowstructure_05{
+	width:635px;
+	padding:0 24px;
+}
+#alarm_wam .rowstructure_05 > textarea{
+	border: none;
+	font-size:14px;
+	width:657px;
+	height:195px;
+    resize: none;
+}
+#alarm_wam .rowstructure_06{
+	width:652px;
+	height:45px;
+	padding:0 24px;
+	margin-bottom:20px;
+	margin-top:15px;
+}
+#alarm_wam .rowstructure_06 > button{
+	width:112px;
+	height:28px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	background-color:#f9f8f8;
+}
+#alarm_wam .rowstructure_06 > button > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+#alarm_wam .rowstructure_06 > button > span{
+	font-size: 12px;
+    line-height: 28px;
+}
+#alarm_wam .comment{
+	width:825px;
+	height:180px;
+	background-color:#f9f8f8;
+	padding:0 24px;
+}
+#alarm_wam .comment_title{
+	padding-top: 16px;
+    padding-bottom: 8px;
+	width:652px;
+	height: 57px;
+	border-bottom:1px solid #edeae9;
+}
+#alarm_wam .comment_title > span{
+	font-size: 14px;
+    line-height: 22px;
+    font-weight:500;
+
+}
+#alarm_wam .comment_story{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:44px;
+	padding:4px 0;
+
+}
+#alarm_wam .profile_img> img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+#alarm_wam .profile_name{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+    font-weight:700;
+
+}
+#alarm_wam .comment_story > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+}
+#alarm_wam .comment_view{
+	display: flex;
+    align-items: center;
+    gap: 9px;
+	width:683px;
+	height:74px;
+}
+#alarm_wam .comment_view > .profile_img{
+	width: 28px;
+    height: 28px;
+}
+#alarm_wam .comment_view_left{
+	width:583px;
+	height:42px;
+}
+#alarm_wam .comment_view_name{
+	position: relative;
+	display: flex;
+    gap: 9px;
+}
+#alarm_wam .comment_view_name > span:nth-child(1){
+	font-size: 14px;
+    line-height: 22px;
+    color:#1e1f21;
+}
+#alarm_wam .comment_view_name > span:nth-child(2){
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+}
+#alarm_wam .comment_view_name > svg{
+	position: absolute;
+    right: 1px;
+    top: 7px;
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+}
+#alarm_wam .comment_view_content{
+	margin-top: 4px;
+	width:583px;
+	height:22px;
+	font-size: 14px;
+    line-height: 22px;
+}
+#alarm_wam .milestone_update_date{
+	font-size: 12px;
+	color:#6d6e6f;
+}
+#alarm_wam .feedblockstroy{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:64px;
+	display:flex;
+}
+#alarm_wam .feedblockstroy_complete > svg{
+	width:32px;
+	height:32px;
+	fill:#58a182;
+}
+#alarm_wam .feedblockstroy_name{
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+    font-weight: 700;
+}
+#alarm_wam .feedblockstroy > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+}
+#alarm_wam .feedblockstroy_update_date{
+	font-size:12px;
+	color:#0d7f56;
+}
+#alarm_wam .milestone_footer{
+	border-top:1px solid #edeae9;
+	width:839px;
+	height:114px;
+	background-color:#f9f8f8;
+}
+#alarm_wam .milestone_comment_content{
+	width: 700px;
+    height: 64px;
+	padding:8px 24px;
+	display:flex;
+}
+#alarm_wam .milestone_comment_content > div:nth-child(1){
+	width: 36px;
+    height: 48px;
+}
+#alarm_wam .milestone_comment_input{
+	width:824px;
+	height:96px;
+}
+#alarm_wam .milestone_comment_input > textarea{
+	display:none;
+	width:824px;
+	height:96px;
+}
+#alarm_wam .milestone_comment_input{
+	width:826px;
+	height:104px;
+}
+#alarm_wam .milestone_comment_input_child02 > textarea{
+	width: 616px;
+    height: 48px;
+	border:1px solid #565557;
+	border-radius:6px;
+}
+#alarm_wam .milestone_Participants{
+	padding: 4px 24px 5px 64px;
+    align-items: center;
+    gap: 9px;
+	width:700px;
+	height:49px;
+	display:flex;
+
+}
+#alarm_wam .milestone_Participants_child01{
+	width:65.28px;
+	height:15px;
+	margin:4px 4px 4px 0;
+	font-size:12px;
+	color:#a2a0a2;
+}
+#alarm_wam .collaboration_profile{
+	align-items: center;
+    gap: 6px;
+	width:134px;
+	height:30px;
+	display:flex;
+}
+#alarm_wam .collaboration_profile img{
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+}
+#alarm_wam .add_collaboration_profile{
+	padding: 0 0 0 5px;
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+	border:1px dashed #a2a0a2;
+}
+#alarm_wam .add_collaboration_profile >svg{
+	width:12px;
+	height:12px;
+}
+#alarm_wam .plus_icon > svg{
+	margin-left: 12px;
+	width:12px;
+	height:12px;
+	fill:#a2a0a2;
+}
+#alarm_wam .milestone_Participants_child03{
+	position: absolute;
+    right: 23px;
+	width:135px;
+	height:36px;
+}
+#alarm_wam .milestone_Participants_child03 > svg{
+	width:16px;
+	height:16px;
+	fill:#a2a0a2;
+}
+#alarm_wam .milestone_Participants_child03 >span{
+	font-weight: 500;
+	font-size: 14px;
+    line-height: 36px;
+    color:#a2a0a2;
+}
+********************************************* 작업 ******************************************************** */

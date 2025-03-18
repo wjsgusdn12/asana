@@ -1,0 +1,1492 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Asana 목록</title>
+<!-- <link rel="stylesheet" href="http://localhost:9090/WebProject1/asana/asana_css/asana_main.css"/> -->
+<link rel="stylesheet" href="../asana_css/main_inventory.css" />
+<link rel="stylesheet" href="../asana_css/main_outline.css" />
+<link rel="stylesheet" href="../asana_css/asana_main.css" />
+<link rel="stylesheet" href="../asana_css/inventory_milestone_content.css"/>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+	integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+	crossorigin="anonymous"></script>
+	
+<script>
+
+	function func1() {
+		$(".black_screen").css('display', 'block');
+		$(".add_member_content").css('display', 'block');
+	}
+	function func2() {
+		$(".tatus_update_parent02").css('display', 'block');
+		$(".black_screen").css('display', 'block');
+	}
+	
+	//wam 세부창 : wam의 세부창 , 배경창 보여주기 
+	function clickWamOfDetails(){
+		$(".transparent_screen").css('display','block');
+		$(".milestone").css('display','block');
+	}
+	
+	//wam세부창 :work 의 세부창 띄워주기 
+	function clickWorkOfDetail(){
+		$(".transparent_screen").css('display','block');
+		$(".work").css('display','block');
+	}
+	
+	
+	
+	//wam세부창 : 담당자 제거클릭시  담당자 삭제 
+	function removeAssignee(){
+		$(".manager_right").css('display','none');
+		$(".no_contact_person").css('display','flex');
+	}
+	//wam 세부창 : 담당자 없음 상태시 멤버 리스트 보여주기 
+	function managerOfAssign(){
+		$(".noContactPerson_clickPopUp").css('display','block');
+		$(".no_contact_person").css('display','none');
+		$(".transparent_screen").css('display','block');
+		$(".milestone_transparent_screen").css('display','block');
+	}
+	
+	$(function(){
+		//wam 세부창 : 담당자 없음 클릭시 메서드 실행 
+		$(".no_contact_person").click(function(){
+			managerOfAssign();
+		});
+		
+		//wam 세부창 : 담당자제거 메서드 실행 
+		$(".wam_contact_person_svg").click(function(){
+			removeAssignee();
+		});
+	});
+	
+	
+	//wam 세부창 : 마감일 없애기 
+	function removeDeadline(){
+		$(".deadline_right").css('display','none');
+		$(".no_deadline").css('display','flex');
+	}
+	
+	
+	//wam 세부창 : 1.마일스톤을 프로젝트에서 제거 
+	function removeProject(){
+		$(".project_add_title").css('display','none');
+	}
+	
+	//wam 세부창 : 2.마일스톤을 프로젝트 추가 
+	function clickAddProject(){
+		$(".AddProject_click_Projectlist").css('display','block');
+		$(".transparent_screen").css('display','block');
+		$(".milestone_transparent_screen").css('display','block');
+	}
+	
+	//wam 세부창 : 1.종속관계 추가 기능 
+	function clickAddDependencies(){
+		$(".clickingDependencies").css('display','block');
+		$(".transparent_screen").css('display','block');
+		$(".milestone_transparent_screen").css('display','block');
+		
+	}
+	
+	//wam 세부창 : 2.선행 , 종속 종류 선택 
+	function clickPriorWork(){
+		$(".typeOfWork_select").css('display','block');
+		$(".clickingDependencies_list").css('display','none');
+	}
+	
+	//wam 세부창 : 3. 종속관계 프로젝트 리스트 
+	function clickselectTask_input(){
+		$(".typeOfWork_select").css('display','none');
+		$(".clickingDependencies_list").css('display','block');
+	}
+	
+	//wam 세부창 : 담당자 svg 클릭시 리스트 보여주기 
+	function clickAssignmentOfSubTask(){
+		//$(".assignmentOfmanager").css('display','block');
+		if( $(this).parent().parent().find(".assignmentOfmanager").css('display')=='none' ) {
+			$(this).parent().parent().find(".assignmentOfmanager").css('display','block');
+			$(this).parent().parent().find(".assignmentOfmanager_list").css('display','block');
+		} else {	// 'block'
+			$(this).parent().parent().find(".assignmentOfmanager").css('display','none');
+			$(this).parent().parent().find(".assignmentOfmanager_list").css('display','none');
+		}
+	}
+	
+	//wam 세부창 : 하위작업 담당자 선택 , 리스트 닫기 
+	function closeAssignmentOfSubTask(){
+		$(".assignmentOfmanager").css('display','none');
+		$(".assignmentOfmanager_list").css('display','none');
+	}
+	//wam 세부창 : 하위작업 담당자 선택 , 리스트 열기 
+	function show_Manager_Deadline(){
+		$(".Add_subtask_save_deadline").css('display','block');
+		$(".Add_subtask_save_manager").css('display','block');
+	}
+	
+	
+
+	$(function() {
+		/* 			$("#share_button").click(function(){
+		 window.location.href = "http://localhost:9090/WebProject1/asana/add_member_page.html";
+		 }); */
+		$("#share_button").click(function() {
+			func1();
+		});
+		 
+		$(".list-image").click(function() {
+			func1();
+		});
+		
+		$(".status_update_content").click(function() {
+			func2();
+		});
+
+		$(".black_screen").click(function() {
+			$(".black_screen").css('display', 'none');
+			$(".add_member_content").css('display', 'none');
+			$(".tatus_update_parent02").css('display', 'none');
+
+		});
+		
+		$(".add_member_child01_icon > svg:last-child").click(function() {
+			$(".black_screen").css('display', 'none');
+			$(".add_member_content").css('display', 'none');
+		});
+		//div를 누르면 보여주기 
+		
+		$("#member_profile_view").click(function() {
+			func1();
+		});
+
+		/* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 */
+		$(".star-center").mouseenter(function() {
+			$(".icon20-star").css('fill', '#fcbd01')
+		});
+		
+		$(".star-center").mouseleave(function() {
+			$(".icon20-star").css('fill', 'gray')
+		});
+		
+		$(".star-center").click(function() {
+			// .on 은 토글.  --> .hasClass() , .addClass() , .removeClass(), toggleClass()
+			$(this).toggleClass("on");
+			/* if($(this).hasClass("on")) {
+			$(this).removeClass("on");
+			} else {
+			$(this).addClass("on");
+			} */
+		});
+		
+		/* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 *//* 별 온오프 제이쿼리 */
+		$(".spread_sheet_Header_Structure").click(function(){
+			clickWamOfDetails();
+		});
+		
+		
+		//전체 배경을 클릭시 세부 wam 창 닫기 
+		$(".transparent_screen").click(function(){
+			$(".transparent_screen").css('display','none');
+			$(".milestone").css('display','none');
+			$(".noContactPerson_clickPopUp").css('display','none');
+			$(".clickingDependencies").css('display','none');
+			$(".work").css('display','none');
+		
+		});
+		
+		
+		
+		
+		
+		//wam 세부창 : wam의 여백 누를시 display none 처리 
+		$(".milestone_transparent_screen").click(function(){
+			$(".noContactPerson_clickPopUp").css('display','none');
+			$(".AddProject_click_Projectlist").css('display','none');
+			$(".milestone_transparent_screen").css('display','none');
+			$(".clickingDependencies").css('display','none');
+		});
+		
+		//wam 세부창 : 마감일 없애는 메서드 실행하기 
+		$(".deadline_remove_svg").click(function(){
+			removeDeadline();
+		});
+		
+		//wam: 세부창 : 1.wam을 프로젝트에서 제거 
+		$(".delete_project_svg").click(function(){
+			removeProject();
+		});
+		
+		//wam 세부창 : 2.wam을 프로젝트에 추가하기 
+		$(".project_add_title_under_projectAddBtn").click(function(){
+			clickAddProject();
+		});
+		
+		//wam 세부창 : 1.종속 관계 추가 버튼 클릭시 메서드 실행 
+		$(".manager_right_03").click(function(){
+			clickAddDependencies();
+		});
+		
+		// wam 세부창 :  2.선행 , 종속 종류 선택  메서드 실행 
+		$(".typeOfWork").click(function(){
+			clickPriorWork();
+		});
+		
+		//wam 세부창 : 3. 종속관계 프로젝트 리스트 메서드 실행 
+		$(".selectTask_input").click(function(){
+			clickselectTask_input();
+		})
+		
+		//wam 세부창 : 1. 하위작업 버튼 클릭시 html코드 생성 
+		$(".rowstructure_06_btn").click(function() {
+			//alert("!");
+			let str = `<div class="Add_subtask_parent">
+							<div class="Add_subtask">
+									<div class="Add_subtask_checkSvg">
+								<svg class="HighlightSol HighlightSol--core CompoundIcon--small CompoundIcon TaskCompletionCompoundIcon TaskCompletionStatusIndicator--incomplete TaskCompletionStatusIndicator TaskRowCompletionStatus-taskCompletionIcon--incomplete TaskRowCompletionStatus-taskCompletionIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+								<path d="M31,16c0,8.3-6.7,15-15,15S1,24.3,1,16S7.7,1,16,1S31,7.7,31,16z" class="check_CompoundIcon-outer"></path>
+								<path d="M13.4,22.1c-0.3,0-0.5-0.1-0.7-0.3l-3.9-3.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22,13.7,22.1,13.4,22.1z" class="check_CompoundIcon-inner"></path>
+								</svg>
+							</div>
+							<div class="Add_subtask_title">
+								<input name="Add_subtask_title" type="text">
+							</div>
+							<div class="Add_subtask_deadline">
+								<svg class="HighlightSol HighlightSol--core Icon CalendarIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M24,2V1c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H10V1c0-0.6-0.4-1-1-1S8,0.4,8,1v1C4.7,2,2,4.7,2,8v16c0,3.3,2.7,6,6,6h16c3.3,0,6-2.7,6-6V8C30,4.7,27.3,2,24,2z M8,4v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4h12v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4c2.2,0,4,1.8,4,4v2H4V8C4,5.8,5.8,4,8,4z M24,28H8c-2.2,0-4-1.8-4-4V12h24v12C28,26.2,26.2,28,24,28z"></path></svg>
+							</div>
+							<div class="Add_subtask_manager">
+								<svg class="HighlightSol HighlightSol--core Icon UserIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16,18c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S20.4,18,16,18z M16,4c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S19.3,4,16,4z M29,32c-0.6,0-1-0.4-1-1v-4.2c0-2.6-2.2-4.8-4.8-4.8H8.8C6.2,22,4,24.2,4,26.8V31c0,0.6-0.4,1-1,1s-1-0.4-1-1v-4.2C2,23,5,20,8.8,20h14.4c3.7,0,6.8,3,6.8,6.8V31C30,31.6,29.6,32,29,32z"></path></svg>
+							</div>
+							<div class="assignmentOfmanager">
+								<div class="assignmentOfmanager_title">
+									<span>담당자</span>
+									<svg class="assignmentOfmanager_title_XIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M18.1,16L27,7.1c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L16,13.9l-8.9-9C6.5,4.3,5.6,4.3,5,4.9S4.4,6.4,5,7l8.9,8.9L5,24.8c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l8.9-8.9l8.9,8.9c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L18.1,16z"></path></svg>
+								</div>
+								<div class="assignmentOfmanager_select">
+									<div class="assignmentOfmanager_select_input">
+										<input name="manager" type="text" placeholder="이름 또는 이메일"/>
+										<svg class="HighlightSol HighlightSol--core CompoundIcon--xsmall CompoundIcon XCircleCompoundIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23,12c0,6.1-4.9,11-11,11S1,18.1,1,12S5.9,1,12,1S23,5.9,23,12z" class="CompoundIcon-outer"></path><path d="M13.4,12l4.3-4.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L12,10.6L7.7,6.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l4.3,4.3l-4.3,4.3c-0.4,0.4-0.4,1,0,1.4C6.5,17.9,6.7,18,7,18s0.5-0.1,0.7-0.3l4.3-4.3l4.3,4.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L13.4,12z" class="CompoundIcon-inner"></path></svg>
+									</div>
+									또는 
+									<div class="assignmentOfmanager_select_assignedToMe">나에게 배정</div>
+								</div>
+							</div>
+							<div class="assignmentOfmanager_list">
+								<div class="assignmentOfmanager_list_select">
+									<img src="../../img01/짱구1.jpg">
+									<div class="assignmentOfmanager_list_select_memberName">지숭</div>
+									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+								</div>
+								<div class="assignmentOfmanager_list_select">
+									<img src="../../img01/짱구2.jpg">
+									<div class="assignmentOfmanager_list_select_memberName">현우</div>
+									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+								</div>
+								<div class="assignmentOfmanager_list_select">
+									<img src="../../img01/철수.png">
+									<div class="assignmentOfmanager_list_select_memberName">길주</div>
+									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+								</div>
+								<div class="invite_team_members_by_email">
+									<svg class="HighlightSol HighlightSol--core Icon TypeaheadActionItemStructure-icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+									<span>이메일로 팀원 초대</span>
+								</div>
+							</div>
+						</div>
+				      </div>`;
+			$(".rowstructure_06").before(str);
+		});
+		
+		//wam 세부창 : 2.하위작업 버튼 클릭시 html코드 생성 후 메서드 실행 
+		$(document).on("click",".Add_subtask_manager",clickAssignmentOfSubTask);
+		$(document).on("click",".Add_subtask_save_manager",clickAssignmentOfSubTask);
+		
+
+		
+		//wam 세부창 : 하위작업 담당자 리스트 창 닫기 
+		$(".assignmentOfmanager_title_XIcon").click(function(){
+			closeAssignmentOfSubTask();
+			
+		});
+		
+		
+		//길주 plus_icon_coooperation
+		$(".plus_icon_coooperation> svg").click(function() { 
+			$(".show_cooperation").css("display","flex");
+			$(".assignmentOfmanager_list").css("display","block");
+		});
+		// 협업참여자 안에서 x 버튼
+		$(".bi-x").click(function() { 
+			alert("!");
+		});
+		// 협업참여자 추가 후 프로필 넣기
+		$(".assignmentOfmanager_list_select").click(function() { 
+			$(".show_cooperation").hide();
+			$(".assignmentOfmanager_list").hide();
+			$(".member_cooperation").show();
+		});
+		
+		//wam의 세부창 보여주는 메서드 실행 
+		$(".spread_sheet_Header_Structure_work").click(function(){
+			clickWorkOfDetail();
+		});
+		
+		//상태 업데이트  x 버튼 누를시 창 닫기 
+		$(".Icon_XIcon").click(function(){
+			alert("!");
+			$(".tatus_update_parent02").css('display','none');
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	});
+	
+	
+
+	$(function() {
+		$(".click_status_update").click(function() {
+			//$(".status_update_box").toggleClass("on");
+			$(this).find(".status_update_box").toggleClass("on");
+		});
+		$(".progress_blue").click(function() { // 보류 중 눌렀을 때
+			$(".progress_change_green").removeClass("on");
+			$(".progress_change_yellow").removeClass("on");
+			$(".progress_change_red").removeClass("on");
+			$(".progress_change_complete").removeClass("on");
+			$(".progress_change_blue").removeClass("on");
+			$(".progress_change_blue").addClass("on");
+			$("#status_update_span").css("display", "none");
+		});
+		$(".progress_yellow").click(function() { // 위험함 눌렀을 때
+			$(".progress_change_green").removeClass("on");
+			$(".progress_change_yellow").removeClass("on");
+			$(".progress_change_red").removeClass("on");
+			$(".progress_change_complete").removeClass("on");
+			$(".progress_change_blue").removeClass("on");
+			$(".progress_change_yellow").addClass("on");
+			$("#status_update_span").css("display", "none");
+		});
+		$(".progress_green").click(function() { // 계획대로 진행 중 눌렀을 때
+			$(".progress_change_green").removeClass("on");
+			$(".progress_change_yellow").removeClass("on");
+			$(".progress_change_red").removeClass("on");
+			$(".progress_change_complete").removeClass("on");
+			$(".progress_change_blue").removeClass("on");
+			$(".progress_change_green").addClass("on");
+			$("#status_update_span").css("display", "none");
+		});
+		$(".progress_red").click(function() { // 계획에서 벗어남 눌렀을 때click_status_update
+			$(".progress_change_green").removeClass("on");
+			$(".progress_change_yellow").removeClass("on");
+			$(".progress_change_red").removeClass("on");
+			$(".progress_change_complete").removeClass("on");
+			$(".progress_change_blue").removeClass("on");
+			$(".progress_change_red").addClass("on");
+			$("#status_update_span").css("display", "none");
+		});
+		$(".progress_complete").click(function() { // 완료 눌렀을 때
+			$(".progress_change_green").removeClass("on");
+			$(".progress_change_yellow").removeClass("on");
+			$(".progress_change_red").removeClass("on");
+			$(".progress_change_complete").removeClass("on");
+			$(".progress_change_blue").removeClass("on");
+			$(".progress_change_complete").addClass("on");
+			$("#status_update_span").css("display", "none");
+		});
+
+	});
+</script>
+</head>
+<body>
+	<div class="transparent_screen" style="display:none"></div>
+	<div id="header">
+		<div id="menu_button">
+			<svg class="Icon BurgerExpand" viewBox="0 0 32 32" aria-hidden="true"
+				focusable="false">
+				<path
+					d="M0 4.5A1.5 1.5 0 0 1 1.5 3h29a1.5 1.5 0 1 1 0 3h-29A1.5 1.5 0 0 1 0 4.5ZM30.5 15h-29a1.5 1.5 0 1 0 0 3h29a1.5 1.5 0 1 0 0-3Zm0 12h-29a1.5 1.5 0 1 0 0 3h29a1.5 1.5 0 1 0 0-3Z"></path></svg>
+		</div>
+		<div id="creation_button">
+			<div>
+				<svg class="MiniIcon OmnibuttonButtonCard-icon PlusMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+					<path
+						d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+			</div>
+			<span>생성</span>
+		</div>
+		<div id="search_div">
+			<svg
+				class="Icon TopbarSearchTypeahead-icon--isInverse TopbarSearchTypeahead-icon MagnifyerIcon"
+				viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+				<path
+					d="M13.999 28c3.5 0 6.697-1.3 9.154-3.432l6.139 6.139a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414l-6.139-6.139A13.93 13.93 0 0 0 27.999 14c0-7.72-6.28-14-14-14s-14 6.28-14 14 6.28 14 14 14Zm0-26c6.617 0 12 5.383 12 12s-5.383 12-12 12-12-5.383-12-12 5.383-12 12-12Z"></path></svg>
+			<span>검색</span>
+		</div>
+		<div id="experience25">체험 25일 남음</div>
+		<div id="charge_info">
+			<span>청구 정보 추가</span>
+		</div>
+		<div id="question_button">
+			<svg class="MiniIcon QuestionMarkMiniIcon" viewBox="0 0 24 24"
+				aria-hidden="true" focusable="false">
+						<path
+					d="M13.749 20a1.75 1.75 0 1 1-3.499.001A1.75 1.75 0 0 1 13.75 20Zm-1.75-18c-4.139 0-6 3-6 5.131V8a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-.869c0-.45.509-2.131 3-2.131 2.783 0 3 2.095 3 2.736 0 1.375-1.021 2.073-1.463 2.311-1.209.651-3.037 1.635-3.037 4.347V15.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1.106c0-.835.276-1.068 1.461-1.705C16.863 11.665 18 9.813 18 7.737c0-2.763-1.878-5.737-6-5.737Z"></path></svg>
+
+		</div>
+
+		<div id="me_button"
+			style="background-image: url('https://s3.us-east-1.amazonaws.com/asana-user-private-us-east-1/assets/1208631811152676/profile_photos/1208631809111502/629b06f79f08400c639b3b99258ca592_36x36.png')">
+		</div>
+		<svg class="MiniIcon ArrowDownMiniIcon" viewBox="0 0 24 24"
+			aria-hidden="true" focusable="false">
+					<path
+				d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+	</div>
+	<div id="content">
+		<div id="sidebar">
+			<div class="sidebar_item active">
+				<svg class="NavIcon HomeNavIcon" viewBox="0 0 40 40"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M37.9,15L22.2,3.8c-1.3-1-3.1-1-4.4-0.1L2.2,14.4c-0.7,0.5-0.9,1.4-0.4,2.1c0.5,0.7,1.4,0.9,2.1,0.4L6,15.4v12.3c0,4.6,3.7,8.3,8.3,8.3h11.4c4.6,0,8.3-3.7,8.3-8.3V15.9l2.1,1.5c0.3,0.2,0.6,0.3,0.9,0.3c0.5,0,0.9-0.2,1.2-0.6C38.7,16.4,38.5,15.5,37.9,15z M31,27.7c0,2.9-2.4,5.3-5.3,5.3H14.3C11.4,33,9,30.6,9,27.7V13.3l10.6-7.2c0.2-0.2,0.5-0.2,0.8,0L31,13.7V27.7z"></path></svg>
+				<span>홈</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon CheckNavIcon" viewBox="0 0 40 40"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M20,2.5C10.4,2.5,2.5,10.4,2.5,20S10.4,37.5,20,37.5S37.5,29.6,37.5,20S29.6,2.5,20,2.5z M20,34.5C12,34.5,5.5,28,5.5,20S12,5.5,20,5.5S34.5,12,34.5,20S28,34.5,20,34.5z M27.7,15c0.6,0.6,0.6,1.5,0,2.1l-10,10c-0.2,0.2-0.6,0.3-1,0.3c-0.4,0-0.8-0.1-1.1-0.4l-4.1-4.1c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l3.1,3.1l8.9-8.9C26.2,14.4,27.1,14.4,27.7,15z"></path></svg>
+				<span>내 작업</span>
+			</div>
+			<div class="sidebar_item">
+				<svg
+					class="CompoundNavIcon BellNotificationCompoundIcon SidebarTopNavLinks-bellNotificationCompoundIcon--red"
+					viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+					<path d="M31 14a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"
+						class="CompoundNavIcon-outer"></path>
+					<path
+						d="M15.422 34h9.156A4.998 4.998 0 0 1 20 37a4.998 4.998 0 0 1-4.578-3Zm20.037-9.007A5.483 5.483 0 0 1 34 21.263v-2.7a1.5 1.5 0 0 0-3 0v2.7a8.48 8.48 0 0 0 2.254 5.765l.813.882a.62.62 0 0 1 .117.701.62.62 0 0 1-.595.39H6.41a.621.621 0 0 1-.595-.39.623.623 0 0 1 .118-.702l.812-.88a8.482 8.482 0 0 0 2.254-5.766V16a10.976 10.976 0 0 1 10.5-10.989 1.499 1.499 0 0 0 1.431-1.565c-.036-.827-.719-1.499-1.565-1.431A13.97 13.97 0 0 0 6 16v5.263a5.484 5.484 0 0 1-1.459 3.731l-.812.88a3.6 3.6 0 0 0-.662 3.939A3.603 3.603 0 0 0 6.41 32h27.18a3.603 3.603 0 0 0 3.343-2.187 3.6 3.6 0 0 0-.661-3.938l-.813-.882Z"
+						class="CompoundNavIcon-inner"></path></svg>
+				<span>수신함</span>
+			</div>
+			<div class="separator"></div>
+			<div class="category with_plus">
+				<span>인사이트</span>
+				<svg class="MiniIcon PlusMiniIcon" viewBox="0 0 24 24"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon ReportingNavIcon" viewBox="0 0 40 40"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M34.5,6c-2.48,0-4.5,2.02-4.5,4.5,0,1.13.43,2.14,1.11,2.93l-4.28,7.55s-.03.06-.04.09c-.26-.05-.52-.08-.79-.08-.85,0-1.64.25-2.32.66l-4.46-3.65c.17-.48.28-.98.28-1.51,0-2.48-2.02-4.5-4.5-4.5s-4.5,2.02-4.5,4.5c0,.94.29,1.81.79,2.54l-4.51,6.17c-.41-.12-.83-.21-1.28-.21-2.48,0-4.5,2.02-4.5,4.5s2.02,4.5,4.5,4.5,4.5-2.02,4.5-4.5c0-.94-.29-1.81-.79-2.54l4.51-6.17c.41.12.83.21,1.28.21.85,0,1.64-.25,2.32-.66l4.46,3.65c-.17.48-.28.98-.28,1.51,0,2.48,2.02,4.5,4.5,4.5s4.5-2.02,4.5-4.5c0-1.13-.43-2.15-1.12-2.94.02-.03.05-.06.07-.09l4.27-7.54c.26.05.51.08.78.08,2.48,0,4.5-2.02,4.5-4.5s-2.02-4.5-4.5-4.5ZM5.5,31c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Zm9.5-13c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Zm11,9c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Zm8.5-15c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Z"></path></svg>
+				<span>보고서</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon PortfolioNavIcon" viewBox="0 0 40 40"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M35,12c1.7,0,3,1.3,3,3v16c0,2.8-2.2,5-5,5H7c-2.8,0-5-2.2-5-5V7c0-1.7,1.3-3,3-3h11.9c0.4,0,0.8,0.2,0.9,0.6  l2.4,5.6c0.5,1.1,1.6,1.8,2.8,1.8H35z M35,15v16c0,1.1-0.9,2-2,2H7c-1.1,0-2-0.9-2-2V15H35z M17.8,12c-0.1-0.2-0.2-0.4-0.3-0.7  L15.6,7H5v5H17.8z"></path></svg>
+				<span>포트폴리오</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon GoalNavIcon" viewBox="0 0 40 40"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M35.6,30.1l-6.2-9.6C31,18.5,32,15.9,32,13c0-6.6-5.4-12-12-12C13.4,1,8,6.4,8,13c0,2.9,1,5.5,2.7,7.6l-6.2,9.6  c-1.2,1.8-1.3,4-0.2,5.9c1,1.9,2.9,3,5.1,3h21.5c2.1,0,4-1.1,5.1-3S36.7,31.9,35.6,30.1z M11,13c0-5,4-9,9-9c5,0,9,4,9,9  c0,1.8-0.5,3.5-1.4,4.9l-2.7-4.2c-1.1-1.6-2.9-2.6-4.8-2.6c-1.9,0-3.7,1-4.8,2.6l-2.7,4.2C11.5,16.5,11,14.8,11,13z M25.5,20.2  C23.9,21.3,22.1,22,20,22s-3.9-0.7-5.5-1.9l3.2-4.8c0.5-0.8,1.4-1.2,2.3-1.2c0.9,0,1.8,0.5,2.3,1.2L25.5,20.2z M33.2,34.6  c-0.5,0.9-1.4,1.4-2.4,1.4H9.2c-1,0-1.9-0.5-2.4-1.4c-0.5-0.9-0.4-1.9,0.1-2.8l6-9.1c2,1.5,4.4,2.3,7.1,2.3c2.7,0,5.1-0.9,7.1-2.3  l6,9.1C33.6,32.6,33.7,33.7,33.2,34.6z"></path></svg>
+				<span>목표</span>
+			</div>
+			<div class="category with_plus">
+				<span>프로젝트</span>
+				<svg class="MiniIcon PlusMiniIcon" viewBox="0 0 24 24"
+					aria-hidden="true" focusable="false">
+					<path
+						d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+			</div>
+			<div class="sidebar_item">
+				<svg
+					class="MiniIcon--large MiniIcon ColorFillIcon ColorFillIcon--colorAqua SmallSquircleMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+					<path
+						d="M10.4,4h3.2c2.2,0,3,0.2,3.9,0.7c0.8,0.4,1.5,1.1,1.9,1.9s0.7,1.6,0.7,3.9v3.2c0,2.2-0.2,3-0.7,3.9c-0.4,0.8-1.1,1.5-1.9,1.9s-1.6,0.7-3.9,0.7h-3.2c-2.2,0-3-0.2-3.9-0.7c-0.8-0.4-1.5-1.1-1.9-1.9c-0.4-1-0.6-1.8-0.6-4v-3.2c0-2.2,0.2-3,0.7-3.9C5.1,5.7,5.8,5,6.6,4.6C7.4,4.2,8.2,4,10.4,4z"></path></svg>
+				<span>협업툴 개발</span>
+			</div>
+			<div class="sidebar_item">
+				<svg
+					class="MiniIcon--large MiniIcon ColorFillIcon ColorFillIcon--colorMagenta SmallSquircleMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+					<path
+						d="M10.4,4h3.2c2.2,0,3,0.2,3.9,0.7c0.8,0.4,1.5,1.1,1.9,1.9s0.7,1.6,0.7,3.9v3.2c0,2.2-0.2,3-0.7,3.9c-0.4,0.8-1.1,1.5-1.9,1.9s-1.6,0.7-3.9,0.7h-3.2c-2.2,0-3-0.2-3.9-0.7c-0.8-0.4-1.5-1.1-1.9-1.9c-0.4-1-0.6-1.8-0.6-4v-3.2c0-2.2,0.2-3,0.7-3.9C5.1,5.7,5.8,5,6.6,4.6C7.4,4.2,8.2,4,10.4,4z"></path></svg>
+				<span>개발자로 취업하기</span>
+			</div>
+			<div class="sidebar_item with_gt">
+				<svg
+					class="PortfolioColorIcon-duotoneBaseLayer ColorFillIcon ColorFillIcon--colorIndigo"
+					viewBox="0 0 20 20" aria-labelledby="titlelui_46" role="img"
+					focusable="false">
+					<title id="titlelui_46">포트폴리오</title><path
+						d="M 0 2.5 C 0 1.65 0.65 1 1.5 1 H 7.7 C 7.9 1 8.05 1.1 8.15 1.3 L 9.6 4.2 C 9.85 4.7 10.35 5.05 10.95 5.05 H 18.5 C 19.35 5.05 20 5.7 20 6.55 V 16.55 C 20 17.95 18.9 19.05 17.5 19.05 H 2.5 C 1.1 19.05 0 17.95 0 16.55 V 2.5 Z"></path></svg>
+				<!-- <svg class="PortfolioColorIcon-duotoneTopLayer" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M 1.5 1 C 0.65 1 0 1.65 0 2.5 V 7.5 C 0 6.65 0.65 6 1.5 6 H 18.5 C 19.35 6 20 6.65 20 7.5 V 6.5 C 20 5.65 19.35 5 18.5 5 H 10.95 C 10.4 5 9.85 4.7 9.6 4.15 L 8.15 1.25 C 8.05 1.1 7.9 1 7.7 1 H 1.5 Z"></path></svg> -->
+				<span>취업</span>
+				<svg
+					class="MiniIcon--small MiniIcon SidebarFlyoutSplitDropdownButton-flyoutChevron ArrowRightMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+					<path
+						d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+			</div>
+			<div class="sidebar_item with_gt">
+				<svg
+					class="PortfolioColorIcon-duotoneBaseLayer ColorFillIcon ColorFillIcon--colorMagenta"
+					viewBox="0 0 20 20" aria-labelledby="titlelui_49" role="img"
+					focusable="false">
+					<title id="titlelui_49">포트폴리오</title><path
+						d="M 0 2.5 C 0 1.65 0.65 1 1.5 1 H 7.7 C 7.9 1 8.05 1.1 8.15 1.3 L 9.6 4.2 C 9.85 4.7 10.35 5.05 10.95 5.05 H 18.5 C 19.35 5.05 20 5.7 20 6.55 V 16.55 C 20 17.95 18.9 19.05 17.5 19.05 H 2.5 C 1.1 19.05 0 17.95 0 16.55 V 2.5 Z"></path></svg>
+				<!-- <svg class="PortfolioColorIcon-duotoneTopLayer" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M 1.5 1 C 0.65 1 0 1.65 0 2.5 V 7.5 C 0 6.65 0.65 6 1.5 6 H 18.5 C 19.35 6 20 6.65 20 7.5 V 6.5 C 20 5.65 19.35 5 18.5 5 H 10.95 C 10.4 5 9.85 4.7 9.6 4.15 L 8.15 1.25 C 8.05 1.1 7.9 1 7.7 1 H 1.5 Z"></path></svg> -->
+				<span>개발</span>
+				<svg
+					class="MiniIcon--small MiniIcon SidebarFlyoutSplitDropdownButton-flyoutChevron ArrowRightMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+					<path
+						d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+			</div>
+			<div class="category">
+				<span>팀</span>
+			</div>
+			<div class="sidebar_item with_gt">
+				<svg
+					class="Icon SidebarItemIcon--iconWithoutCustomizationColor UserFillIcon"
+					viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+					<path
+						d="M31,30H11c-.552,0-1-.448-1-1v-2c0-3.866,3.134-7,7-7h8c3.866,0,7,3.134,7,7v2c0,.552-.448,1-1,1Zm-23-3c0-2.029,.676-3.901,1.814-5.407,.495-.656,.023-1.593-.799-1.593h-2.015c-3.866,0-7,3.134-7,7v2c0,.552,.448,1,1,1H7c.552,0,1-.448,1-1v-2ZM28.5,10c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5,3.358,7.5,7.5,7.5,7.5-3.358,7.5-7.5Zm-17,0c0-2.125,.698-4.087,1.878-5.67,.431-.579,.176-1.413-.522-1.594-1.074-.278-2.24-.324-3.45-.067-2.917,.619-5.248,2.996-5.779,5.93-.86,4.758,2.773,8.901,7.373,8.901,.632,0,1.245-.08,1.831-.23,.71-.181,.984-1.013,.546-1.601-1.179-1.582-1.877-3.544-1.877-5.669Z"></path></svg>
+				<span>내 작업 공간</span>
+				<svg
+					class="MiniIcon--small MiniIcon SidebarFlyoutSplitDropdownButton-flyoutChevron ArrowRightMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+					<path
+						d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+			</div>
+			<div class="sidebar_item">
+				<div>
+					<svg
+						class="Icon ButtonThemeablePresentation-leftIcon SidebarInvite-icon EmailIcon"
+						viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+						<path
+							d="M25.998 4h-20c-3.309 0-6 2.691-6 6v12c0 3.309 2.691 6 6 6h20c3.31 0 6-2.691 6-6V10c0-3.309-2.69-6-6-6Zm-20 2h20c.74 0 1.424.215 2.02.567L16.704 17.879a1 1 0 0 1-1.414 0L3.98 6.567A3.96 3.96 0 0 1 6 6Zm24 16c0 2.206-1.794 4-4 4h-20c-2.206 0-4-1.794-4-4V10c0-.74.215-1.424.567-2.019l11.312 11.313a2.993 2.993 0 0 0 2.121.876 2.99 2.99 0 0 0 2.121-.877L29.431 7.981A3.96 3.96 0 0 1 29.998 10v12Z"></path></svg>
+					<span>팀원 초대</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<div id="main_outline">
+				<div id="header">
+					<div id="header1">
+						<div id="employment">
+							<svg class="MiniIcon PortfolioGenericMiniIcon"
+								viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+						<path
+									d="M21,6h-8.4c-0.2,0-0.3,0-0.5-0.1c-0.1-0.1-0.3-0.2-0.4-0.3L9.8,2.5C9.8,2.3,9.6,2.2,9.5,2.1S9.2,2,9,2H1C0.7,2,0.5,2.1,0.3,2.3C0.1,2.5,0,2.7,0,3v16c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V9C24,7.3,22.7,6,21,6z M2,4h6.4l1.2,2H2V4L2,4L2,4z M22,19c0,0.6-0.4,1-1,1H3c-0.6,0-1-0.4-1-1V8h19c0.6,0,1,0.4,1,1V19z"></path></svg>
+							<span>취업 </span>
+							<svg
+								class="MiniIcon NavigationBreadcrumbContent-divider SlashMiniIcon"
+								viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+						<path
+									d="M16.21 1.837a1.002 1.002 0 0 0-1.307.541L7.25 20.856a1.001 1.001 0 0 0 1.848.766l7.654-18.478a1.001 1.001 0 0 0-.54-1.307Z"></path></svg>
+						</div>
+						<div style="width: auto;" class="list-image">
+							<img style="z-index: 4;" class="img-small"
+								src="..\..\img01\짱구1.jpg"> <img
+								style="z-index: 3; margin-left: -10px;" class="img-small"
+								src="..\..\img01\짱구2.jpg"> <img
+								style="z-index: 2; margin-left: -10px;" class="img-small"
+								src="..\..\img01\철수.png">
+						</div>
+						<div id="share_button">
+							<svg class="MiniIcon LockFillMiniIcon" viewBox="0 0 24 24"
+								aria-hidden="true" focusable="false">
+						<path
+									d="M19.499 8h-1.5V6c0-3.309-2.691-6-6-6s-6 2.691-6 6v2h-1.5a2.503 2.503 0 0 0-2.5 2.5v9c0 1.378 1.121 2.5 2.5 2.5h15c1.379 0 2.5-1.122 2.5-2.5v-9c0-1.378-1.121-2.5-2.5-2.5Zm-3.5 0h-8V6c0-2.206 1.794-4 4-4s4 1.794 4 4v2Z"></path></svg>
+							<span>공유</span>
+						</div>
+						<div id="horizontal_line"></div>
+						<div id="customized">
+							<img
+								class="DeprecatedMiniIllustration DeprecatedMiniIllustration--smallMiniIcon ButtonThemeablePresentation-leftIcon"
+								alt=""
+								src="https://d3ki9tyy5l5ruj.cloudfront.net/obj/ce625ef5536516f31458c34d0c9d41457cae8470/customize_12.svg">
+							<span>사용자 지정</span>
+						</div>
+					</div>
+					<div id="header2">
+						<img src="img01/초록색2.png"></img>
+						<div id="project_title">
+							<span>협업툴 개발(1)</span>
+							<svg class="first_icon" style="margin-top: 7px;"
+								viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+						<path
+									d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+
+
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<div class="star-center" style="width: 25px; height: 25px;">
+								<svg class="icon20-star" viewBox="0 0 32 32" aria-hidden="true"
+									focusable="false" style="fill: gray;">
+                           <path
+										d="M.608 11.301a2.161 2.161 0 0 0 .538 2.224l5.867 5.78-1.386 8.164c-.14.824.192 1.637.868 2.124a2.133 2.133 0 0 0 2.262.155l7.241-3.848 7.24 3.848a2.133 2.133 0 0 0 2.263-.155 2.155 2.155 0 0 0 .868-2.124l-1.386-8.164 5.867-5.78c.59-.582.797-1.434.538-2.224a2.146 2.146 0 0 0-1.734-1.466l-8.1-1.19-3.623-7.42A2.148 2.148 0 0 0 15.998 0c-.828 0-1.57.476-1.935 1.223L10.44 8.645l-8.1 1.19A2.145 2.145 0 0 0 .606 11.3h.002Zm2.025.512 9.143-1.342 4.086-8.37c.012-.023.044-.088.137-.088.093 0 .124.064.137.089l4.086 8.369 9.143 1.342c.023.003.093.014.125.11a.163.163 0 0 1-.042.178l-6.609 6.511 1.56 9.192a.16.16 0 0 1-.065.169c-.074.054-.129.023-.152.01l-8.181-4.346-8.181 4.347c-.022.013-.08.04-.152-.011a.159.159 0 0 1-.065-.17l1.56-9.19-6.61-6.512a.163.163 0 0 1-.041-.178c.032-.096.102-.106.125-.11h-.004Z"></path></svg>
+								<svg class="icon20-star-on" viewBox="0 0 32 32"
+									aria-hidden="true" focusable="false">
+                           <path
+										d="m.938 12.86 6.47 6.394-1.526 9.022c-.096.56.131 1.113.592 1.444a1.47 1.47 0 0 0 1.556.105l7.969-4.247 7.969 4.247a1.465 1.465 0 0 0 1.557-.105c.46-.332.688-.885.593-1.443l-1.527-9.024 6.468-6.393c.402-.396.543-.974.368-1.51a1.47 1.47 0 0 0-1.188-1.002l-8.924-1.314L17.328.841C17.078.33 16.57.001 16 .001c-.569 0-1.076.329-1.326.84l-3.987 8.193-8.924 1.314A1.466 1.466 0 0 0 .575 11.35a1.467 1.467 0 0 0 .366 1.508l-.003.002Z"></path></svg>
+							</div>
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<!-- 별 html -->
+							<!-- 별 html -->
+
+						</div>
+
+
+						<!-- 상단바의 프로젝트 상태 업데이트  수정중 -->
+						<div class="click_status_update header_click_status_update">
+							<div class="circle"></div>
+							<span id="status_update_span">상태 설정</span>
+							<div class="DownIcon">
+								<svg class="ArrowDown" viewBox="0 0 24 24" aria-hidden="true"
+									focusable="false">
+									<path
+										d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+							</div>
+							<!--상태설정 체인지-->
+							<div class="progress_change_green">
+								<div class="green">
+									<div class="green_circle">
+										<svg class="status_green" viewBox="0 0 24 24"
+											aria-hidden="true" focusable="false">
+											<path
+												d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+									</div>
+									<div class="green_span">
+										<span>계획대로 진행 중</span>
+									</div>
+								</div>
+							</div>
+							<div class="progress_change_yellow">
+								<div class="yellow">
+									<div class="yellow_circle">
+										<svg class="status_yellow" viewBox="0 0 24 24"
+											aria-hidden="true" focusable="false">
+											<path
+												d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+									</div>
+									<div class="yellow_span">
+										<span>위험함</span>
+									</div>
+								</div>
+							</div>
+							<div class="progress_change_red">
+								<div class="red">
+									<div class="red_circle">
+										<svg class="status_red" viewBox="0 0 24 24" aria-hidden="true"
+											focusable="false">
+											<path
+												d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+									</div>
+									<div class="red_span">
+										<span>계획에서 벗어남</span>
+									</div>
+								</div>
+							</div>
+							<div class="progress_change_blue">
+								<div class="blue">
+									<div class="blue_circle">
+										<svg class="status_blue" viewBox="0 0 24 24"
+											aria-hidden="true" focusable="false">
+											<path
+												d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+									</div>
+									<div class="blue_span">
+										<span>보류 중</span>
+									</div>
+								</div>
+							</div>
+							<div class="progress_change_complete">
+								<div class="check">
+									<div class="complete">
+										<svg class="check_icon" viewBox="0 0 24 24" aria-hidden="true"
+											focusable="false">
+											<path
+												d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+									</div>
+									<div class="complete_span">
+										<span>완료</span>
+									</div>
+								</div>
+							</div>
+							<!--상태설정 토글-->
+							<div class="status_update_box">
+								<div class="status">
+									<div class="progress_green">
+										<div class="green">
+											<div class="green_circle">
+												<svg class="status_green" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+											</div>
+											<div class="green_span">
+												<span>계획대로 진행 중</span>
+											</div>
+										</div>
+									</div>
+									<div class="progress_yellow">
+										<div class="yellow">
+											<div class="yellow_circle">
+												<svg class="status_yellow" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+											</div>
+											<div class="yellow_span">
+												<span>위험함</span>
+											</div>
+										</div>
+									</div>
+									<div class="progress_red">
+										<div class="red">
+											<div class="red_circle">
+												<svg class="status_red" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+											</div>
+											<div class="red_span">
+												<span>계획에서 벗어남</span>
+											</div>
+										</div>
+									</div>
+									<div class="progress_blue">
+										<div class="blue">
+											<div class="blue_circle">
+												<svg class="status_blue" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+											</div>
+											<div class="blue_span">
+												<span>보류 중</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="check_move">
+									<div class="progress_complete">
+										<div class="check">
+											<div class="complete">
+												<svg class="check_icon" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+											</div>
+											<div class="complete_span">
+												<span>완료</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--프로젝트 상태 업데이트  수정중 -->
+					</div>
+					<div id="header3">
+						<div id="header3_item">
+							<svg
+								class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon ProjectMiniIcon"
+								aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+								focusable="false">
+						<path
+									d="M 18 2 h -2 c 0 -1.1 -0.9 -2 -2 -2 h -4 C 8.9 0 8 0.9 8 2 H 6 C 3.8 2 2 3.8 2 6 v 14 c 0 2.2 1.8 4 4 4 h 12 c 2.2 0 4 -1.8 4 -4 V 6 C 22 3.8 20.2 2 18 2 Z M 10 2 h 4 l 0 1 c 0 0 0 0 0 0 s 0 0 0 0 l 0 1 h -4 V 2 Z M 20 20 c 0 1.1 -0.9 2 -2 2 H 6 c -1.1 0 -2 -0.9 -2 -2 V 6 c 0 -1.1 0.9 -2 2 -2 h 2 c 0 1.1 0.9 2 2 2 h 4 c 1.1 0 2 -0.9 2 -2 h 2 c 1.1 0 2 0.9 2 2 V 20 Z M 17 11 c 0 0.6 -0.4 1 -1 1 h -3.5 c -0.6 0 -1 -0.4 -1 -1 s 0.4 -1 1 -1 H 16 C 16.6 10 17 10.4 17 11 Z M 17 15 c 0 0.6 -0.4 1 -1 1 h -3.5 c -0.6 0 -1 -0.4 -1 -1 s 0.4 -1 1 -1 H 16 C 16.6 14 17 14.4 17 15 Z M 10 11 c 0 0.8 -0.7 1.5 -1.5 1.5 S 7 11.8 7 11 s 0.7 -1.5 1.5 -1.5 S 10 10.2 10 11 Z M 10 15 c 0 0.8 -0.7 1.5 -1.5 1.5 S 7 15.8 7 15 s 0.7 -1.5 1.5 -1.5 S 10 14.2 10 15 Z"></path></svg>
+							<span>개요</span>
+						</div>
+						<div id="header3_item">
+							<svg
+								class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon ListViewMiniIcon"
+								aria-current="true" viewBox="0 0 24 24" aria-hidden="true"
+								focusable="false">
+						<path
+									d="M5 2H3C1.346 2 0 3.346 0 5v2c0 1.654 1.346 3 3 3h2c1.654 0 3-1.346 3-3V5c0-1.654-1.346-3-3-3Zm1 5c0 .551-.448 1-1 1H3c-.552 0-1-.449-1-1V5c0-.551.448-1 1-1h2c.552 0 1 .449 1 1v2Zm-1 7H3c-1.654 0-3 1.346-3 3v2c0 1.654 1.346 3 3 3h2c1.654 0 3-1.346 3-3v-2c0-1.654-1.346-3-3-3Zm1 5c0 .551-.448 1-1 1H3c-.552 0-1-.449-1-1v-2c0-.551.448-1 1-1h2c.552 0 1 .449 1 1v2Zm4-13a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H11a1 1 0 0 1-1-1Zm14 12a1 1 0 0 1-1 1H11a1 1 0 1 1 0-2h12a1 1 0 0 1 1 1Z"></path></svg>
+							<span>목록</span>
+						</div>
+						<div id="header3_item">
+							<svg
+								class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon BoardMiniIcon"
+								aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+								focusable="false">
+						<path
+									d="M21,2h-4h-2H9H7H3C1.3,2,0,3.3,0,5v10c0,1.7,1.3,3,3,3h4v1c0,1.7,1.3,3,3,3h4c1.7,0,3-1.3,3-3v-3h4c1.7,0,3-1.3,3-3V5  C24,3.3,22.7,2,21,2z M3,16c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h4v12H3z M15,19c0,0.6-0.4,1-1,1h-4c-0.6,0-1-0.4-1-1v-0.9V4h6v12.2  V19z M22,13c0,0.6-0.4,1-1,1h-4V4h4c0.6,0,1,0.4,1,1V13z"></path></svg>
+							<span>보드</span>
+						</div>
+						<div id="header3_item">
+							<svg
+								class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon BoardMiniIcon"
+								aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+								focusable="false">
+						<path
+									d="M21,2h-4h-2H9H7H3C1.3,2,0,3.3,0,5v10c0,1.7,1.3,3,3,3h4v1c0,1.7,1.3,3,3,3h4c1.7,0,3-1.3,3-3v-3h4c1.7,0,3-1.3,3-3V5  C24,3.3,22.7,2,21,2z M3,16c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h4v12H3z M15,19c0,0.6-0.4,1-1,1h-4c-0.6,0-1-0.4-1-1v-0.9V4h6v12.2  V19z M22,13c0,0.6-0.4,1-1,1h-4V4h4c0.6,0,1,0.4,1,1V13z"></path></svg>
+							<span>메세지</span>
+						</div>
+						<div id="header3_item">
+							<svg
+								class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon AttachVerticalMiniIcon"
+								aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+								focusable="false">
+						<path
+									d="M14,24C10.7,24,8,21.3,8,18V8C8,5.8,9.8,4,12,4C14.2,4,16,5.8,16,8V16.9C16,17.5,15.6,17.9,15,17.9C14.4,17.9,14,17.5,14,16.9V8C14,6.9,13.1,6,12,6C10.9,6,10,6.9,10,8V18C10,20.2,11.8,22,14,22C16.2,22,18,20.2,18,18V8C18,4.7,15.3,2,12,2C8.7,2,6,4.7,6,8V13C6,13.6,5.6,14,5,14C4.4,14,4,13.6,4,13V8C4,3.6,7.6,0,12,0C16.4,0,20,3.6,20,8V18C20,21.3,17.3,24,14,24Z"></path></svg>
+							<span>파일</span>
+						</div>
+						<div id="header3_item">
+							<svg
+								class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon DocumentMiniIcon"
+								aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+								focusable="false">
+						<path
+									d="M5.998 24h12c2.206 0 4-1.794 4-4V9.683a3.984 3.984 0 0 0-1.075-2.729L15.62 1.271A4 4 0 0 0 13.321.065.999.999 0 0 0 12.998 0c-.037 0-.068.017-.103.021-.067-.003-.133-.021-.2-.021H6C3.793 0 2 1.794 2 4v16c0 2.206 1.793 4 4 4Zm8-21.502c.053.046.11.086.158.138l5.008 5.365h-3.69c-.814 0-1.476-.648-1.476-1.444V2.498ZM3.998 4c0-1.103.897-2 2-2h6v4.556c0 1.899 1.56 3.444 3.475 3.444h4.525v10c0 1.103-.897 2-2 2h-12c-1.103 0-2-.897-2-2V4Z"></path></svg>
+							<span>메모</span>
+						</div>
+						<div id="header3_item">
+							<svg class="Icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true"
+								focusable="false">
+								<path
+									d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+						</div>
+					</div>
+				</div>
+
+				<div id="main_content">
+					<div class="page_tool_bar">
+						<div class="page_tool_bar_left">
+							<div class="work_add">
+								<div class="work_add_left">
+									<svg
+										class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon PlusMiniIcon"
+										viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path
+											d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+									<span>작업추가</span>
+								</div>
+								<div class="work_add_right">
+									<svg
+										class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon ArrowDownMiniIcon"
+										viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path
+											d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+								</div>
+							</div>
+						</div>
+						<div class="filtering_menu">
+							<div class="filtering_menu_child">
+								<svg
+									class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon FilterMiniIcon"
+									viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+									<path
+										d="M24 5a1 1 0 0 1-1 1H1a1 1 0 1 1 0-2h22a1 1 0 0 1 1 1Zm-4 7H4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2Zm-3 8H7a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2Z"></path></svg>
+								필터링
+							</div>
+							<div class="filtering_menu_child">
+								<svg
+									class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon SortMiniIcon"
+									viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+									<path
+										d="M17.999 5v13h3a1 1 0 0 1 .707 1.707l-4 4a.997.997 0 0 1-1.414 0l-4-4A1 1 0 0 1 12.999 18h3V5a1 1 0 1 1 2 0Zm-15.924.383A1 1 0 0 0 2.999 6h3v13a1 1 0 1 0 2 0V6h3a1 1 0 0 0 .707-1.707l-4-4a.999.999 0 0 0-1.414 0l-4 4a1 1 0 0 0-.217 1.09Z"></path></svg>
+								정렬
+							</div>
+							<div class="filtering_menu_child">
+								<svg
+									class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon GroupByMiniIcon"
+									viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+									<path
+										d="M5.454 22h13.09A3.455 3.455 0 0 0 22 18.545V5.455A3.455 3.455 0 0 0 18.544 2H5.454A3.455 3.455 0 0 0 2 5.455v13.091A3.454 3.454 0 0 0 5.454 22ZM4 5.455C4 4.653 4.651 4 5.454 4h13.091C19.348 4 20 4.652 20 5.455v13.092c0 .802-.652 1.455-1.455 1.455H5.455a1.456 1.456 0 0 1-1.456-1.455V5.455ZM6.5 9a1.5 1.5 0 1 1 3.001.001A1.5 1.5 0 0 1 6.5 9Zm5 0a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2h-4.5a1 1 0 0 1-1-1Zm-5 6a1.5 1.5 0 1 1 3.001.001 1.5 1.5 0 0 1-3-.001Zm5 0a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2h-4.5a1 1 0 0 1-1-1Z"></path></svg>
+								그룹
+							</div>
+							<div class="filtering_menu_child">
+								<svg
+									class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon SettingsMiniIcon"
+									viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+									<path
+										d="M20.999 16H9.894a5.005 5.005 0 0 0-4.895-4c-2.757 0-5 2.243-5 5s2.243 5 5 5a5.005 5.005 0 0 0 4.895-4h11.105a1 1 0 1 0 0-2Zm-16 4c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3Zm14-18a5.005 5.005 0 0 0-4.895 4H2.999a1 1 0 1 0 0 2h11.105a5.005 5.005 0 0 0 4.895 4c2.757 0 5-2.243 5-5s-2.243-5-5-5Zm0 8c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3Z"></path></svg>
+								옵션
+							</div>
+						</div>
+					</div>
+					<div class="spread_sheet_Header_Structure">
+						<div class="work_name">작업 이름</div>
+						<div class="manager">담당자</div>
+						<div class="deadline_section">마감일</div>
+						<div class="collaboration_participants">협업 참여자</div>
+						<div class="user_created">생성한 사용자</div>
+						<div class="creation_date">생성일</div>
+						<div class="last_modified_date">마지막 수정일</div>
+						<div class="completion_date">완료일</div>
+						<div class="plus_icon_div">
+							<svg
+								class="HighlightSol HighlightSol--core MiniIcon PlusMiniIcon"
+								viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+								<path
+									d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+						</div>
+					</div>
+					<div class="wam_section_title">
+						<div class="wam_section_title_child">
+							<div class="wam_section_title_child_svg">
+								<svg
+									class="HighlightSol HighlightSol--core Icon DownTriangleIcon"
+									viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+									<path
+										d="M25.422 12.617a1 1 0 0 0-.924-.617h-17a1 1 0 0 0-.707 1.707l8.5 8.5a.997.997 0 0 0 1.414 0l8.5-8.5a1 1 0 0 0 .217-1.09Z"></path></svg>
+							</div>
+							<div class="button_with_section_name">할일</div>
+						</div>
+					</div>
+					<div class="spread_sheet_Header_Structure">
+						
+						<!--마일스톤의 세부창 보여주기   -->
+						<div class="milestone">
+						<div class="milestone_transparent_screen"></div>
+							<div class="milestone_header">
+								<div class="complete_btn">
+									<svg
+										class="MiniIcon ButtonThemeablePresentation-leftIcon CheckMiniIcon"
+										viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path
+											d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+									<span>완료됨</span>
+								</div>
+								<div class="milestone_header_right">
+									<div>
+										<svg
+											class="Icon ButtonThemeablePresentation-rightIcon ThumbsUpLineIcon"
+											viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+											<path
+												d="M5 28h19.94a3.987 3.987 0 0 0 3.961-3.395l1.552-10.03a3.96 3.96 0 0 0-.909-3.187 3.962 3.962 0 0 0-3.01-1.384H20V4.006C20 2.045 18.71.469 16.785.084c-1.918-.383-3.723.573-4.477 2.383l-3.975 9.536H5c-1.654 0-3 1.345-3 2.999V25c0 1.654 1.346 3 3 3Zm5-14.8 4.154-9.969c.465-1.116 1.5-1.341 2.238-1.191.742.148 1.608.751 1.608 1.961V12h8.532c.574 0 1.118.25 1.492.687.374.437.54 1.012.451 1.58l-1.552 10.032A1.997 1.997 0 0 1 24.94 26H10V13.2H10ZM4 15c0-.551.448-1 1-1h3v12H5c-.552 0-1-.449-1-1V15Z"></path></svg>
+									</div>
+									<div>
+										<svg class="Icon AttachVerticalIcon" viewBox="0 0 32 32"
+											aria-hidden="true" focusable="false">
+											<path
+												d="M19,32c-3.9,0-7-3.1-7-7V10c0-2.2,1.8-4,4-4s4,1.8,4,4v9c0,0.6-0.4,1-1,1s-1-0.4-1-1v-9c0-1.1-0.9-2-2-2s-2,0.9-2,2v15c0,2.8,2.2,5,5,5s5-2.2,5-5V10c0-4.4-3.6-8-8-8s-8,3.6-8,8v5c0,0.6-0.4,1-1,1s-1-0.4-1-1v-5C6,4.5,10.5,0,16,0s10,4.5,10,10v15C26,28.9,22.9,32,19,32z"></path></svg>
+									</div>
+									<div>
+										<svg class="Icon SubtaskIcon" viewBox="0 0 32 32"
+											aria-hidden="true" focusable="false">
+											<path
+												d="M25,20c-2.4,0-4.4,1.7-4.9,4H11c-3.9,0-7-3.1-7-7v-5h16.1c0.5,2.3,2.5,4,4.9,4c2.8,0,5-2.2,5-5s-2.2-5-5-5c-2.4,0-4.4,1.7-4.9,4H4V3c0-0.6-0.4-1-1-1S2,2.4,2,3v14c0,5,4,9,9,9h9.1c0.5,2.3,2.5,4,4.9,4c2.8,0,5-2.2,5-5S27.8,20,25,20z M25,8c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S23.3,8,25,8z M25,28c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S26.7,28,25,28z"></path></svg>
+									</div>
+									<div>
+										<svg class="Icon LinkIcon" viewBox="0 0 32 32"
+											aria-hidden="true" focusable="false">
+											<path
+												d="M19.365 12.636a8.94 8.94 0 0 1 2.636 6.366 8.945 8.945 0 0 1-2.636 6.366l-4.001 4a8.976 8.976 0 0 1-6.366 2.634 8.976 8.976 0 0 1-6.366-2.634c-3.51-3.51-3.51-9.22 0-12.73l3.658-3.659a.999.999 0 1 1 1.414 1.415l-3.658 3.658a7.01 7.01 0 0 0 0 9.901c2.73 2.73 7.173 2.732 9.903 0l4.001-4a7.01 7.01 0 0 0 0-9.902 6.925 6.925 0 0 0-2.877-1.739 1 1 0 0 1 .592-1.91 9.019 9.019 0 0 1 3.699 2.235l.001-.002ZM29.368 2.633c-3.511-3.51-9.221-3.51-12.732 0l-4.001 4A8.94 8.94 0 0 0 9.999 13c0 2.405.936 4.665 2.636 6.367a9.019 9.019 0 0 0 3.699 2.235 1.001 1.001 0 0 0 .592-1.911 6.925 6.925 0 0 1-2.877-1.738 7.01 7.01 0 0 1 0-9.903l4.001-4c2.731-2.73 7.174-2.73 9.903 0 2.729 2.728 2.73 7.171 0 9.902l-3.658 3.657a.999.999 0 1 0 1.414 1.415l3.658-3.659c3.51-3.51 3.51-9.22 0-12.73l.001-.002Z"></path></svg>
+									</div>
+									<div>
+										<svg
+											class="Icon ButtonThemeablePresentation-leftIcon ExpandIcon"
+											viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+											<path
+												d="M13.7,19.7L5.4,28H13c0.6,0,1,0.4,1,1s-0.4,1-1,1H3c-0.6,0-1-0.4-1-1V19c0-0.6,0.4-1,1-1s1,0.4,1,1v7.6l8.3-8.3c0.4-0.4,1-0.4,1.4,0S14.1,19.3,13.7,19.7z M29,2H19c-0.6,0-1,0.4-1,1s0.4,1,1,1h7.6l-8.3,8.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3L28,5.4V13c0,0.6,0.4,1,1,1s1-0.4,1-1V3C30,2.4,29.6,2,29,2z"></path></svg>
+									</div>
+									<div>
+										<svg class="HighlightSol Icon MoreIcon" viewBox="0 0 32 32"
+											aria-hidden="true" focusable="false">
+											<path
+												d="M16,13c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S14.3,13,16,13z M3,13c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S1.3,13,3,13z M29,13c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S27.3,13,29,13z"></path></svg>
+									</div>
+									<div>
+										<svg class="HighlightSol Icon CloseIcon" viewBox="0 0 32 32"
+											aria-hidden="true" focusable="false">
+											<path
+												d="M3 15h18.379L13.94 7.561a1.5 1.5 0 1 1 2.121-2.121l10 10a1.5 1.5 0 0 1 0 2.121l-10 10A1.495 1.495 0 0 1 15 28a1.5 1.5 0 0 1-1.061-2.56l7.439-7.439H3a1.5 1.5 0 1 1 0-3V15ZM30.5 2.5A1.5 1.5 0 0 0 29 4v25a1.5 1.5 0 1 0 3 0V4a1.5 1.5 0 0 0-1.5-1.5Z"></path></svg>
+									</div>
+								</div>
+							</div>
+							<div class="milestone_content">
+								<div class="milestone_content_child01">
+									<div class="milestone_content_child01_02">
+										<svg
+											class="CompoundIcon--small CompoundIcon MilestoneCompletionCompoundIcon MilestoneCompletionStatusIndicator--complete MilestoneCompletionStatusIndicator MilestoneIndicator--complete MilestoneIndicator-icon"
+											data-testid="milestone_completion_status_indicator"
+											viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+											<path
+												d="M20.1,2.8c-2.3-2.3-5.9-2.3-8.2,0L2.7,12c-2.3,2.3-2.3,5.9,0,8.2l9.2,9.2c2.3,2.3,5.9,2.3,8.2,0l9.2-9.2  c2.3-2.3,2.3-5.9,0-8.2L20.1,2.8z"
+												class="CompoundIcon-outer"></path>
+											<path
+												d="M13.4,22.2c-0.3,0-0.5-0.1-0.7-0.3L8.8,18c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22.1,13.7,22.2,13.4,22.2z"
+												class="CompoundIcon-inner"></path></svg>
+										<span>마일스톤</span>
+									</div>
+									<div class="milestone_content_child01_03">
+										<div class="milestone_content_title">
+											<input type="text" name="milestone_content_title"
+												value="스토리보드 완성" />
+										</div>
+									</div>
+
+								</div>
+								<div class="milestone_content_child02">
+									<div class="rowstructure">
+										<div class="rowstructure_title">
+											<span>담당자</span>
+										</div>
+										<div class="manager_right">
+											<div>
+												<img src="../img01/철수.png"></img>
+											</div>
+											<span>현우</span>
+											<svg class="wam_contact_person_svg"
+												viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+												<path
+													d="M14.5,12l6-6C20.8,5.7,21,5.2,21,4.8s-0.2-0.9-0.5-1.2C20.1,3.2,19.7,3,19.2,3S18.3,3.2,18,3.5l-6,6l-6-6 C5.7,3.2,5.2,3,4.8,3S3.9,3.2,3.5,3.5C3.2,3.9,3,4.3,3,4.8S3.2,5.7,3.5,6l6,6l-6,6c-0.7,0.7-0.7,1.8,0,2.5C3.9,20.8,4.3,21,4.8,21 s0.9-0.2,1.2-0.5l6-6l6,6c0.3,0.3,0.8,0.5,1.2,0.5s0.9-0.2,1.2-0.5c0.7-0.7,0.7-1.8,0-2.5L14.5,12z"></path></svg>
+										</div>
+										<div class="no_contact_person">
+											<div class="no_contact_person_UserIcon">
+												<svg class="HighlightSol HighlightSol--core Icon UserIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16,18c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S20.4,18,16,18z M16,4c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S19.3,4,16,4z M29,32c-0.6,0-1-0.4-1-1v-4.2c0-2.6-2.2-4.8-4.8-4.8H8.8C6.2,22,4,24.2,4,26.8V31c0,0.6-0.4,1-1,1s-1-0.4-1-1v-4.2C2,23,5,20,8.8,20h14.4c3.7,0,6.8,3,6.8,6.8V31C30,31.6,29.6,32,29,32z"></path></svg>
+											</div>
+											담당자 없음
+										</div>
+										
+										<!-- 수정중  -->
+										<div class="noContactPerson_clickPopUp">
+											<div class="noContactPerson_clickPopUp_inputDiv">
+												<div class="noContactPerson_input">
+													<div class="noContactPerson_input_svg">
+														<svg class="HighlightSol HighlightSol--core Icon UserIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16,18c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S20.4,18,16,18z M16,4c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S19.3,4,16,4z M29,32c-0.6,0-1-0.4-1-1v-4.2c0-2.6-2.2-4.8-4.8-4.8H8.8C6.2,22,4,24.2,4,26.8V31c0,0.6-0.4,1-1,1s-1-0.4-1-1v-4.2C2,23,5,20,8.8,20h14.4c3.7,0,6.8,3,6.8,6.8V31C30,31.6,29.6,32,29,32z"></path></svg>
+												    </div>
+												    <input name="responsiblePerson" type="text" placeholder="이름 또는 이메일" />
+												</div>
+											</div>
+											<div class="noContactPerson_clickPopUp_member" >
+												<div class="noContactPerson_clickPopUp_member_list">
+													<img src="../../img01/짱구1.jpg"/>
+													<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
+													<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
+												</div>
+												<div class="noContactPerson_clickPopUp_member_list">
+													<img src="../../img01/짱구1.jpg"/>
+													<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
+													<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
+												</div>
+												<div class="noContactPerson_clickPopUp_member_list">
+													<img src="../../img01/짱구1.jpg"/>
+													<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
+													<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
+												</div>
+												<div class="Invite_by_email">
+													<img src="../../img01/free-icon-mail-646094.png"/>
+													이메일로 팀원초대
+												</div>
+											</div>
+										</div>
+										<!-- 수정중  -->
+										
+									</div>
+									<div class="rowstructure">
+										<div class="rowstructure_title">
+											<span>마감일</span>
+										</div>
+										<div class="deadline_right">
+											<div class="second">
+												<svg class="HighlightSol Icon CalendarIcon"
+													viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+													<path
+														d="M24,2V1c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H10V1c0-0.6-0.4-1-1-1S8,0.4,8,1v1C4.7,2,2,4.7,2,8v16c0,3.3,2.7,6,6,6h16c3.3,0,6-2.7,6-6V8C30,4.7,27.3,2,24,2z M8,4v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4h12v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4c2.2,0,4,1.8,4,4v2H4V8C4,5.8,5.8,4,8,4z M24,28H8c-2.2,0-4-1.8-4-4V12h24v12C28,26.2,26.2,28,24,28z"></path></svg>
+											</div>
+											<span>10월 31일</span>
+											<svg class="deadline_remove_svg"
+												viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+												<path
+													d="M14.5,12l6-6C20.8,5.7,21,5.2,21,4.8s-0.2-0.9-0.5-1.2C20.1,3.2,19.7,3,19.2,3S18.3,3.2,18,3.5l-6,6l-6-6 C5.7,3.2,5.2,3,4.8,3S3.9,3.2,3.5,3.5C3.2,3.9,3,4.3,3,4.8S3.2,5.7,3.5,6l6,6l-6,6c-0.7,0.7-0.7,1.8,0,2.5C3.9,20.8,4.3,21,4.8,21 s0.9-0.2,1.2-0.5l6-6l6,6c0.3,0.3,0.8,0.5,1.2,0.5s0.9-0.2,1.2-0.5c0.7-0.7,0.7-1.8,0-2.5L14.5,12z"></path></svg>
+										</div>
+										
+										<!-- 수정중  -->
+										<div class="no_deadline">
+											<div class="no_deadline_svg">
+												<svg class="HighlightSol HighlightSol--core Icon CalendarIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M24,2V1c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H10V1c0-0.6-0.4-1-1-1S8,0.4,8,1v1C4.7,2,2,4.7,2,8v16c0,3.3,2.7,6,6,6h16c3.3,0,6-2.7,6-6V8C30,4.7,27.3,2,24,2z M8,4v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4h12v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4c2.2,0,4,1.8,4,4v2H4V8C4,5.8,5.8,4,8,4z M24,28H8c-2.2,0-4-1.8-4-4V12h24v12C28,26.2,26.2,28,24,28z"></path></svg>
+											</div>
+											마감일 없음
+										</div>
+										<!-- 수정중  -->
+									</div>
+									<div class="rowstructure_02">
+										<div class="rowstructure_title_02">
+											<span>프로젝트</span>
+										</div>
+										<div class="manager_right_02">
+											<div class="project_add_title">
+												<svg class="HighlightSol_MiniIcon" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="M10.4,4h3.2c2.2,0,3,0.2,3.9,0.7c0.8,0.4,1.5,1.1,1.9,1.9s0.7,1.6,0.7,3.9v3.2c0,2.2-0.2,3-0.7,3.9c-0.4,0.8-1.1,1.5-1.9,1.9s-1.6,0.7-3.9,0.7h-3.2c-2.2,0-3-0.2-3.9-0.7c-0.8-0.4-1.5-1.1-1.9-1.9c-0.4-1-0.6-1.8-0.6-4v-3.2c0-2.2,0.2-3,0.7-3.9C5.1,5.7,5.8,5,6.6,4.6C7.4,4.2,8.2,4,10.4,4z"></path></svg>
+												<span>협업툴 개발 (1)</span>
+												<div class="section">
+													<span>할일</span>
+													<svg
+														class="HighlightSol MiniIcon ButtonThemeablePresentation-rightIcon ArrowDownMiniIcon"
+														viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+														<path
+															d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+												</div>
+												<svg class="delete_project_svg" viewBox="0 0 24 24"
+													aria-hidden="true" focusable="false">
+													<path
+														d="M14.5,12l6-6C20.8,5.7,21,5.2,21,4.8s-0.2-0.9-0.5-1.2C20.1,3.2,19.7,3,19.2,3S18.3,3.2,18,3.5l-6,6l-6-6 C5.7,3.2,5.2,3,4.8,3S3.9,3.2,3.5,3.5C3.2,3.9,3,4.3,3,4.8S3.2,5.7,3.5,6l6,6l-6,6c-0.7,0.7-0.7,1.8,0,2.5C3.9,20.8,4.3,21,4.8,21 s0.9-0.2,1.2-0.5l6-6l6,6c0.3,0.3,0.8,0.5,1.2,0.5s0.9-0.2,1.2-0.5c0.7-0.7,0.7-1.8,0-2.5L14.5,12z"></path></svg>
+											</div>
+											<div class="project_add_title_under_projectAddBtn">프로젝트에 추가</div>
+											<div class="AddProject_click_Projectlist">
+												<input name="project_name" type="text" placeholder="마일스톤을 프로젝트에 추가 ..."/>
+												<div class="AddProject_click_Projectlist_projectName">
+													<div class="AddProject_click_Projectlist_projectdiv">프로젝트 hw(3)</div>
+													<div class="AddProject_click_Projectlist_projectdiv">개발자로 취업하기(2)</div>
+													<div class="AddProject_click_Projectlist_projectdiv">프로젝트 gj(4)</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="rowstructure_03">
+										<div class="rowstructure_title_03">
+											<span>종속관계</span>
+										</div>
+										<div class="manager_right_03">종속 관계 추가</div>
+										
+										
+										<div class="clickingDependencies">
+											<div class="selectTask">
+												<div class="typeOfWork">
+													<svg class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon TaskDependencyDirectionSelector-hourglassIcon HourglassMiniIcon" data-testid="HourGlassIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6.93V4h1a1 1 0 1 0 0-2H3a1 1 0 1 0 0 2h1v2.93c0 1.43.737 2.775 1.975 3.597.87.578 1.78 1.067 2.744 1.473-.964.406-1.875.896-2.744 1.473C4.738 14.295 4 15.64 4 17.07V20H3a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2h-1v-2.93c0-1.43-.738-2.775-1.976-3.597A16.532 16.532 0 0 0 15.28 12a16.566 16.566 0 0 0 2.744-1.473C19.26 9.705 20 8.36 20 6.93Zm-3.084 8.209c.68.45 1.083 1.172 1.083 1.93V20H6v-2.93c0-.76.404-1.48 1.083-1.931 1.472-.978 3.082-1.67 4.917-2.112 1.835.442 3.446 1.134 4.917 2.112ZM18 6.93c0 .76-.404 1.48-1.083 1.931-1.472.978-3.082 1.67-4.917 2.112-1.835-.442-3.446-1.134-4.917-2.112C6.403 8.411 6 7.689 6 6.93V4h12v2.93Z"></path></svg>
+													선행작업
+													<svg class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-rightIcon TaskDependencyDirectionSelector-arrowDownIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+												</div>
+												<input name="wamOfName" type="text" placeholder="작업찾기" class="selectTask_input"/>
+											</div>
+											<div class="typeOfWork_select">
+												<div class="typeOfWork_select_list">
+													<svg class="HighlightSol HighlightSol--core MiniIcon ButtonThemeablePresentation-leftIcon TaskDependencyDirectionSelector-hourglassIcon HourglassMiniIcon" data-testid="HourGlassIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6.93V4h1a1 1 0 1 0 0-2H3a1 1 0 1 0 0 2h1v2.93c0 1.43.737 2.775 1.975 3.597.87.578 1.78 1.067 2.744 1.473-.964.406-1.875.896-2.744 1.473C4.738 14.295 4 15.64 4 17.07V20H3a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2h-1v-2.93c0-1.43-.738-2.775-1.976-3.597A16.532 16.532 0 0 0 15.28 12a16.566 16.566 0 0 0 2.744-1.473C19.26 9.705 20 8.36 20 6.93Zm-3.084 8.209c.68.45 1.083 1.172 1.083 1.93V20H6v-2.93c0-.76.404-1.48 1.083-1.931 1.472-.978 3.082-1.67 4.917-2.112 1.835.442 3.446 1.134 4.917 2.112ZM18 6.93c0 .76-.404 1.48-1.083 1.931-1.472.978-3.082 1.67-4.917 2.112-1.835-.442-3.446-1.134-4.917-2.112C6.403 8.411 6 7.689 6 6.93V4h12v2.93Z"></path></svg>
+													선행작업
+												</div>
+												<div class="typeOfWork_select_list">
+													<svg class="HighlightSol HighlightSol--core MiniIcon TaskDependencyDirectionSelector-blockingIcon BlockingMiniIcon" data-testid="BlockingIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0Zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10Zm5-10a1 1 0 0 1-1 1H8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1Z"></path></svg>
+													후속작업
+												</div>
+											</div>
+											<div class="clickingDependencies_list" >
+												<div class="clickingDependencies_list_workSelect">
+													<div class="clickingDependencies_list_workSelect_svg">
+														<svg class="HighlightSol HighlightSol--core CompoundIcon--small CompoundIcon TaskCompletionCompoundIcon TaskCompletionStatusIndicator--incomplete TaskCompletionStatusIndicator" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+														<path d="M31,16c0,8.3-6.7,15-15,15S1,24.3,1,16S7.7,1,16,1S31,7.7,31,16z" class="CompoundIcon-outer"></path>
+														<path d="M13.4,22.1c-0.3,0-0.5-0.1-0.7-0.3l-3.9-3.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22,13.7,22.1,13.4,22.1z" class="CompoundIcon-inner"></path>
+														</svg>
+													</div>
+													<div class="clickingDependencies_list_workSelect_wamOfName">프로젝트 초안 작성하기</div>
+													<div class="clickingDependencies_list_workSelect_project">협업툴 개발(1)</div>
+												</div>
+												<div class="clickingDependencies_list_workSelect">
+													<div class="clickingDependencies_list_workSelect_svg">
+														<svg class="HighlightSol HighlightSol--core CompoundIcon--small CompoundIcon TaskCompletionCompoundIcon TaskCompletionStatusIndicator--incomplete TaskCompletionStatusIndicator" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+														<path d="M31,16c0,8.3-6.7,15-15,15S1,24.3,1,16S7.7,1,16,1S31,7.7,31,16z" class="CompoundIcon-outer"></path>
+														<path d="M13.4,22.1c-0.3,0-0.5-0.1-0.7-0.3l-3.9-3.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22,13.7,22.1,13.4,22.1z" class="CompoundIcon-inner"></path>
+														</svg>
+													</div>
+													<div class="clickingDependencies_list_workSelect_wamOfName">미팅 일정 확인</div>
+													<div class="clickingDependencies_list_workSelect_project">협업툴 개발(1)</div>
+												</div>
+												<div class="clickingDependencies_list_workSelect">
+													<div class="clickingDependencies_list_workSelect_svg">
+														<svg class="HighlightSol HighlightSol--core CompoundIcon--small CompoundIcon MilestoneCompletionCompoundIcon MilestoneCompletionStatusIndicator--incomplete MilestoneCompletionStatusIndicator" data-testid="milestone_completion_status_indicator" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+														<path d="M20.1,2.8c-2.3-2.3-5.9-2.3-8.2,0L2.7,12c-2.3,2.3-2.3,5.9,0,8.2l9.2,9.2c2.3,2.3,5.9,2.3,8.2,0l9.2-9.2  c2.3-2.3,2.3-5.9,0-8.2L20.1,2.8z" class="milestone_CompoundIcon-outer"></path>
+														<path d="M13.4,22.2c-0.3,0-0.5-0.1-0.7-0.3L8.8,18c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22.1,13.7,22.2,13.4,22.2z" class="milestone_CompoundIcon-inner"></path>
+														</svg>
+													</div>
+													<div class="clickingDependencies_list_workSelect_wamOfName">기능명세서 완성</div>
+													<div class="clickingDependencies_list_workSelect_project"></div>
+												</div>
+												<div class="clickingDependencies_list_workSelect">
+													<div class="clickingDependencies_list_workSelect_svg">
+														<svg class="HighlightSol HighlightSol--core CompoundIcon--small CompoundIcon TaskCompletionCompoundIcon TaskCompletionStatusIndicator--incomplete TaskCompletionStatusIndicator" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+														<path d="M31,16c0,8.3-6.7,15-15,15S1,24.3,1,16S7.7,1,16,1S31,7.7,31,16z" class="CompoundIcon-outer"></path>
+														<path d="M13.4,22.1c-0.3,0-0.5-0.1-0.7-0.3l-3.9-3.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22,13.7,22.1,13.4,22.1z" class="CompoundIcon-inner"></path>
+														</svg>
+													</div>
+													<div class="clickingDependencies_list_workSelect_wamOfName">자소서 작성하기</div>
+													<div class="clickingDependencies_list_workSelect_project">개발자로 취업하기(2)</div>
+												</div>
+											</div>
+										</div>
+										
+										
+									</div>
+									<div class="rowstructure_04">
+										<div class="rowstructure_title_04">
+											<span>설명</span>
+										</div>
+										<div class="manager_right_04"></div>
+									</div>
+									<div class="rowstructure_05">
+										<textarea name="milestone_content">마일스톤 생성 1의 내용입니다</textarea>
+									</div>
+									
+								
+									 <!-- 수정중  --> <!-- 수정중  -->
+									 <div class="Add_subtask_save_parent">
+										 <div class="Add_subtask_save">
+											<div class="Add_subtask_checkSvg_save">
+												<svg class="HighlightSol HighlightSol--core CompoundIcon--small CompoundIcon TaskCompletionCompoundIcon TaskCompletionStatusIndicator--incomplete TaskCompletionStatusIndicator TaskRowCompletionStatus-taskCompletionIcon--incomplete TaskRowCompletionStatus-taskCompletionIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+												<path d="M31,16c0,8.3-6.7,15-15,15S1,24.3,1,16S7.7,1,16,1S31,7.7,31,16z" class="check_CompoundIcon-outer"></path>
+												<path d="M13.4,22.1c-0.3,0-0.5-0.1-0.7-0.3l-3.9-3.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22,13.7,22.1,13.4,22.1z" class="check_CompoundIcon-inner"></path>
+												</svg>
+											</div>
+											<div class="Add_subtask_save_title">
+												<input name="Add_subtask_title" type="text" />
+											</div>
+											<div class="Add_subtask_save_deadline">
+												<svg class="HighlightSol HighlightSol--core Icon CalendarIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M24,2V1c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H10V1c0-0.6-0.4-1-1-1S8,0.4,8,1v1C4.7,2,2,4.7,2,8v16c0,3.3,2.7,6,6,6h16c3.3,0,6-2.7,6-6V8C30,4.7,27.3,2,24,2z M8,4v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4h12v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4c2.2,0,4,1.8,4,4v2H4V8C4,5.8,5.8,4,8,4z M24,28H8c-2.2,0-4-1.8-4-4V12h24v12C28,26.2,26.2,28,24,28z"></path></svg>
+											</div>
+											<div class="Add_subtask_save_manager">
+												<svg class="HighlightSol HighlightSol--core Icon UserIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16,18c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S20.4,18,16,18z M16,4c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S19.3,4,16,4z M29,32c-0.6,0-1-0.4-1-1v-4.2c0-2.6-2.2-4.8-4.8-4.8H8.8C6.2,22,4,24.2,4,26.8V31c0,0.6-0.4,1-1,1s-1-0.4-1-1v-4.2C2,23,5,20,8.8,20h14.4c3.7,0,6.8,3,6.8,6.8V31C30,31.6,29.6,32,29,32z"></path></svg>
+											</div>
+											<!-- 매니저 버튼 클릭시  -->
+											<div class="assignmentOfmanager">
+												<div class="assignmentOfmanager_title">
+													<span>담당자</span>
+													<svg class="assignmentOfmanager_title_XIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M18.1,16L27,7.1c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L16,13.9l-8.9-9C6.5,4.3,5.6,4.3,5,4.9S4.4,6.4,5,7l8.9,8.9L5,24.8c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l8.9-8.9l8.9,8.9c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L18.1,16z"></path></svg>
+												</div>
+												<div class="assignmentOfmanager_select">
+													<div class="assignmentOfmanager_select_input">
+														<input name="manager" type="text" placeholder="이름 또는 이메일"/>
+														<svg class="HighlightSol HighlightSol--core CompoundIcon--xsmall CompoundIcon XCircleCompoundIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23,12c0,6.1-4.9,11-11,11S1,18.1,1,12S5.9,1,12,1S23,5.9,23,12z" class="CompoundIcon-outer"></path><path d="M13.4,12l4.3-4.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L12,10.6L7.7,6.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l4.3,4.3l-4.3,4.3c-0.4,0.4-0.4,1,0,1.4C6.5,17.9,6.7,18,7,18s0.5-0.1,0.7-0.3l4.3-4.3l4.3,4.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L13.4,12z" class="CompoundIcon-inner"></path></svg>
+													</div>
+													또는 
+													<div class="assignmentOfmanager_select_assignedToMe">나에게 배정</div>
+												</div>
+											</div>
+											<div class="assignmentOfmanager_list">
+												<div class="assignmentOfmanager_list_select">
+													<img src="../../img01/짱구1.jpg">
+													<div class="assignmentOfmanager_list_select_memberName">지숭</div>
+													<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+												</div>
+												<div class="assignmentOfmanager_list_select">
+													<img src="../../img01/짱구2.jpg">
+													<div class="assignmentOfmanager_list_select_memberName">현우</div>
+													<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+												</div>
+												<div class="assignmentOfmanager_list_select">
+													<img src="../../img01/철수.png">
+													<div class="assignmentOfmanager_list_select_memberName">길주</div>
+													<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+												</div>
+												<div class="invite_team_members_by_email">
+													<svg class="HighlightSol HighlightSol--core Icon TypeaheadActionItemStructure-icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+													<span>이메일로 팀원 초대</span>
+												</div>
+											</div>
+											<!-- 매니저 버튼 클릭시  -->
+										</div>
+									</div>
+									 <!-- 수정중  --> <!-- 수정중  -->
+									 
+									  
+									<div class="rowstructure_06">
+										<button class="rowstructure_06_btn">
+											<svg
+												class="HighlightSol MiniIcon ButtonThemeablePresentation-leftIcon PlusMiniIcon"
+												viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+												<path
+													d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+											<span>하위 작업 추가</span>
+										</button>
+									</div>
+									<div class="comment">
+										<div class="comment_title">
+											<span>댓글</span>
+										</div>
+										<div class="comment_story">
+											<div class="profile_img">
+												<img src="../img01/짱구1.jpg"></img>
+											</div>
+											<div class="profile_name">지숭</div>
+											<div>님이 이 작업을 생성했습니다</div>
+											<div class="milestone_update_date">3일전</div>
+										</div>
+										<div class="feedblockstroy">
+											<div class="feedblockstroy_complete">
+												<svg
+													class="HighlightSol CompoundIcon--large CompoundIcon MilestoneCompletionCompoundIcon MilestoneCompletionStatusIndicator--complete MilestoneCompletionStatusIndicator"
+													data-testid="milestone_completion_status_indicator"
+													viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+													<path
+														d="M20.1,2.8c-2.3-2.3-5.9-2.3-8.2,0L2.7,12c-2.3,2.3-2.3,5.9,0,8.2l9.2,9.2c2.3,2.3,5.9,2.3,8.2,0l9.2-9.2  c2.3-2.3,2.3-5.9,0-8.2L20.1,2.8z"
+														class="CompoundIcon-outer"></path>
+													<path
+														d="M13.4,22.2c-0.3,0-0.5-0.1-0.7-0.3L8.8,18c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22.1,13.7,22.2,13.4,22.2z"
+														class="CompoundIcon-inner"></path></svg>
+											</div>
+											<div class="feedblockstroy_name">지숭</div>
+											<div>님이 마일스톤을 완료로 표시했습니다</div>
+											<div class="feedblockstroy_update_date">3일전</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="milestone_footer">
+								<div class="milestone_comment_content">
+									<div class="profile_img">
+										<img src="../img01/짱구1.jpg"></img>
+									</div>
+									<div class="milestone_comment_input_child02">
+										<textarea>댓글추가</textarea>
+									</div>
+								</div>
+								<div class="milestone_Participants">
+									<div class="milestone_Participants_child01">협업 참여자</div>
+									<div class="collaboration_profile">
+										<div>
+											<img src="img01/짱구1.jpg"></img>
+										</div>
+										<div>
+											<img src="img01/철수.jpeg"></img>
+										</div>
+										<div>
+											<svg class="HighlightSol MiniIcon UserMiniIcon"
+												viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+												<path
+													d="M12,14c-3.859,0-7-3.14-7-7S8.141,0,12,0s7,3.14,7,7-3.141,7-7,7Zm0-12c-2.757,0-5,2.243-5,5s2.243,5,5,5,5-2.243,5-5-2.243-5-5-5Zm10,21v-2c0-2.757-2.243-5-5-5H7c-2.757,0-5,2.243-5,5v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v2c0,.552,.447,1,1,1s1-.448,1-1Z"></path></svg>
+										</div>
+										<div class="add_collaboration_profile">
+											<svg class="HighlightSol MiniIcon UserMiniIcon"
+												viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+												<path
+													d="M12,14c-3.859,0-7-3.14-7-7S8.141,0,12,0s7,3.14,7,7-3.141,7-7,7Zm0-12c-2.757,0-5,2.243-5,5s2.243,5,5,5,5-2.243,5-5-2.243-5-5-5Zm10,21v-2c0-2.757-2.243-5-5-5H7c-2.757,0-5,2.243-5,5v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v2c0,.552,.447,1,1,1s1-.448,1-1Z"></path></svg>
+										</div>
+										<div class="plus_icon_coooperation">
+											<svg
+												class="HighlightSol MiniIcon--small MiniIcon PlusMiniIcon"
+												viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+												<path
+													d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+										</div>
+									</div>
+									<div class="milestone_Participants_child03">
+										<svg
+											class="HighlightSol Icon--small Icon ButtonThemeablePresentation-leftIcon BellIcon"
+											viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+											<path
+												d="M2.03 20.635A5.87 5.87 0 0 0 4 16.249V12c0-3.247 1.276-6.288 3.593-8.563C9.909 1.164 12.962-.064 16.224.002 22.717.121 28 5.667 28 12.365v3.884c0 1.675.718 3.273 1.97 4.386 1.047.932 1.33 2.411.704 3.682C30.17 25.339 29.061 26 27.85 26H4.152c-1.211 0-2.32-.661-2.824-1.684-.626-1.271-.344-2.75.704-3.682l-.002.001ZM16 31a5.51 5.51 0 0 0 4.392-2.196c.248-.328.004-.804-.407-.804h-7.969c-.411 0-.655.476-.407.804A5.508 5.508 0 0 0 16 31Z"></path></svg>
+										<span>마일스톤 나가기</span>
+									</div>
+									
+									
+									<!-- input 길주  --> <!-- input 길주  -->
+									
+									<!--------------------------- 협업참여자 text --------------------------->
+									<div class="show_cooperation">
+										<div class="cooperation_profile">
+											<img class="writer_profile_img" src="img/jjangu.png">
+											<div class="cooperation_name">
+											<span>길주</span>
+											<i class="bi-x"></i>
+											</div>
+										</div>
+										<input type="text" name="cooperation" id="plus_cooperation"/>
+									</div>	
+									<!--------------------------- 협업참여자 text --------------------------->
+									<!------------------------------- 초대 멤버 조회 ------------------------->
+									<div class="assignmentOfmanager_list">
+										<div class="assignmentOfmanager_list_select">
+										<img src="img/jjangu.png">
+										<div class="assignmentOfmanager_list_select_memberName">지숭</div>
+										<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+										</div>
+										<div class="assignmentOfmanager_list_select">
+										<img src="img/cute.jjang.png">
+										<div class="assignmentOfmanager_list_select_memberName">현우</div>
+										<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+										</div>
+										<div class="assignmentOfmanager_list_select">
+										<img src="img/개 아이콘.jpeg">
+										<div class="assignmentOfmanager_list_select_memberName">길주</div>
+										<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
+										</div>										
+									</div>
+									<!-- input 길주  --><!-- input 길주  -->
+								</div>
+							</div>
+						</div>
+						<!--마일스톤의 세부창 보여주기   -->
+						
+						<div class="work_name">마일스톤</div>
+						<div class="manager">현우</div>
+						<div class="deadline_section">12월 4일</div>
+						<div class="collaboration_participants">협업 참여자</div>
+						<div class="user_created">지숭</div>
+						<div class="creation_date">11월 16일</div>
+						<div class="last_modified_date">오늘</div>
+						<div class="completion_date"></div>
+						<div class="plus_icon_div"></div>
+					</div>
+					<div class="spread_sheet_Header_Structure_work">
+						<div class="work_name">작업</div>
+						<div class="manager">지수</div>
+						<div class="deadline_section">12월 4일</div>
+						<div class="collaboration_participants">협업 참여자</div>
+						<div class="user_created">지숭</div>
+						<div class="creation_date">11월 16일</div>
+						<div class="last_modified_date">오늘</div>
+						<div class="completion_date"></div>
+						<div class="plus_icon_div"></div>
+					</div>
+					<div class="spread_sheet_Header_Structure">
+						<div class="work_name">승인보여주기</div>
+						<div class="manager">길주</div>
+						<div class="deadline_section">12월 4일</div>
+						<div class="collaboration_participants">협업 참여자</div>
+						<div class="user_created">지숭</div>
+						<div class="creation_date">11월 16일</div>
+						<div class="last_modified_date">오늘</div>
+						<div class="completion_date"></div>
+						<div class="plus_icon_div"></div>
+					</div>
+					<div class="spread_sheet_Header_Structure">
+						<div class="work_name">스토리보드 완성</div>
+						<div class="manager">현우</div>
+						<div class="deadline_section">12월 4일</div>
+						<div class="collaboration_participants">협업 참여자</div>
+						<div class="user_created">지숭</div>
+						<div class="creation_date">11월 16일</div>
+						<div class="last_modified_date">오늘</div>
+						<div class="completion_date"></div>
+						<div class="plus_icon_div"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="black_screen" style="display: none;"></div>
+</body>
+</html>

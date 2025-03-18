@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+*{
+box-sizing:border-box;
+}
+body{
+	width:1887px;
+}
+.darker_wallpapers{
+	background-color:rgba(30, 31, 33, .75);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 250;
+}
+
+.member_alarm_main{
+	z-index: 300;
+	display:none;
+	transform:translate(-50%,-50%);
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:560px;
+	height:345px;
+	border-radius:12px;
+	background-color:white;
+}
+.member_alarm_header{
+	display: flex;
+    align-items: center;
+	gap: 360px;
+	width:560px;
+	height:64px;
+	padding:0 24px;
+	border-bottom:1px solid #edeae9;
+}
+.member_alarm_header > span{
+	font-size: 20px;
+    line-height: 28px;
+    font-weight:500;
+    color:#1e1f21;
+}
+.member_alarm_header > svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+}
+
+.member_alarm_content{
+	width:560px;
+	height:281px; 
+	overflow-y:scroll;
+	overflow-x: hidden
+}
+.member_alarm_inventory{
+	width:560px;
+	height:19px;
+	padding:0 0 0 232px;
+	margin:16px 0 ;
+}
+.member_alarm_inventory > span{
+	font-size:14px;
+	color:#6d6e6f;
+}
+.member_alarm_inventory > span:nth-child(1){
+	margin: 0 35px 0 0;
+}
+.member_alarm_inventory > span:nth-child(2){
+	margin: 0 35px 0 0;
+}
+.member_alarm_user{
+	display: flex;
+    align-items: center;
+	width:560px;
+	height:20px;
+	padding:0 32px;
+}
+.member_alarm_user > span{
+	font-size:14px;
+	line-height:20px;
+	font-weight:500;
+	color:#1e1f21;
+
+}
+.member_alarm_user_check{
+	align-items: center;
+	width:560px;
+	height:50px;
+	padding:0 32px;
+	display:flex;
+}
+.member_alarm_user_check_01 > img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+.member_alarm_user_check_02{
+	width:158px;
+	height:41px;
+	padding:0 12px;
+}
+.member_alarm_user_check_02 > span:nth-child(1){
+	font-size:14px;
+	line-height:22px;
+	color:#1e1f21;
+}
+.member_alarm_user_check_02 > span:nth-child(3){
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+}
+.member_alarm_user_check_03{
+	padding: 0 0 0 57px;
+	width:300px;
+	height:12px;
+
+}
+.member_alarm_user_check_03 > input{
+	widht:12px;
+	height:12px;
+
+}
+.member_alarm_user_check_03 > input:nth-child(1){
+	margin-right: 80px;
+}
+.member_alarm_user_check_03 > input:nth-child(2){
+	margin-right: 80px;
+}
+.second{
+	margin-top:25px;
+
+}

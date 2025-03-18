@@ -1,0 +1,754 @@
+@charset "UTF-8";
+
+.Icon_XIcon:hover{
+	cursor:pointer;
+}
+
+.add_member_displayblock{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0
+}
+
+.transparent_screen_add_member{
+	display:none;
+	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	width:560px;
+	height:710px;
+	margin:auto;
+	background-color:transparent;
+	z-index:150;
+}
+
+
+.add_member_content{
+	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	width:560px;
+	height:710px;
+	margin:auto;
+	border:1px solid;
+	border-radius:12px;
+	background-color: white;
+}
+.add_member_child01{
+	align-items: center;
+	gap: 250px;
+	display:flex;
+	width:560px;
+	height:64px;
+	padding:0 24px;
+	border-bottom:1px solid #edeae9;
+}
+.add_member_child01 > span{
+	font-size:20px;
+	line-height:28px;
+	font-weight:500;
+
+}
+.add_member_child01_icon{
+	right: 11px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+	width:68px;
+	height:28px;
+	margin:0 0 0 16px;
+}
+.add_member_child01_icon > svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+
+}
+.add_member_child02{
+	border-radius:6px;
+	border-bottom:1px solid #edeae9;
+	width:560px;
+	height:162px;
+	padding:24px;
+
+}
+.add_member_child02_01{
+	width:512px;
+	height:28px;
+	margin-bottom:8px;
+}
+.add_member_child02_02{
+	gap: 6px;
+	display:flex;
+	width:512px;
+	height:36px;
+}
+.add_member_child02_03{
+	margin-top: 15px;
+	width:512px;
+	height:22px;
+}
+.add_member_child02_01 span{
+	font-size: 16px;
+    line-height: 20px;
+    font-weight:500;
+
+}
+/* 수정 input  *//* 수정 input  *//* 수정 input  */
+
+.add_member_child_save_input_parent{
+	border-radius: 6px;
+    border: 1px solid #cfcbcb;
+	width:314px;
+	height:34px;
+	
+}
+.add_member_child02_02 > .add_member_child_save_input_parent > input{
+	float: left;
+    border: none;
+	border-radius:6px;
+	width:200px;
+	height:30px;
+	padding: 6px;
+	
+	
+}
+
+.add_member_child_save_span{
+	display:none;
+	margin-top: 4px;
+    float: left;
+    font-size: 13px;
+    padding-left: 10px;
+   	border-radius:6px;
+	width:69px;
+	height:24px;
+	background:rgb(207 207 207);	
+}
+
+.add_member_child_save_span > svg{
+	width:17px;
+	height:17px;
+	cursor:pointer;
+}
+
+.add_member_child_save_span > svg > .CompoundIcon-outer{
+	fill :transparent;
+	stroke : transparent;
+}
+
+.add_member_child_save_span > svg > .CompoundIcon-inner{
+	fill :#534d4d;;
+	
+}
+
+
+
+
+/*룰 버튼 */
+.role_button{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+	margin-right: 5px;
+	width:148px;
+	height:34px;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+	
+}
+
+.role_button > span{
+	font-size:12px;
+	line-height:28px;
+	color:#6d6e6f;
+}
+
+.role_button > svg{
+	fill:#6d6e6f;
+	width:12px;
+	height:12px;
+}
+
+
+.role_button_projectManager{
+	display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+	margin-right: 5px;
+	width:148px;
+	height:34px;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+	
+}
+
+.role_button_projectManager.on{
+	display:flex;
+}
+
+.role_button_projectManager > span{
+	font-size:12px;
+	line-height:28px;
+	color:#6d6e6f;
+}
+
+.role_button_projectManager > svg{
+	fill:#6d6e6f;
+	width:12px;
+	height:12px;
+}
+
+.role_button_editor{
+	display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+	margin-right: 5px;
+	width:148px;
+	height:34px;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+	
+}
+
+.role_button_editor.on{
+	display:flex;
+}
+
+.role_button_editor > span{
+	font-size:12px;
+	line-height:28px;
+	color:#6d6e6f;
+	
+}
+
+.role_button_editor > svg{
+	fill:#6d6e6f;
+	width:12px;
+	height:12px;
+}
+
+.role_button_CommentManager{
+	display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+	margin-right: 5px;
+	width:148px;
+	height:34px;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+	
+}
+
+.role_button_CommentManager.on{
+	display:flex;
+}
+
+.role_button_CommentManager > span{
+	font-size:12px;
+	line-height:28px;
+	color:#6d6e6f;
+	
+}
+
+.role_button_CommentManager > svg{
+	fill:#6d6e6f;
+	width:12px;
+	height:12px;
+}
+
+.role_button_Viewer{
+	display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+	margin-right: 5px;
+	width:148px;
+	height:34px;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+}
+
+.role_button_Viewer.on{
+	display:flex;
+}
+
+.role_button_Viewer > span{
+	font-size:12px;
+	line-height:28px;
+	color:#6d6e6f;
+}
+
+.role_button_Viewer > svg{
+	fill:#6d6e6f;
+	width:12px;
+	height:12px;
+}
+
+
+.role_button_child01{
+	display:none;
+	width:280px;
+	height:299px;
+	padding:4px 0;
+	border-radius:6px;
+	border : 1px solid #edeae9;
+}
+.role_button_child01_01{
+	display: flex;
+	width:280px;
+	height:66px;
+	padding:2px 10px;
+	border-bottom:1px solid #edeae9;
+}
+
+.click_change_authority{
+	padding: 4px 0;
+	position: absolute;
+	z-index:200;
+	display:none;
+	top: 34px;
+    left: 304px;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid #edeae9;
+	width:280px;
+	height:223px;
+}
+
+.click_change_authority.on{
+	display:block;
+}
+
+.click_change_authority_line{
+    display: flex;
+	width:280px;
+	height:68px;
+	padding:2px 10px;
+}
+
+.click_change_authority_line:not(:last-child){
+	border-bottom: 1px solid #edeae9;
+}
+
+.click_change_authority_check_svg{
+	height:68px;
+	width:40px;
+}
+
+.click_change_authority_check_svg > svg{
+	display:none;
+	margin-left: 7px;
+	width:12px;
+}
+
+.click_change_authority_list{
+	width: 232px;
+    height: 58px;
+
+}
+
+.projectmanager:hover{
+	background-color: rgba(55, 23, 23, .05);
+}
+.editor:hover{
+	background-color: rgba(55, 23, 23, .05);
+}
+.CommentManager:hover{
+	background-color: rgba(55, 23, 23, .05);
+}
+.Viewer:hover{
+	background-color: rgba(55, 23, 23, .05);
+}
+
+
+.click_change_authority_list > span:nth-child(1){
+	font-size:14px;
+}
+
+.click_change_authority_list > span:nth-child(3){
+	font-size:12px;
+	color: #6d6e6f;
+}
+
+
+.add_member_child02_03 > span{
+	font-size:14px;
+	line-height:22px;
+}
+.add_member_child02_02 > button{
+	color: white;
+    background: #6195ff;
+	width: 56px;
+    height: 34px;
+    border-radius:6px;
+    border:1px solid  #edeae9;
+}
+
+.add_member_child03{
+	width:560px;
+	height:121px;
+	padding:24px 24px 16px;
+
+}
+.add_member_child03_01{
+	width:512px;
+	height:24px;
+	margin:0 0 8px;
+}
+.add_member_child03_02{
+	display:none;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	align-items: center;
+    gap: 260px;
+	width:512px;
+	height:48px;
+	
+}
+.add_member_child03_02.on{
+	display:flex;
+} 
+.add_member_child03_01 > span{
+	font-size:16px;
+	line-height:24px;
+	font-weight:500;
+}
+
+.role_button_child01_01_01{
+	width:15px;
+	height:58px;
+}
+.role_button_child01_01_02{
+	width:232px;
+	height:58px;
+
+}
+.role_button_child01_01_01 > svg{
+	width:12px;
+	height:12px;
+	fill:#1e1f21;
+}
+.role_button_child01_span1{
+	font-size:14px;
+	line-height:22px;
+}
+.role_button_child01_span2{
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+}
+
+
+/*룰 버튼 */
+.add_member_child03_02_left{
+	display: flex;
+    align-items: center;
+    gap: 10px;
+	width: 220px;
+    height: 35px;
+}
+.add_member_child03_02_left > svg{
+	margin-left: 9px;
+	width:16px;
+	height:16px;
+	fill:#1e1f21;
+}
+.add_member_child03_02_left > span{
+	font-size: 14px;
+    line-height: 22px;
+}
+.add_member_child03_02_right{
+	width:20px;
+	height:20px;
+}
+.add_member_child03_02_right > svg{
+	width:12px;
+	height:12px;
+}
+.access_setting_option{
+	z-index: 200;
+    position: relative;
+    background: white;
+	display:none;
+	padding:4px 0;
+	width:512px;
+	height:113px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+}
+.access_setting_option_member{
+	display: flex;
+	width:495px;
+	height:48px;
+	padding: 2px 10px;
+
+}
+
+.access_setting_option_member:hover{
+	background-color: rgba(55, 23, 23, .05);
+}
+.access_setting_option_member_left{
+	padding-left: 21px;
+	width:45px;
+	height:40px;
+}
+.access_setting_option_member_left > svg{
+	width:14px;
+	height:14px;
+	fill:#1e1f21;
+
+}
+.access_setting_option_member_right{
+	width:423px;
+	height:40px;
+}
+.access_setting_option_member_right01{
+	font-size:14px;
+	line-height:22px;
+	font-weight:400;
+	color:#1e1f21;
+}
+.access_setting_option_member_right02{
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+
+}
+.access_setting_02{
+	padding-left: 21px;
+}
+.add_member_child04{
+	display: flex;
+    gap: 407px;
+	width:543px;
+	height:28px;
+	padding:0 24px 8px;
+
+}
+.add_member_child04 > span{
+	font-size:16px;
+	line-height:20px;
+	font-weight:500;
+}
+.add_member_child04_01{
+	display:none;
+	font-size:14px;
+	color:#4464bb;
+
+}
+.add_member_child05{
+	display: flex;
+	align-items: center;
+    gap: 13px;
+	width:543px;
+	height:50px;
+	padding:0 24px;
+}
+
+
+.icon_user_back > svg{
+	width:16px;
+	height:16px;
+	fill:#fff;
+}
+.icon_user_back{
+	padding: 4px;
+	width:28px;
+	height:28px;
+	border-radius:50%;
+	background-color:#afabac;
+	border:1px solid #6d6e6f;
+
+
+}
+.add_member_child05 >span{
+	width: 300px;
+	font-size:14px;
+	line-heihgt:22px;
+}
+.add_member_role{
+	position: absolute;
+    right: 19px;
+    border:1px solid  rgb(255,255,255,1);
+}
+.access_setting_scroll{
+	width:557px;
+	height:380px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.add_member_child06{
+	align-items: center;
+	display: flex;
+	width:543px;
+	height:50px;
+	padding:0 24px;
+
+}
+.add_member_child06_child_left >  img{
+	margin-right: 19px;
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+
+.add_member_child06_child_center{
+	width:300px;
+}
+
+.add_member_child06_child_center > span:nth-child(1){
+	font-size:14px;
+	line-height:22px;
+}
+.add_member_child06_child_center > span:nth-child(3){
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+}
+.add_member_child07{
+	margin-top: 28px;
+	width:560px;
+	height:69px;
+	padding: 16px 24px;
+	border-top:1px solid #cfcbcb;
+}
+.link_button{
+	gap: 10px;
+    align-items: center;
+    display: flex;
+	right: 19px;
+    position: absolute;
+	border: 1px solid #cfcbcb;
+    border-radius: 6px;
+	width:161px;
+	height:36px;
+}
+.link_button > svg{
+	margin: 6px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+.link_button > span{
+	font-size:14px;
+	line-height:36px;
+
+}
+.black_screen {
+			background-color: rgba(0, 0, 0, 0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 100;
+}
+.add_member_content {
+			z-index: 101;
+}
+
+.Parent_of_the_popup_manager{
+	position: relative;
+}	
+
+/*협업툴 개발 언더 권한 변경 *//*협업툴 개발 언더 권한 변경 */
+.click_change_authority_under{
+	display:none;
+	padding: 10px 0;
+    position: absolute;
+    z-index: 200;
+    top: 38px;
+    left: 219px;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid #edeae9;
+    width: 280px;
+    height: 299px;
+}
+
+.click_change_authority_under.on{
+	display:block;
+}
+
+.click_change_authority_list_under{
+	margin-bottom: 10px;
+	display:flex;
+	width: 270px;
+    height: 58px;
+}
+
+.click_change_authority_list_under_div > span:nth-child(1){
+	font-size: 14px;
+}
+
+.click_change_authority_list_under_div> span:nth-child(3){
+	font-size: 12px;
+}
+
+.transparent_div{
+	width:30px;
+	height:20px;
+}
+
+/*검색창 수정중 *//*검색창 수정중 *//*검색창 수정중 */
+.member_search_box_list{
+	
+	z-index: 500;
+    position: relative;
+    left: 31px;
+	border-radius: 6px;
+    background: #f1efefad;
+	width:355px;
+	height:36px;
+}
+.member_search_box_img{
+	padding-right:10px;
+	padding-top: 4px;
+	float: left;
+}
+
+.member_search_box_img > img{
+	width: 24px;
+    height: 24px;
+    border-radius: 50%;
+	
+}
+
+.member_search_box_text{
+	float: left;
+	width:300px;
+	height:36px;
+}
+
+.member_search_box_text > span:nth-child(1){
+	font-weight: 500;
+    margin-right: 15px;
+    font-size: 15px;
+	
+}
+
+.member_search_box_text > span:nth-child(3){
+	 font-size: 10px;
+}
+
+
+
+
+
+
+
+
+/*협업툴 개발 언더 권한 변경 *//*협업툴 개발 언더 권한 변경 */
+
+	
+	

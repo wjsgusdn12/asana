@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	body{
+		width: 1887px;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	
+	#header {
+		margin: 50px 0 0 236px;
+		position: relative;
+		height: 114px;
+	}
+	
+	#header>#header1 {
+		position: relative;
+		height: 44px;
+	}
+	
+	#header>#header2 {
+		position: relative;
+		height: 36px;
+	}
+	
+	#header>#header3 {
+		position: relative;
+		display: flex;
+		height: 34px;
+		gap: 5px;
+	}
+	
+	#header1>#employment {
+		position: absolute;
+		font-size: 14px;
+		width: 80px;
+	}
+	
+	#employment>svg {
+		width: 12px;
+		height: 12px;
+	}
+	
+	#share_button {
+		position: absolute;
+		width: 60px;
+		right: 130px;
+		width: 58px;
+		height: 28px;
+		background-color: rgb(75, 137, 220);
+		border-radius: 6px;
+		padding: 2px 0 0 7px;
+	}
+	
+	#share_button>span {
+		color: white;
+		font-size: 12px;
+	}
+	
+	#share_button>svg {
+		width: 12px;
+		height: 12px;
+		fill: white;
+	}
+	
+	#horizontal_line {
+		height: 25px;
+		position: absolute;
+		right: 123px;
+		width: 1px;
+		border-left: 1px solid rgb(211, 211, 211);
+	}
+	
+	#customized {
+		position: absolute;
+		right: 20px;
+		width: 97.3px;
+		height: 28px;
+		background: rgb(255, 255, 255);
+		border: 1px solid rgb(211, 211, 211);
+		padding-left: 5px;
+		border-radius: 6px;
+	}
+	
+	#customized>img {
+		width: 12px;
+		height: 12px;
+	}
+	
+	#customized>span {
+		font-size: 12px;
+	}
+	
+	#blue_box {
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		border-radius: 5px;
+		margin-right: 10px; /*여기서 마진을 준다고 해서 뒤에 협엽툴 겹치는걸 방지해 주지 않는건가 ?*/
+		background: rgb(237, 250, 255);
+	}
+	
+	#project_title {
+		position: absolute;
+		left: 40px;
+		width: 200px;
+	}
+	
+	#project_title>span {
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 500;
+		padding-right: 10px;
+	}
+	
+	#project_title>svg {
+		width: 16px;
+		height: 16px;
+		fill: rgb(135, 136, 138);
+	}
+	
+	#dangerous {
+		position: absolute;
+		left: 250px;
+		width: 60px;
+		height: 20px;
+		background: rgb(255, 234, 216);
+		padding: 0 0 6px 0;
+		border-radius: 5px;
+	}
+	
+	#dangerous>svg {
+		fill: rgb(242, 184, 135);
+		width: 12px;
+	}
+	
+	#dangerous>span {
+		font-size: 12px;
+		line-height: 18px;
+		color: rgb(242, 184, 135);
+	}
+	
+	#project_title>.first_icon {
+		padding-right: 3px;
+	}
+	
+	#header2>img {
+		position: absolute;
+	}
+	
+	#header3_item {
+		left: 10px;
+		width: 60px;
+		height: 34px;
+	}
+	
+	#header3_item>svg {
+		padding: 10px 0 0 0;
+		width: 12px;
+		fill: rgb(135, 136, 138);
+	}
+	
+	#header3_item>span {
+		font-size: 14px;
+		line-height: 22px;
+		color: rgb(135, 136, 138);
+	}
+	
+	#header3_item:nth-child(4) {
+		width: 80px;
+	}
+	
+	#header3_item:nth-child(7)>svg {
+		width: 16px;
+	}
+	
+	#main_content {
+		border-top: 1px solid rgb(212, 214, 217);
+		position: relative;
+		padding: 0 0 0 236px;
+		
+		height: 1374px;
+	}
+	
+	#main_content>#outline_content {
+	    overflow-y: scroll;
+		position: absolute;
+		padding: 48px 0 0 240px;
+		left: 0px;
+		width: 1510px;
+		height: 100%
+	}
+	
+	#main_content>#outline_content>#inline_content {
+		margin: 0 auto;
+		width: 748px;;
+		height: 100%
+	}
+	
+	#main_content>#activity_feed {
+		background-color:#f9f8f8;
+		padding:24px;
+		left: 1497px;
+		overflow-y: scroll;
+		position: absolute;
+		width: 398px;
+		height: 100%
+	}
+	
+	#project_description {
+		width: 748px;
+		height: 203px;
+		margin: 0 0 32px 0;
+	}
+	
+	#project_description_child {
+		width: 748px;
+		height: 42px;
+	}
+	
+	#project_description_child>span {
+		font-size: 20px;
+		font-weight: 500;
+	}
+	
+	#project_description_img {
+		padding: 8px 0;
+	}
+	
+	#project_description_img>img {
+		width: 748px;
+		height: 142px;
+	}
+	
+	#project_role {
+		width: 747px;
+		height: 156px;
+		margin: 0 0 48px 0;
+	}
+	
+	#project_role>#add_member {
+		width: 747px;
+		height: 28px;
+		margin: 0 0 8px 0;
+	}
+	
+	#project_role>#add_member>span {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 28px;
+	}
+	
+	#member_profile_parent {
+		display: flex;
+	}
+	
+	#member_profile_view:nth-child(1) {
+		width: 181px;
+		height: 56px;
+		padding: 8px;
+		display: flex;
+	}
+	
+	#member_profile_view {
+		width: 181px;
+		height: 56px;
+		padding: 8px;
+		margin: 0 8px 0 0;
+		display: flex;
+	}
+	
+	#member_profile_default {
+		margin: 0 8px 0 0;
+		padding: 6px 4px 0 9px;
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		border: 1px dashed;
+		padding: 6px 4px 0 9px;
+	}
+	
+	#member_profile_default>svg {
+		width: 16px;
+		height: 16px;
+		fill: rgb(135, 136, 138);
+	}
+	
+	#member_profile_parent {
+		width: 748px;
+		height: 56px;
+	}
+	
+	#member_profile_view:nth-child(1)>span {
+		margin: 5px;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgb(135, 136, 138);
+	}
+	
+	#member_profile {
+		margin: 0 8px 0 0;
+		padding: 6px 4px 0 9px;
+		height: 35px;
+		width: 35px;
+		border: 1px solid black;
+		border-radius: 50%;
+	}
+	
+	#member_profile_name {
+		padding: 0 0 3px 0;
+		font-size: 14px;
+	}
+	
+	#member_profile_role {
+		font-size: 12px;
+		line-height: 18px;
+		color: rgb(135, 136, 138);
+	}
+	
+	#connected_goals {
+		width: 618px;
+		height: 380;
+		margin: 0 0 48px 0;
+	}
+	
+	#connected_goals_title {
+		width: 618px;
+		height: 28;
+		margin: 0 0 8px 0;
+	}
+	
+	#connected_goals_title>span {
+		font-size: 20px;
+	}
+	
+	#connected_goals_title>svg {
+		width: 16px;
+		height: 16px;
+	}
+	
+	#connected_goal_content_parent {
+		width: 630px;
+		height: 344px;
+	}
+	
+	#connected_goal_content {
+		margin: 0 12px 12px 0;
+		width: 303px;
+		height: 160px;
+		float: left;
+		padding: 12px 16px;
+		border: 1px solid rgb(135, 136, 138);
+		border-radius: 6px;
+	}
+	
+	#connected_goal_content1 {
+		width: 271;
+		height: 22px;
+	}
+	
+	#connected_goal_content1>span {
+		font-size: 14px;
+		line-height: 22px;
+		color: rgb(135, 136, 138);
+	}
+	
+	#connected_goal_content1>svg {
+		width: 12px;
+		height: 12px;
+		fill: rgb(135, 136, 138);
+	}
+	
+	#connected_goal_content2 {
+		width: 271px;
+		height: 82px;
+		margin: 0 0 8px 0;
+	}
+	
+	#connected_goal_content2>span {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	
+	#connected_goal_content3 {
+		width: 271px;
+		height: 24px;
+	}
+	
+	#connected_goal_content3>#state_of_the_goal {
+		float: left;
+		font-size: 12px;
+		line-height: 18px;
+		color: rgb(135, 136, 138);
+	}
+	
+	#connected_goal_content3>#connected_goal_content3_svg1 {
+		float: left;
+		width: 12px;
+		height: 12px;
+		fill: #f1bd6c;
+	}
+	
+	#connected_goal_content3>#dotted {
+		float: left;
+		font-size: 12px;
+		line-height: 18px;
+		color: #a2a0a2;
+	}
+	
+	#connected_goal_content3>#color {
+		float: left;
+		border-radius: 50px;
+		width: 8px;
+		height: 8px;
+		background-color: rgb(93, 162, 131);
+		/*display:inline;*/
+		float: left;
+		margin: 5px;
+	}
+	
+	#connected_goal_content3>#profile_img {
+		margin: 0 0 0 20px;
+		float: left;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		border: 1px solid black;
+	}
+	
+	#connected_goal_content3_period {
+		padding: 0 4px;
+		float: left;
+		font-size: 12px;
+		line-height: 18px;
+		color: #a2a0a2;
+	}
+	
+	#connected_goal_content:nth-child(2)  #color {
+		background-color: #d1395a;
+	}
+	
+	#connected_goal_content:nth-child(3) #connected_goal_content2 {
+		width: 299.5px;
+		height: 104px;
+		margin: 0 0 8px 0;
+	}
+	
+	#connected_goal_content:nth-child(3)  #color {
+		background-color: #d1395a;
+	}
+	#main_connected_portfolio{
+		width:748px;
+		height:74px;
+		margin-bottom:48px;
+	}
+	#main_connected_portfolio > div{
+		float:left;
+	}
+	#main_connected_portfolio > #connected_portfolio1{
+		width:748px;
+		height:28px;
+		margin-bottom:8px;
+	
+	}
+	#main_connected_portfolio > #connected_portfolio2{
+		border-top:1px solid #edeae9;
+		border-bottom:1px solid #edeae9;
+		padding:5px 0;
+		width:748px;
+		height:38px;
+		
+	
+	}
+	#connected_portfolio1 span{
+		font-size:20px;
+		line-height:28px;
+		font-weight:500;
+	}
+	#connected_portfolio1 svg{
+		width:16px;
+		height:16px;
+	
+	}
+	#connected_portfolio2_child1 svg{
+		width:20px;
+		height:20px;
+		margin:0 8px 0 4px;
+		fill:#a69ff3;
+	}
+	#connected_portfolio2 span{
+		font-size: 14px;
+		line-height: 22px;
+	}
+	
+	#portfolio_name{
+		width: 280px;
+	}
+	#portfolio_parent{
+		
+		width:24px;
+		height:24px;
+		border-radius:50%;
+	}
+	#connected_portfolio2_child1{
+		float:left;
+		width:30px;
+		height:30px
+	}
+	#connected_portfolio2_child2{
+		float:left;
+		width:616px;
+		height:22px
+	}
+	#connected_portfolio2_child3{
+		margin: 0 0 0 40px;
+		float:left;
+		width:24px;
+		height:24px
+	}
+	#connected_portfolio2_child4{
+		margin:0 0 0 10px;
+		
+		float:left;
+		width:24px;
+		height:24px
+	}
+	#connected_portfolio2_child4 > svg{
+		fill:#6d6e6f;
+		width:16px;
+		height:16px;
+	}
+	.core_resources{
+		width:748px;
+		height:198px;
+		margin:0 0 48px;
+		
+	}
+	.core_resources_01{
+		width:748px;
+		height:28px;
+		margin:0 0 8px;
+	}
+	.core_resources_01 > span{
+		font-size:20px;
+		line-height:28px;
+		font-weight:500;
+		
+	}
+	.core_resources_02{
+		border-radius: 8px;
+		border:1px solid #edeae9;
+		width:748px;
+		height:162px;
+	}
+	.core_resources_03{
+		margin:auto;
+		width:500px;
+		height:116px;
+	}
+	.core_resources_04{
+		width:140px;
+		height:140px;
+		float: left;
+	}
+	.core_resources_04 img{
+		width:140px;
+		height:140px;
+	}
+	.core_resources_05{
+		float: left;
+		width:344px;
+		height:116px;
+		padding:12px;
+		padding: 30px 0 0 30px;
+		
+		
+	}
+	.core_resources_05 span:nth-child(1){
+		color:black;
+		font-size:14px;
+		line-height:22px;
+	}
+	.core_resources_05 svg{
+		width:16px;
+		height:16px;
+		fill:#6d6e6f;
+	}
+	.core_resources_05_child{
+		font-size:14px;
+		line-height:36px;
+		color:#6d6e6f;
+		margin: 0 5px 0 0;
+	}
+	.milestone{
+		width:748px;
+		height:107px;
+	}
+	.milestone_title{
+		width:748px;
+		height:28px;
+		margin:0 0 8px;
+		
+	}
+	.milestone_title > span{
+		font-size:20px;
+		line-height:28px;
+		font-weight:500;
+	}
+	.milestone_title > svg{
+		weight:16px;
+		height:16px;
+		fill:#6d6e6f;
+	}
+	.milestone_content1{
+		border-top: 1px solid #edeae9;
+	    border-bottom: 1px solid #edeae9;
+		padding: 5px 0;
+		width:748px;
+		height:36px;
+	
+	}
+	.milestone_content1_child01{
+		float:left;
+		width:16px;
+		height:16px;
+	}
+	.milestone_content1_child01 > svg{
+		width:15px;
+		height:15px;
+		fill:#368e6a;
+	}
+	.milestone_content1_child02{
+		float:left;
+		width:626px;
+		height:34px;
+		
+	}
+	.milestone_content1_child02 > span{
+		font-size:14px;
+		font-weight:600;
+		color:#6d6e6f;
+	}
+	.milestone_content1_child03{
+		position: relative;
+		float: left;
+	    width: 80px;
+	    height: 30px;
+	}
+	
+	.milestone_content1_child03 > span{
+		position: absolute;
+	    bottom: 3px;
+		font-size:12px;
+		color:#afabac;
+		line-height: 34px;
+		
+	}
+	.profile_img{
+		border-radius:50%;
+		width:24px;
+		height:24px;
+		border:1px solid #afabac;
+	}
+	.status_update{
+		width:331px;
+		height:207px;
+		margin:0 0 32px;
+	}
+	.status_update_title{
+		width:331px;
+		height:36px;
+		margin:0 0 12px;
+	
+	}
+	.status_update_title > span{
+		margin: 0px 144px 0 0;
+		font-size:20px;
+		line-height:28px;
+		color:#f1bd6c;
+		font-weight:500;
+	}
+	.status_update_title > select{
+		height:36px;
+		font-size:14px;
+		line-height:36px;
+		background:white;
+		border-color:#cfcbcb;
+		width:129px;
+		border-radius:6px;
+		border: 1px solid #afabac;
+		
+	}
+	.status_update_content{
+		background-color:white;
+		width:329px;
+		height:141px;
+		border-radius:6px;
+		border:1px solid #afabac;
+	
+	}
+	.status_update_content01{
+		border-top-left-radius:6px;
+		border-top-right-radius:6px;
+		width:327px;
+		height:8px;
+		background-color:#f1bd6c;
+	}
+	.status_update_content02_parent{
+		margin:15px;
+	}
+	.status_update_content02 span:nth-child(1){
+		font-size:16px;
+		line-height:20px;
+		font-weight:500;
+	}
+	.status_update_content02 span:nth-child(2){
+		font-weight:700;
+		font-size:14px;
+	}
+	.status_update_content03 img{
+		border-radius:50%;
+		width:28px;
+		height:28px;
+	}
+	.status_update_content02_span01{
+		font-weight:500;
+		font-size:16px;
+		line-height:20px;
+		
+	}
+	.status_update_content02_span02{
+		font-size:14px;
+		line-height:18px;
+		font-weight:700;
+	
+	}
+	.Icon_Button{
+		width:28px;
+		height:28px;
+		fill:#6d6e6f;
+	
+	}
+	.status_update_content03{
+		position: relative;
+		margin: 0 0 0 -20px;
+		gap: 93px;
+		display:flex;
+		width:329px;
+		height:71px;
+		padding:16px;
+	
+	}
+	
+	.status_update_content04{
+		top: 10px;
+	    position: absolute;
+	    left: 63px;
+	}
+	.status_update_content03 img{
+		
+		margin:0 5px 0 0;
+	}
+	.status_update_content04_span1{
+		font-weight:700;
+		font-size:14px;
+		line-height:18px;
+		
+	}
+	.status_update_content04_span2{
+		font-size:12px;
+		
+	}
+	.Icon_Button{
+		    position: absolute;
+	        right: 20px;
+			width:16px;
+			height:16px;
+			fill:#6d6e6f;
+	}
+	.project_summary{
+		width:331px;
+		height:170px;
+		margin:12px 0;
+	}
+	.main_project_summary{
+		width:331px;
+		height:170px;
+		border-radius: 6px;
+	    border: 1px solid #afabac;
+	}
+	.project_summary_content1{
+		width:331px;
+		height:56px;
+		padding:16px 16px 12px;
+	
+	}
+	.project_summary_content1 > img{
+		width:12px;
+		height:12px;
+	}
+	.project_summary_content1 > span{
+		font-size:16px;
+		line-height:20px;
+		font-weight:500;
+	
+	
+	}
+	.project_summary_content2{
+		width:331px;
+		height:44px;
+		padding:0 16px;
+	
+	}
+	.project_summary_content2 > span{
+		font-size:14px;
+		line-height:22px;
+	
+	
+	}
+	.project_summary_content3{
+		position:relative;
+		width:331px;
+		height:68px;
+		padding:16px;
+	
+	
+	}
+	.project_summary_content3 svg{
+		top:-1px;
+		position:absolute;
+		left:0;
+		width:12px;
+		height:12px;
+		
+	}
+	.project_summary_content3 span{
+		padding-left:8px;
+		font-size:14px;
+		line-height:22px;
+		
+	}
+	.project_summary_content3_child{
+		position:absolute;
+		top:26px;
+	
+	}
+	.Compound_button{
+		position:relative;
+		display:inline-flex;
+		width:20px;
+		height:12px;
+		padding:1px;
+		border-radius:7px;
+		background-color:#6a696a;
+		border:1px solid #6a696a;
+	}
+	.deadline{
+		position:relative;
+		width:331px;
+		height:68px;
+	}
+	
+	.deadline::before{
+		position:absolute;
+		top:32px;
+		left:12px;
+		content:'';
+		border:1px dashed #424244;
+		border-radius:4px;
+		height:32px;
+		
+	}
+	
+	.deadline_content{
+		padding-bottom:32px;
+		position:relative;
+		width:154px;
+		height:36px;
+	
+	}
+	.deadline_content > .calendar{
+		padding:5px;
+		float:left;
+		width:28px;
+		height:28px;
+		border-radius:50%;
+		border:1px solid #d1395a;
+	}
+	.deadline_content svg{
+		width:16px;
+		height:16px;
+		fill:#d1395a;
+	}
+	.deadline_content > span{
+		position:absolute;
+		left: 38px;
+	    top: 6px;
+		font-size:14px;
+		color:#d1395a;
+	
+	}
+	.message_line{
+		padding:6px;
+		position:relative;
+		width:331px;
+		height:20px;
+		margin-bottom:48px;
+	}
+	.message_line::before{
+		position:absolute;
+		top:32px;
+		left:12px;
+		content:'';
+		border:1px dashed #424244;
+		border-radius:4px;
+		height:28px;
+		}
+	.message_line > svg{
+		width:16px;
+		height:16px;
+		fill:#689af3;
+	}
+	.message_line > span{
+		font-size:16px;
+		line-height:20px;
+		color:#689af3;
+		
+	}
+	.member_profile{
+	    height: 24px;
+	    width: 24px;
+		border: 1px solid black;
+	    border-radius: 50%;
+	}
+	.activityfeed_timeline{
+		position:relative;
+		width:331px;
+		height:106px;
+		padding-bottom:32px;
+	}
+	.activityfeed_timeline::before{
+		position:absolute;
+		top:32px;
+		left:12px;
+		content:'';
+		border:1px solid #424244;
+		border-radius:4px;
+		height:82px;
+	}
+	.timeline_02{
+	 	top:16px;
+	}
+	
+	.activityfeed_timeline_child01 {
+		width:331px;
+		height:22px;
+	
+	}
+	.activityfeed_timeline_child01 > svg{
+		width:16px;
+		height:16px;
+		fill:#a2a0a2;
+	
+	}
+	.activityfeed_timeline_child01 > span{
+		font-size:16px;
+		line-height:20px;
+		font-weight:500;
+	}
+	.activityfeed_timeline_child02{
+		position: absolute;
+	    left: 26px;
+		margin-top:4px;
+		width:331px;
+		height:18px;
+		
+	}
+	.activityfeed_timeline_child02 > span{
+		font-size:12px;
+		line-height:18px;
+	}
+	.activityfeed_timeline_child03{
+		position: absolute;
+		top: 45px;
+	    left: 26px;
+		width:331px;
+		height:24px;
+		margin-top:8px;
+	}
+	.activityfeed_timeline_vesion2{
+		position:relative;
+		width:331px;
+		height:76px;
+	}
+	.activityfeed_timeline_vesion2::before{
+		position:absolute;
+		top:32px;
+		left:12px;
+		content:'';
+		border:1px solid #424244;
+		border-radius:4px;
+		height:52px;
+		
+	}
+	.activityfeed_timeline_child02_version2{
+		left: 20px;
+	    position: absolute;
+	    top: 32px;
+		width:331px;
+		height:20px;
+	}
+	.timeline_child02_version2_01{
+		font-size:14px;
+		line-height:20px;
+		font-weight:500;
+	}
+	
+	.timeline_child02_version2_02{
+		font-size:12px;
+		line-height:18px;
+		color:#a2a0a2;
+	}
+	.timeline_03{
+	 	top:35px;
+	}
+	.timeline_04{
+	 	top:52px;
+	}
+	.activityfeed_timeline_vesion3{
+		position:relative;
+		width:331px;
+		height:76px;
+	}
+	.activityfeed_timeline_vesion3::before{
+		position: absolute;
+	    top: 32px;
+	    left: 12px;
+	    content: '';
+	    border: 1px solid #424244;
+	    border-radius: 4px;
+	    height: 52px;	
+	}
+	
+	.activityfeed_timeline_vesion3.timeline_05  .Icon_state_update{
+		fill:#f1bd6c;
+		
+	}
+	.activityfeed_timeline_vesion3 > activityfeed_timeline_child01 > span{
+		font-size: 16px;
+	    line-height: 20px;
+	    font-weight: 500;
+	}
+	.activityfeed_timeline_vesion3 .timeline_child02_version2_01{
+		font-size: 14px;
+	    line-height: 20px;
+	    font-weight:500;
+	
+	
+	}
+	.activityfeed_timeline_vesion3 .timeline_child02_version2_02{
+		font-size: 12px;
+	    line-height: 18px;
+	    color: #a2a0a2;
+	}
+	.timeline_05{
+		top:69px;
+	}
+	.activityfeed_timeline_vesion3.timeline_06  .Icon_state_update{
+		fill:#5da283;
+	}
+	.timeline_06{
+		top:89px;
+	}
+	.timeline_07{
+		top:107px;
+	
+	}
+	.activityfeed_timeline_vesion4{
+		position:relative;
+		width:331px;
+		width:76px;
+	}
+	.timeline_08{
+		top:127px;
+	
+	}
+	
+	
+
+
+
+
+</style>
+<body>
+	<div id="header">
+		<div id="header1">
+			<div id="employment">
+				<svg class="MiniIcon PortfolioGenericMiniIcon" viewBox="0 0 24 24"
+					aria-hidden="true" focusable="false">
+						<path
+						d="M21,6h-8.4c-0.2,0-0.3,0-0.5-0.1c-0.1-0.1-0.3-0.2-0.4-0.3L9.8,2.5C9.8,2.3,9.6,2.2,9.5,2.1S9.2,2,9,2H1C0.7,2,0.5,2.1,0.3,2.3C0.1,2.5,0,2.7,0,3v16c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V9C24,7.3,22.7,6,21,6z M2,4h6.4l1.2,2H2V4L2,4L2,4z M22,19c0,0.6-0.4,1-1,1H3c-0.6,0-1-0.4-1-1V8h19c0.6,0,1,0.4,1,1V19z"></path></svg>
+				<span>취업 </span>
+				<svg
+					class="MiniIcon NavigationBreadcrumbContent-divider SlashMiniIcon"
+					viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+						<path
+						d="M16.21 1.837a1.002 1.002 0 0 0-1.307.541L7.25 20.856a1.001 1.001 0 0 0 1.848.766l7.654-18.478a1.001 1.001 0 0 0-.54-1.307Z"></path></svg>
+			</div>
+			<div id="member_button"></div>
+			<div id="share_button">
+				<svg class="MiniIcon LockFillMiniIcon" viewBox="0 0 24 24"
+					aria-hidden="true" focusable="false">
+						<path
+						d="M19.499 8h-1.5V6c0-3.309-2.691-6-6-6s-6 2.691-6 6v2h-1.5a2.503 2.503 0 0 0-2.5 2.5v9c0 1.378 1.121 2.5 2.5 2.5h15c1.379 0 2.5-1.122 2.5-2.5v-9c0-1.378-1.121-2.5-2.5-2.5Zm-3.5 0h-8V6c0-2.206 1.794-4 4-4s4 1.794 4 4v2Z"></path></svg>
+				<span>공유</span>
+			</div>
+			<div id="horizontal_line"></div>
+			<div id="customized">
+				<img
+					class="DeprecatedMiniIllustration DeprecatedMiniIllustration--smallMiniIcon ButtonThemeablePresentation-leftIcon"
+					alt=""
+					src="https://d3ki9tyy5l5ruj.cloudfront.net/obj/ce625ef5536516f31458c34d0c9d41457cae8470/customize_12.svg">
+				<span>사용자 지정</span>
+			</div>
+		</div>
+		<div id="header2">
+			<img src="img01/초록색2.png"></img>
+			<div id="project_title">
+				<span>협업툴 개발(1)</span>
+				<svg class="first_icon" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+
+				<svg class="second_icon" viewBox="0 0 32 32" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M.608 11.301a2.161 2.161 0 0 0 .538 2.224l5.867 5.78-1.386 8.164c-.14.824.192 1.637.868 2.124a2.133 2.133 0 0 0 2.262.155l7.241-3.848 7.24 3.848a2.133 2.133 0 0 0 2.263-.155 2.155 2.155 0 0 0 .868-2.124l-1.386-8.164 5.867-5.78c.59-.582.797-1.434.538-2.224a2.146 2.146 0 0 0-1.734-1.466l-8.1-1.19-3.623-7.42A2.148 2.148 0 0 0 15.998 0c-.828 0-1.57.476-1.935 1.223L10.44 8.645l-8.1 1.19A2.145 2.145 0 0 0 .606 11.3h.002Zm2.025.512 9.143-1.342 4.086-8.37c.012-.023.044-.088.137-.088.093 0 .124.064.137.089l4.086 8.369 9.143 1.342c.023.003.093.014.125.11a.163.163 0 0 1-.042.178l-6.609 6.511 1.56 9.192a.16.16 0 0 1-.065.169c-.074.054-.129.023-.152.01l-8.181-4.346-8.181 4.347c-.022.013-.08.04-.152-.011a.159.159 0 0 1-.065-.17l1.56-9.19-6.61-6.512a.163.163 0 0 1-.041-.178c.032-.096.102-.106.125-.11h-.004Z"></path></svg>
+			</div>
+			<div id="dangerous">
+				<svg class="MiniIcon StatusDotFillMiniIcon" viewBox="0 0 24 24"
+					aria-hidden="true" focusable="false">
+						<path
+						d="m20,12c0,4.42-3.58,8-8,8s-8-3.58-8-8S7.58,4,12,4s8,3.58,8,8Z"></path></svg>
+				<span>위험함</span>
+			</div>
+		</div>
+		<div id="header3">
+			<div id="header3_item">
+				<svg
+					class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon ProjectMiniIcon"
+					aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M 18 2 h -2 c 0 -1.1 -0.9 -2 -2 -2 h -4 C 8.9 0 8 0.9 8 2 H 6 C 3.8 2 2 3.8 2 6 v 14 c 0 2.2 1.8 4 4 4 h 12 c 2.2 0 4 -1.8 4 -4 V 6 C 22 3.8 20.2 2 18 2 Z M 10 2 h 4 l 0 1 c 0 0 0 0 0 0 s 0 0 0 0 l 0 1 h -4 V 2 Z M 20 20 c 0 1.1 -0.9 2 -2 2 H 6 c -1.1 0 -2 -0.9 -2 -2 V 6 c 0 -1.1 0.9 -2 2 -2 h 2 c 0 1.1 0.9 2 2 2 h 4 c 1.1 0 2 -0.9 2 -2 h 2 c 1.1 0 2 0.9 2 2 V 20 Z M 17 11 c 0 0.6 -0.4 1 -1 1 h -3.5 c -0.6 0 -1 -0.4 -1 -1 s 0.4 -1 1 -1 H 16 C 16.6 10 17 10.4 17 11 Z M 17 15 c 0 0.6 -0.4 1 -1 1 h -3.5 c -0.6 0 -1 -0.4 -1 -1 s 0.4 -1 1 -1 H 16 C 16.6 14 17 14.4 17 15 Z M 10 11 c 0 0.8 -0.7 1.5 -1.5 1.5 S 7 11.8 7 11 s 0.7 -1.5 1.5 -1.5 S 10 10.2 10 11 Z M 10 15 c 0 0.8 -0.7 1.5 -1.5 1.5 S 7 15.8 7 15 s 0.7 -1.5 1.5 -1.5 S 10 14.2 10 15 Z"></path></svg>
+				<span>개요</span>
+			</div>
+			<div id="header3_item">
+				<svg
+					class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon ListViewMiniIcon"
+					aria-current="true" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M5 2H3C1.346 2 0 3.346 0 5v2c0 1.654 1.346 3 3 3h2c1.654 0 3-1.346 3-3V5c0-1.654-1.346-3-3-3Zm1 5c0 .551-.448 1-1 1H3c-.552 0-1-.449-1-1V5c0-.551.448-1 1-1h2c.552 0 1 .449 1 1v2Zm-1 7H3c-1.654 0-3 1.346-3 3v2c0 1.654 1.346 3 3 3h2c1.654 0 3-1.346 3-3v-2c0-1.654-1.346-3-3-3Zm1 5c0 .551-.448 1-1 1H3c-.552 0-1-.449-1-1v-2c0-.551.448-1 1-1h2c.552 0 1 .449 1 1v2Zm4-13a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H11a1 1 0 0 1-1-1Zm14 12a1 1 0 0 1-1 1H11a1 1 0 1 1 0-2h12a1 1 0 0 1 1 1Z"></path></svg>
+				<span>목록</span>
+			</div>
+			<div id="header3_item">
+				<svg
+					class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon BoardMiniIcon"
+					aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M21,2h-4h-2H9H7H3C1.3,2,0,3.3,0,5v10c0,1.7,1.3,3,3,3h4v1c0,1.7,1.3,3,3,3h4c1.7,0,3-1.3,3-3v-3h4c1.7,0,3-1.3,3-3V5  C24,3.3,22.7,2,21,2z M3,16c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h4v12H3z M15,19c0,0.6-0.4,1-1,1h-4c-0.6,0-1-0.4-1-1v-0.9V4h6v12.2  V19z M22,13c0,0.6-0.4,1-1,1h-4V4h4c0.6,0,1,0.4,1,1V13z"></path></svg>
+				<span>보드</span>
+			</div>
+			<div id="header3_item">
+				<svg
+					class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon BoardMiniIcon"
+					aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M21,2h-4h-2H9H7H3C1.3,2,0,3.3,0,5v10c0,1.7,1.3,3,3,3h4v1c0,1.7,1.3,3,3,3h4c1.7,0,3-1.3,3-3v-3h4c1.7,0,3-1.3,3-3V5  C24,3.3,22.7,2,21,2z M3,16c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h4v12H3z M15,19c0,0.6-0.4,1-1,1h-4c-0.6,0-1-0.4-1-1v-0.9V4h6v12.2  V19z M22,13c0,0.6-0.4,1-1,1h-4V4h4c0.6,0,1,0.4,1,1V13z"></path></svg>
+				<span>메세지</span>
+			</div>
+			<div id="header3_item">
+				<svg
+					class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon AttachVerticalMiniIcon"
+					aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M14,24C10.7,24,8,21.3,8,18V8C8,5.8,9.8,4,12,4C14.2,4,16,5.8,16,8V16.9C16,17.5,15.6,17.9,15,17.9C14.4,17.9,14,17.5,14,16.9V8C14,6.9,13.1,6,12,6C10.9,6,10,6.9,10,8V18C10,20.2,11.8,22,14,22C16.2,22,18,20.2,18,18V8C18,4.7,15.3,2,12,2C8.7,2,6,4.7,6,8V13C6,13.6,5.6,14,5,14C4.4,14,4,13.6,4,13V8C4,3.6,7.6,0,12,0C16.4,0,20,3.6,20,8V18C20,21.3,17.3,24,14,24Z"></path></svg>
+				<span>파일</span>
+			</div>
+			<div id="header3_item">
+				<svg
+					class="MiniIcon--small MiniIcon ObjectTabNavigationBarItemWithMenu-icon DocumentMiniIcon"
+					aria-current="false" viewBox="0 0 24 24" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M5.998 24h12c2.206 0 4-1.794 4-4V9.683a3.984 3.984 0 0 0-1.075-2.729L15.62 1.271A4 4 0 0 0 13.321.065.999.999 0 0 0 12.998 0c-.037 0-.068.017-.103.021-.067-.003-.133-.021-.2-.021H6C3.793 0 2 1.794 2 4v16c0 2.206 1.793 4 4 4Zm8-21.502c.053.046.11.086.158.138l5.008 5.365h-3.69c-.814 0-1.476-.648-1.476-1.444V2.498ZM3.998 4c0-1.103.897-2 2-2h6v4.556c0 1.899 1.56 3.444 3.475 3.444h4.525v10c0 1.103-.897 2-2 2h-12c-1.103 0-2-.897-2-2V4Z"></path></svg>
+				<span>메모</span>
+			</div>
+			<div id="header3_item">
+				<svg class="Icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true"
+					focusable="false">
+						<path
+						d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+			</div>
+
+
+
+		</div>
+	</div>
+	<div id="main_content">
+		<div id="outline_content">
+			<div id="inline_content">
+				<div id="project_description">
+					<div id="project_description_child">
+						<span>프로젝트 설명</span>
+						<div id="project_description_img">
+							<img src="img01/에디터2.png"></img>
+						</div>
+					</div>
+				</div>
+				<div id="project_role">
+					<div id="add_member">
+						<span>프로젝트 역할</span>
+					</div>
+					<div id="member_profile_parent">
+						<div id="member_profile_view">
+							<div id="member_profile_default">
+								<svg class="Icon PlusIcon" viewBox="0 0 32 32"
+									aria-hidden="true" focusable="false">
+								<path
+										d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+							</div>
+							<span>멤버 추가</span>
+						</div>
+						<div id="member_profile_view">
+							<div id="member_profile"></div>
+							<div id="member_profile_name1">
+								<div id="member_profile_name">
+									<span>지숭</span>
+								</div>
+								<div id="member_profile_role">
+									<span>프로젝트 소유자</span>
+								</div>
+							</div>
+
+						</div>
+						<div id="member_profile_view">
+							<div id="member_profile"></div>
+							<div id="member_profile_name1">
+								<div id="member_profile_name">
+									<span>현우</span>
+								</div>
+								<div id="member_profile_role">
+									<span>+역할추가</span>
+								</div>
+							</div>
+						</div>
+						<div id="member_profile_view">
+							<div id="member_profile"></div>
+							<div id="member_profile_name1">
+								<div id="member_profile_name">
+									<span>길주</span>
+								</div>
+								<div id="member_profile_role">
+									<span>+역할추가</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="connected_goals">
+					<div id="connected_goals_title">
+						<span>연결된 목표</span>
+						<svg class="Icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true"
+							focusable="false">
+						<path
+								d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+					</div>
+					<div id="connected_goal_content_parent">
+						<div id="connected_goal_content">
+							<div id="connected_goal_content1">
+								<span>java 학습하기</span>
+								<svg
+									class="MiniIcon Breadcrumb-divider--compact Breadcrumb-divider ArrowRightMiniIcon"
+									viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+							<path
+										d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+							</div>
+							<div id="connected_goal_content2">
+								<span>오라클 학습하기</span>
+							</div>
+							<div id="connected_goal_content3">
+								<div id="color"></div>
+								<div id="state_of_the_goal">
+									<span>계획대로 진행중(100%)</span>
+								</div>
+								<div id="connected_goal_content3_svg1">
+									<svg
+										class="MiniIcon ParentGoalCardContent-automaticIndicator AutomationMiniIcon"
+										viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path
+											d="M5.414 14h4.198L7.39 20.666a1.968 1.968 0 0 0 .846 2.333c.333.206.699.307 1.06.307a1.98 1.98 0 0 0 1.405-.594l9.298-9.298a1.995 1.995 0 0 0 .434-2.179A1.994 1.994 0 0 0 18.585 10h-4.2l2.223-6.666a1.968 1.968 0 0 0-.846-2.333 1.969 1.969 0 0 0-2.465.287l-9.298 9.298a1.995 1.995 0 0 0-.434 2.179A1.994 1.994 0 0 0 5.413 14Z"></path></svg>
+								</div>
+								<div id="dotted">
+									<span>•</span>
+								</div>
+								<div id="connected_goal_content3_period">
+									<span>FY24 4분기</span>
+								</div>
+								<div id="profile_img"></div>
+							</div>
+
+						</div>
+						<div id="connected_goal_content">
+							<div id="connected_goal_content1">
+								<span>3째주 까지 데이터베이스 완성하기</span>
+								<svg
+									class="MiniIcon Breadcrumb-divider--compact Breadcrumb-divider ArrowRightMiniIcon"
+									viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+							<path
+										d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+							</div>
+							<div id="connected_goal_content2">
+								<span>java 학습하기</span>
+							</div>
+							<div id="connected_goal_content3">
+								<div id="color"></div>
+								<div id="state_of_the_goal">
+									<span>계획에서 벗어남(50%)</span>
+								</div>
+								<div id="connected_goal_content3_svg1">
+									<svg
+										class="MiniIcon ParentGoalCardContent-automaticIndicator AutomationMiniIcon"
+										viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path
+											d="M5.414 14h4.198L7.39 20.666a1.968 1.968 0 0 0 .846 2.333c.333.206.699.307 1.06.307a1.98 1.98 0 0 0 1.405-.594l9.298-9.298a1.995 1.995 0 0 0 .434-2.179A1.994 1.994 0 0 0 18.585 10h-4.2l2.223-6.666a1.968 1.968 0 0 0-.846-2.333 1.969 1.969 0 0 0-2.465.287l-9.298 9.298a1.995 1.995 0 0 0-.434 2.179A1.994 1.994 0 0 0 5.413 14Z"></path></svg>
+								</div>
+								<div id="dotted">
+									<span>•</span>
+								</div>
+								<div id="connected_goal_content3_period">
+									<span>FY24 4분기</span>
+								</div>
+								<div id="profile_img"></div>
+							</div>
+
+						</div>
+						<div id="connected_goal_content">
+							<div id="connected_goal_content2">
+								<span>3째주 까지 데이터베이스 완성하기</span>
+							</div>
+							<div id="connected_goal_content3">
+								<div id="color"></div>
+								<div id="state_of_the_goal">
+									<span>계획에서 벗어남(100%)</span>
+								</div>
+								<div id="connected_goal_content3_svg1">
+									<svg
+										class="MiniIcon ParentGoalCardContent-automaticIndicator AutomationMiniIcon"
+										viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path
+											d="M5.414 14h4.198L7.39 20.666a1.968 1.968 0 0 0 .846 2.333c.333.206.699.307 1.06.307a1.98 1.98 0 0 0 1.405-.594l9.298-9.298a1.995 1.995 0 0 0 .434-2.179A1.994 1.994 0 0 0 18.585 10h-4.2l2.223-6.666a1.968 1.968 0 0 0-.846-2.333 1.969 1.969 0 0 0-2.465.287l-9.298 9.298a1.995 1.995 0 0 0-.434 2.179A1.994 1.994 0 0 0 5.413 14Z"></path></svg>
+								</div>
+								<div id="dotted">
+									<span>•</span>
+								</div>
+								<div id="connected_goal_content3_period">
+									<span>FY24 4분기</span>
+								</div>
+								<div id="profile_img"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div id="main_connected_portfolio">
+					<div id="connected_portfolio1">
+						<span>연결된 포트폴리오</span>
+						<svg class="Icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true"
+							focusable="false">
+							<path
+								d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+					</div>
+					<div id="connected_portfolio2">
+						<div id="connected_portfolio2_child1">
+							<svg class="PortfolioColorIcon-duotoneBaseLayer ColorFillIcon ColorFillIcon--colorIndigo" viewBox="0 0 20 20" aria-labelledby="titlelui_36389" role="img" focusable="false"><title id="titlelui_36389">포트폴리오</title><path d="M 0 2.5 C 0 1.65 0.65 1 1.5 1 H 7.7 C 7.9 1 8.05 1.1 8.15 1.3 L 9.6 4.2 C 9.85 4.7 10.35 5.05 10.95 5.05 H 18.5 C 19.35 5.05 20 5.7 20 6.55 V 16.55 C 20 17.95 18.9 19.05 17.5 19.05 H 2.5 C 1.1 19.05 0 17.95 0 16.55 V 2.5 Z"></path></svg>
+						</div>
+						<div id="connected_portfolio2_child2">
+							<span>취업</span>
+						</div>
+						<div id="connected_portfolio2_child3">
+						<img src="img01/짱구1.jpg" id="portfolio_parent"></img>
+						</div>
+						<div id="connected_portfolio2_child4">
+							<svg class="Icon MoreIcon" viewBox="0 0 32 32" aria-hidden="true"
+								focusable="false">
+								<path
+									d="M16,13c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S14.3,13,16,13z M3,13c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S1.3,13,3,13z M29,13c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S27.3,13,29,13z"></path></svg>
+						</div>
+					</div>
+				</div>
+				<div class="core_resources">
+					<div class="core_resources_01"><span>핵심 리소스</span></div>
+					<div class="core_resources_02">
+						<div class="core_resources_03">
+							<div class="core_resources_04">
+								<img src="img01/01.png"></img>
+							</div>
+							<div class="core_resources_05">
+								<span>프로젝트 브리프와 도움이 되는 리소스를 사용하여 공유된 비전을 중심으로 팀을 조율하세요.</span>
+								<br/>
+								<br/>
+								<svg class="Icon ButtonThemeablePresentation-leftIcon BriefIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M22 0H10C6.691 0 4 2.691 4 6v20c0 3.309 2.691 6 6 6h12c3.309 0 6-2.691 6-6V6c0-3.309-2.691-6-6-6Zm4 26c0 2.206-1.794 4-4 4H10c-2.206 0-4-1.794-4-4V6c0-2.206 1.794-4 4-4h12c2.206 0 4 1.794 4 4v20ZM22.611 8.75l-4.083-.597-1.822-3.714a.778.778 0 0 0-.706-.44.778.778 0 0 0-.706.44l-1.822 3.714-4.083.597a.786.786 0 0 0-.437 1.339l2.958 2.901-.697 4.09a.788.788 0 0 0 1.143.827l3.645-1.927 3.645 1.927a.788.788 0 0 0 1.143-.827l-.697-4.09 2.958-2.901a.786.786 0 0 0-.437-1.339h-.002Zm-3.922 2.812-.747.733.176 1.032.283 1.661-1.466-.776-.935-.495-.935.495-1.466.776.283-1.661.176-1.032-.747-.733-1.21-1.187 1.662-.243 1.042-.152.464-.946.732-1.492.732 1.492.464.946 1.042.152 1.662.243-1.21 1.187h-.002ZM22.999 21a1 1 0 0 1-1 1h-12a1 1 0 0 1 0-2h12a1 1 0 0 1 1 1Zm0 4a1 1 0 0 1-1 1h-12a1 1 0 0 1 0-2h12a1 1 0 0 1 1 1Z"></path></svg>
+								<span class="core_resources_05_child">프로젝트 브리프 생성</span>
+								<svg class="Icon ButtonThemeablePresentation-leftIcon AttachVerticalIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M19,32c-3.9,0-7-3.1-7-7V10c0-2.2,1.8-4,4-4s4,1.8,4,4v9c0,0.6-0.4,1-1,1s-1-0.4-1-1v-9c0-1.1-0.9-2-2-2s-2,0.9-2,2v15c0,2.8,2.2,5,5,5s5-2.2,5-5V10c0-4.4-3.6-8-8-8s-8,3.6-8,8v5c0,0.6-0.4,1-1,1s-1-0.4-1-1v-5C6,4.5,10.5,0,16,0s10,4.5,10,10v15C26,28.9,22.9,32,19,32z"></path></svg>
+								<span class="core_resources_05_child">링크 및 파일 추가 </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="milestone">
+					<div class="milestone_title">
+						<span>마일스톤</span>
+						<svg class="Icon PlusIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M26,14h-8V6c0-1.1-0.9-2-2-2l0,0c-1.1,0-2,0.9-2,2v8H6c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h8v8c0,1.1,0.9,2,2,2l0,0c1.1,0,2-0.9,2-2v-8h8c1.1,0,2-0.9,2-2l0,0C28,14.9,27.1,14,26,14z"></path></svg>
+					</div>
+					<div class="milestone_content1">
+						<div class="milestone_content1_child01">
+							<svg class="CompoundIcon--small CompoundIcon MilestoneCompletionCompoundIcon MilestoneCompletionStatusIndicator--complete MilestoneCompletionStatusIndicator MilestoneRowCompletionStatus-icon--complete MilestoneRowCompletionStatus-icon--enabled MilestoneRowCompletionStatus-icon" data-testid="milestone_completion_status_indicator" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M20.1,2.8c-2.3-2.3-5.9-2.3-8.2,0L2.7,12c-2.3,2.3-2.3,5.9,0,8.2l9.2,9.2c2.3,2.3,5.9,2.3,8.2,0l9.2-9.2  c2.3-2.3,2.3-5.9,0-8.2L20.1,2.8z" class="CompoundIcon-outer"></path><path d="M13.4,22.2c-0.3,0-0.5-0.1-0.7-0.3L8.8,18c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22.1,13.7,22.2,13.4,22.2z" class="CompoundIcon-inner"></path></svg>
+						</div>
+						<div class="milestone_content1_child02">
+							<span>스토리보드 완성</span>
+						</div>
+						<div class="milestone_content1_child03">
+							<span>10월 31일</span>
+						</div>
+						<img class="profile_img" src="img01/철수.png"></img>
+					</div>
+					<div class="milestone_content1">
+						<div class="milestone_content1_child01">
+							<svg class="CompoundIcon--small CompoundIcon MilestoneCompletionCompoundIcon MilestoneCompletionStatusIndicator--complete MilestoneCompletionStatusIndicator MilestoneRowCompletionStatus-icon--complete MilestoneRowCompletionStatus-icon--enabled MilestoneRowCompletionStatus-icon" data-testid="milestone_completion_status_indicator" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M20.1,2.8c-2.3-2.3-5.9-2.3-8.2,0L2.7,12c-2.3,2.3-2.3,5.9,0,8.2l9.2,9.2c2.3,2.3,5.9,2.3,8.2,0l9.2-9.2  c2.3-2.3,2.3-5.9,0-8.2L20.1,2.8z" class="CompoundIcon-outer"></path><path d="M13.4,22.2c-0.3,0-0.5-0.1-0.7-0.3L8.8,18c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1l8.1-8.1c0.4-0.4,1-0.4,1.4,0   s0.4,1,0,1.4l-8.9,8.9C13.9,22.1,13.7,22.2,13.4,22.2z" class="CompoundIcon-inner"></path></svg>
+						</div>
+						<div class="milestone_content1_child02">
+							<span>기능명세서 완성</span>
+						</div>
+						<div class="milestone_content1_child03">
+							<span>12월 7일</span>
+						</div>
+						<img class="profile_img" src="img01/짱구2.jpg"></img>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="activity_feed">
+			<div class="status_update">
+				<div class="status_update_title">
+					<span>위험함</span>
+					<select name="status_id">
+						<option value="none">상태 업데이트</option>
+						<option value="status_name1">계획대로 진행 중</option>
+						<option value="status_name2">위험함</option>
+						<option value="status_name3">계획에서 벗어남</option>
+						<option value="status_name4">보류 중</option>
+						<option value="status_name5">완료</option>
+						<option value="none">AI로 업데이트 초안 만들기</option>
+					</select>
+				</div>
+				<div class="status_update_content">
+					<div class="status_update_content01"></div>
+					<div class="status_update_content02_parent">
+						<div class="status_update_content02">
+							<span class="status_update_content02_span01">상태 업데이트 -10월 28일</span>
+							<br>
+							<br>
+							<span class="status_update_content02_span02">요약</span>
+						</div>
+						<div class="status_update_content03">
+							<img src="img01/짱구1.jpg"></img>
+							<div class="status_update_content04">
+								<span class="status_update_content04_span1">지숭</span>
+								<br>
+								<span class="status_update_content04_span2">25일 전</span>
+							</div>
+							<svg class="Icon_Button" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28h19.94a3.987 3.987 0 0 0 3.961-3.395l1.552-10.03a3.96 3.96 0 0 0-.909-3.187 3.962 3.962 0 0 0-3.01-1.384H20V4.006C20 2.045 18.71.469 16.785.084c-1.918-.383-3.723.573-4.477 2.383l-3.975 9.536H5c-1.654 0-3 1.345-3 2.999V25c0 1.654 1.346 3 3 3Zm5-14.8 4.154-9.969c.465-1.116 1.5-1.341 2.238-1.191.742.148 1.608.751 1.608 1.961V12h8.532c.574 0 1.118.25 1.492.687.374.437.54 1.012.451 1.58l-1.552 10.032A1.997 1.997 0 0 1 24.94 26H10V13.2H10ZM4 15c0-.551.448-1 1-1h3v12H5c-.552 0-1-.449-1-1V15Z"></path></svg>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="project_summary">
+				<div class="main_project_summary">
+					<div class="project_summary_content1">
+						<img alt="" src="https://d3ki9tyy5l5ruj.cloudfront.net/obj/7dba910df709118d839d60fa095ed87acc71ec4c/ai_icon_12.svg" class="AiCopilotMiniIcon--undefined">
+						<span>프로젝트 요약</span>
+					</div>
+					<div class="project_summary_content2">
+						<span>인공 지능을 사용하여 이 프로젝트의 최근 진행 상황을 파악하세요.</span>
+					</div>
+					<div class="project_summary_content3">
+						<div class="project_summary_content3_child">
+							<div class="Compound_button">
+								<svg class="CompoundIcon--xsmall CompoundIcon TaskCompletionCompoundIcon SwitchPresentation-checkCircle" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23,12c0,6.1-4.9,11-11,11S1,18.1,1,12S5.9,1,12,1S23,5.9,23,12z" class="CompoundIcon-outer"></path><path d="M10.6,16.9c-0.4,0.4-1,0.4-1.4,0l-3.4-3.4c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0l2.7,2.7l6.4-6.4   c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L10.6,16.9z" class="CompoundIcon-inner"></path></svg>
+							</div>
+							<span>구독</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="deadline">
+				<div class="deadline_content">
+					<div class="calendar">
+						<svg class="Icon CalendarIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M24,2V1c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H10V1c0-0.6-0.4-1-1-1S8,0.4,8,1v1C4.7,2,2,4.7,2,8v16c0,3.3,2.7,6,6,6h16c3.3,0,6-2.7,6-6V8C30,4.7,27.3,2,24,2z M8,4v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4h12v1c0,0.6,0.4,1,1,1s1-0.4,1-1V4c2.2,0,4,1.8,4,4v2H4V8C4,5.8,5.8,4,8,4z M24,28H8c-2.2,0-4-1.8-4-4V12h24v12C28,26.2,26.2,28,24,28z"></path></svg>
+					</div>
+					<span>10월 16일 - 31일</span>
+				</div>
+			</div>
+			<div class="message_line">
+				<svg class="Icon ProjectOverviewActivityFeed-messageButtonIcon CommentIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M20 28c6.617 0 12-5.383 12-12v-2c0-6.617-5.383-12-12-12h-8C5.383 2 0 7.383 0 14v2c0 3.368 1.459 6.611 4.004 8.898.068.061.151.098.226.149l.778 6.079a.998.998 0 0 0 1.634.639l4.492-3.766h8.865L20 28Z"></path></svg>
+				<span>멤버에게 메시지 보내기</span>
+			</div>
+			<div class="activityfeed_timeline">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon UsersIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M21,18c-4.411,0-8-3.589-8-8S16.589,2,21,2s8,3.589,8,8-3.589,8-8,8Zm0-14c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm11,25v-2c0-3.86-3.141-7-7-7h-8c-3.859,0-7,3.14-7,7v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-2.757,2.243-5,5-5h8c2.757,0,5,2.243,5,5v2c0,.552,.447,1,1,1s1-.448,1-1ZM12,17c0-.552-.447-1-1-1-3.309,0-6-2.691-6-6s2.691-6,6-6c.553,0,1-.448,1-1s-.447-1-1-1C6.589,2,3,5.589,3,10s3.589,8,8,8c.553,0,1-.448,1-1ZM2,29v-2c0-2.757,2.243-5,5-5h2c.553,0,1-.448,1-1s-.447-1-1-1h-2C3.141,20,0,23.14,0,27v2C0,29.552,.447,30,1,30s1-.448,1-1Z"></path></svg>
+					<span>zingh1113@gmail.com 님이 참가했습니다</span>
+				</div>
+				<div class="activityfeed_timeline_child02">
+					<span>4일 전 </span>
+				</div>
+				<div class="activityfeed_timeline_child03">
+					<div class="member_profile"></div>
+				</div>
+			</div>
+			<div class="activityfeed_timeline_vesion2 timeline_02">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon CommentLineIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M20 2h-8C5.383 2 0 7.383 0 14v2c0 3.103 1.239 6.1 3.424 8.342l.586 5.857a1.999 1.999 0 0 0 3.247 1.357L11.662 28h8.339c6.617 0 12-5.383 12-12v-2c0-6.617-5.384-12-12.001-12Zm-9.045 24L6 30l-.659-6.589C3.305 21.58 2 18.953 2 16v-2C2 8.477 6.477 4 12 4h8c5.523 0 10 4.477 10 10v2c0 5.523-4.477 10-10 10h-9.045Z"></path></svg>
+					<span>협업툴 개발 파일</span>
+				</div>
+				<div class="activityfeed_timeline_child02_version2">
+					<span class="timeline_child02_version2_01">현우</span>
+					<span class="timeline_child02_version2_02">4일 전 </span>
+				</div>
+			</div>
+			<div class="activityfeed_timeline timeline_03">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon UsersIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M21,18c-4.411,0-8-3.589-8-8S16.589,2,21,2s8,3.589,8,8-3.589,8-8,8Zm0-14c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm11,25v-2c0-3.86-3.141-7-7-7h-8c-3.859,0-7,3.14-7,7v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-2.757,2.243-5,5-5h8c2.757,0,5,2.243,5,5v2c0,.552,.447,1,1,1s1-.448,1-1ZM12,17c0-.552-.447-1-1-1-3.309,0-6-2.691-6-6s2.691-6,6-6c.553,0,1-.448,1-1s-.447-1-1-1C6.589,2,3,5.589,3,10s3.589,8,8,8c.553,0,1-.448,1-1ZM2,29v-2c0-2.757,2.243-5,5-5h2c.553,0,1-.448,1-1s-.447-1-1-1h-2C3.141,20,0,23.14,0,27v2C0,29.552,.447,30,1,30s1-.448,1-1Z"></path></svg>
+					<span>길주 님이 참가했습니다</span>
+				</div>
+				<div class="activityfeed_timeline_child02">
+					<span>18일 전</span>
+				</div>
+				<div class="activityfeed_timeline_child03">
+					<div class="member_profile"></div>
+				</div>
+			</div>
+			<div class="activityfeed_timeline timeline_04">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon UsersIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M21,18c-4.411,0-8-3.589-8-8S16.589,2,21,2s8,3.589,8,8-3.589,8-8,8Zm0-14c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm11,25v-2c0-3.86-3.141-7-7-7h-8c-3.859,0-7,3.14-7,7v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-2.757,2.243-5,5-5h8c2.757,0,5,2.243,5,5v2c0,.552,.447,1,1,1s1-.448,1-1ZM12,17c0-.552-.447-1-1-1-3.309,0-6-2.691-6-6s2.691-6,6-6c.553,0,1-.448,1-1s-.447-1-1-1C6.589,2,3,5.589,3,10s3.589,8,8,8c.553,0,1-.448,1-1ZM2,29v-2c0-2.757,2.243-5,5-5h2c.553,0,1-.448,1-1s-.447-1-1-1h-2C3.141,20,0,23.14,0,27v2C0,29.552,.447,30,1,30s1-.448,1-1Z"></path></svg>
+					<span>현우 님이 참가했습니다</span>
+				</div>
+				<div class="activityfeed_timeline_child02">
+					<span>27일 전</span>
+				</div>
+				<div class="activityfeed_timeline_child03">
+					<div class="member_profile"></div>
+				</div>
+			</div>
+			<div class="activityfeed_timeline_vesion3 timeline_05">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon_state_update" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16,0c8.8,0,16,7.2,16,16s-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0z"></path></svg>
+					<span>상태 업데이트 - </span>
+					<span>10월 28일</span>
+				</div>
+				<div class="activityfeed_timeline_child02_version2">
+					<span class="timeline_child02_version2_01">지숭</span>
+					<span class="timeline_child02_version2_02">27일 전</span>
+				</div>
+			</div>
+			<div class="activityfeed_timeline_vesion3 timeline_06">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon_state_update" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16,0c8.8,0,16,7.2,16,16s-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0z"></path></svg>
+					<span>상태 업데이트 - </span>
+					<span>10월 28일</span>
+				</div>
+				<div class="activityfeed_timeline_child02_version2">
+					<span class="timeline_child02_version2_01">지숭</span>
+					<span class="timeline_child02_version2_02">27일 전</span>
+				</div>
+			</div>
+			<div class="activityfeed_timeline timeline_07">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon UsersIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M21,18c-4.411,0-8-3.589-8-8S16.589,2,21,2s8,3.589,8,8-3.589,8-8,8Zm0-14c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm11,25v-2c0-3.86-3.141-7-7-7h-8c-3.859,0-7,3.14-7,7v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-2.757,2.243-5,5-5h8c2.757,0,5,2.243,5,5v2c0,.552,.447,1,1,1s1-.448,1-1ZM12,17c0-.552-.447-1-1-1-3.309,0-6-2.691-6-6s2.691-6,6-6c.553,0,1-.448,1-1s-.447-1-1-1C6.589,2,3,5.589,3,10s3.589,8,8,8c.553,0,1-.448,1-1ZM2,29v-2c0-2.757,2.243-5,5-5h2c.553,0,1-.448,1-1s-.447-1-1-1h-2C3.141,20,0,23.14,0,27v2C0,29.552,.447,30,1,30s1-.448,1-1Z"></path></svg>
+					<span>회원님이 참가했습니다</span>
+				</div>
+				<div class="activityfeed_timeline_child02">
+					<span>29일 전</span>
+				</div>
+				<div class="activityfeed_timeline_child03">
+					<div class="member_profile"></div>
+				</div>
+			</div>
+			<div class="activityfeed_timeline_vesion4 timeline_08">
+				<div class="activityfeed_timeline_child01">
+					<svg class="Icon_ProjectIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M10,13.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5S8.5,15.8,8.5,15S9.2,13.5,10,13.5z M23,14h-8c-0.6,0-1,0.4-1,1s0.4,1,1,1h8c0.6,0,1-0.4,1-1S23.6,14,23,14z M23,20h-8c-0.6,0-1,0.4-1,1s0.4,1,1,1h8c0.6,0,1-0.4,1-1S23.6,20,23,20z M10,19.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5S8.5,21.8,8.5,21S9.2,19.5,10,19.5z M24,2h-2.2c-0.4-1.2-1.5-2-2.8-2h-6c-1.3,0-2.4,0.8-2.8,2H8C4.7,2,2,4.7,2,8v18c0,3.3,2.7,6,6,6h16c3.3,0,6-2.7,6-6V8C30,4.7,27.3,2,24,2z M13,2h6c0.6,0,1,0.4,1,1v2c0,0.6-0.4,1-1,1h-6c-0.6,0-1-0.4-1-1V3C12,2.4,12.4,2,13,2z M28,26c0,2.2-1.8,4-4,4H8c-2.2,0-4-1.8-4-4V8c0-2.2,1.8-4,4-4h2v1c0,1.7,1.3,3,3,3h6c1.7,0,3-1.3,3-3V4h2c2.2,0,4,1.8,4,4V26z"></path></svg>
+					<span>프로젝트 생성됨</span>
+				</div>
+				<div class="activityfeed_timeline_child02_version2">
+					<span class="timeline_child02_version2_01">지숭</span>
+					<span class="timeline_child02_version2_02">29일 전</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

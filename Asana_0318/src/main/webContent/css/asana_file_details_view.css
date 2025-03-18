@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+* {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.background_div {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: #1e1f21;
+}
+.file_top_minus_div,
+.file_top_plus_div{
+	width:20px;
+	height:20px;
+}
+.file_top_minus_icon,
+.file_top_plus_icon{
+	width:18px;
+	height:18px;
+	fill:lightgray;
+	margin-bottom: 13px;
+}
+.file_top_percent_div{
+	width:50px;
+	height:20px;
+}
+.file_top_div {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #474747;
+	display: flex;
+}
+
+.file_main-left {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 10%;
+	height: 100%;
+}
+
+.file_main_img {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:white;
+	width: 175%;
+	height: 100%;
+}
+
+.file_main-right {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 10%;
+	height: 100%;
+}
+.file_move_beforenum{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:17px;
+	height:17px;
+	fill:lightgray;
+}
+.file_move_nextnum{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:17px;
+	height:17px;
+	fill:lightgray;
+	
+}
+.file_move_div{
+	width:35px;
+	height:35px;
+	cursor:pointer;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.file_move_div:hover{
+	background-color:#5b5b5b;
+	border-radius:5px;
+}
+.file_page_file_img{
+	width:225px;
+	height:225px;
+}
+
+.file_main_div {
+	width: 99.8%;
+	height: 86%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.file_under_div {
+	width: 99.8%;
+	height: 7%;
+	display:flex;
+	align-items: flex-start;
+	margin-left: 50px;
+}
+
+.file_top_left {
+	width: 200px;
+	height: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 0px 0px 20px;
+}
+
+.file_top_mid {
+	width: 165px;
+	height: 50%;
+	color: white;
+	display: flex;
+	align-items: center;
+	display: flex;
+	border: 1px solid white;
+	margin: 0px 45px 0px 0px;
+	border-radius: 5px;
+}
+
+.top_mid_left {
+	width: 70%;
+	height: 100%;
+	border-right: 1px solid white;
+	display: flex;
+}
+
+.top_mid_right {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.file_top_right {
+	width: 180px;
+	height: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.file_top_file_name {
+	padding-top: 10px;
+	font-size: 13px;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 13px;
+}
+
+.file_top_write_time {
+	font-size: 13px;
+	width: 100%;
+	height: 100%;
+	color: lightgray;
+}
+
+.file_top_minus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33%;
+	height: 100%;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.file_top_minus_div:hover {
+	background-color: #474747;
+	border-radius: 5px;
+}
+
+.file_top_percent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33%;
+	height: 100%;
+	font-size: 15px;
+}
+
+.file_top_plus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33%;
+	height: 100%;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.file_top_plus_div:hover {
+	background-color: #474747;
+	border-radius: 5px;
+}
+
+.file_size_reset {
+	width: 15px;
+	height: 15px;
+	fill: lightgray;
+}
+
+.file_size_reset.on {
+	width: 15px;
+	height: 15px;
+	fill: white;
+	display: none;
+	cursor: pointer;
+}
+
+.file_top_download_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 3800px;
+	border-right: 1px solid #474747;
+}
+
+.file_download_icon {
+	width: 20px;
+	height: 20px;
+	fill: lightgray;
+	margin-right: 10px;
+}
+
+.file_top_x_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+}
+
+.file_top_x_inner {
+	width: 60%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.file_top_x_inner:hover {
+	background: #474747;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.file_top_download_inner {
+	width: 90%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size:15px;
+}
+
+.file_top_download_inner:hover {
+	background: #474747;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.file_page_img_coor{
+	width: 1175.17px;
+    height: 728px;
+    display:none;
+}
+.file_page_small_img_cartier,
+.file_page_small_img_coor{
+	width:68px;
+	height:44px;
+	border:1px solid white;
+	border-radius:5px;
+	margin:5px;
+	cursor:pointer;
+}

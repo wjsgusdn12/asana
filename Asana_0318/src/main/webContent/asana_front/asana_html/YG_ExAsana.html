@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Asana 20241101</title>
+	<style>
+		* {
+			box-sizing: border-box; 
+		}
+		body { 
+			margin: 0;
+			overflow-y: hidden;
+			overflow-x: hidden;
+		}
+		#header { 
+			position: relative; 
+			height: 49px; 
+			background-color: rgb(46, 46, 48);
+			border-bottom: 1px solid rgb(66,66,68);
+		}
+		#header > #menu_button {
+			position: absolute;
+		    top: 15px;
+		    left: 26px;
+   			fill: rgb(245, 244, 243);
+			height: 16px;
+			width: 16px;
+		}
+		#header > #creation_button {
+			position: absolute;
+		    top: 8px;
+		    left: 60px;
+   			width: 74px;
+			height: 32px;
+			border-radius: 16px;
+			border: 1px solid rgb(110, 109, 110);
+			background-color: rgb(61, 62, 64);
+			padding: 6px;
+		}
+		#header > #creation_button > div {
+			position: relative;
+			width: 20px;
+			height: 20px;
+			margin-top: -1px;
+			background-color: rgb(255, 88, 74);
+			border-radius: 50%;
+		}
+		#header > #creation_button > div > svg {
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			width: 12px;
+			height: 12px;
+			font-size: 14px;
+			fill: white;
+		}
+		#header > #creation_button > span {
+		    position: absolute;
+		    top: 3px;
+		    right: 6px;
+			color: rgb(245, 244, 243);
+			font-size: 14px;
+			line-height: 22px;
+			margin: 0 6px;
+		}
+		#header > #search_div {
+			position: absolute;
+			top: 8px;
+		    left: 690px;
+   			width: 540px;
+			height: 32px;
+			background-color: rgb(86, 85, 87);
+			border-radius: 16px;
+		}
+		#header > #search_div > svg {
+			fill: rgb(245, 244, 243);
+			width: 16px;
+			height: 16px;
+		    margin-left: 12px;
+    		margin-top: 8px;
+		}
+		#header > #search_div > span {
+		    position: absolute;
+		    top: 6px;
+		    left: 33px;
+			color: rgb(245, 244, 243);
+			font-size: 14px;
+		}
+		#header > #experience25 {
+			position: absolute;
+			top: 15px;
+   			right: 196px;
+   			color: rgb(245, 244, 243);
+			font-size: 12px;
+			line-height: 18px;
+			letter-spacing: -0.3px;
+		}
+		#header > #charge_info {
+			position: absolute;
+		    top: 10px;
+		    right: 87px;
+   			background-color: rgb(226, 178, 102);
+			border-radius: 6px;
+			padding: 8px;
+			width: 97px;
+			height: 28px; 
+		}
+		#header > #charge_info > span {
+			display: block;
+	        margin-top: -1px;
+    		margin-left: 1px;
+		    letter-spacing: -0.3px;
+			font-size: 12px;
+			line-height: 14px;
+			color: rgb(30, 31, 33);
+		    cursor: pointer;
+		}
+		#header > #question_button {
+			position: absolute;
+		    top: 10px;
+		    right: 51px;
+			width: 28px;
+			height: 28px;
+			border: 1px solid rgb(106, 105, 106);
+			border-radius: 50px;
+		}
+		#header > #question_button > svg {
+			height: 12px;
+			width: 12px;
+			fill: rgb(162, 160, 162);
+			cursor: pointer;
+			margin-left: 7px;
+    		margin-top: 7px;
+		}
+		#header > #me_button {
+			position: absolute;
+		    top: 10px;
+	        right: 14px;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background-position: 50%;
+    		background-size: cover;
+		}
+		#header > svg:last-child {
+			position: absolute;
+		    top: 10px;
+	        right: 5px;
+			fill: rgb(245, 244, 243);
+			width: 12px;
+			height: 12px;
+		}
+		#content > #sidebar {
+			position: relative;
+			width: 241px;
+			height: 920px; 
+			background-color: rgb(46, 46, 48);
+			border-right: 1px solid rgb(66,66,68); 
+		}
+		#content > #main {
+			height: 920px;
+			width: 1671px;
+		}
+		#content > #sidebar .sidebar_item {
+			position: relative;
+			font-size: 14px;
+			font-weight: 400;
+			height: 32px;
+			line-height: 32px;
+		}
+		#content > #sidebar .sidebar_item:NOT(:last-child) {
+			width: 216px;
+			margin: 0 12px;
+		}
+		#content > #sidebar .sidebar_item:first-child {
+			margin-top: 12px;
+		}
+		#content > #sidebar .sidebar_item.active {
+			background-color: rgba(255, 255, 255, 0.11);
+			border-radius: 8px;
+		}
+		#content > #sidebar .sidebar_item svg.MiniIcon.MiniIcon--large {
+		    top: 4px;
+		    left: 10px;
+		}
+		#content > #sidebar .sidebar_item svg.ArrowRightMiniIcon {
+			fill: rgb(162, 160, 162);
+			height: 12px;
+			width: 12px;
+		    top: 10px;
+		    right: 8px;
+   		}
+   		#content > #sidebar .sidebar_item svg.UserFillIcon {
+   			top: 8px !important;
+   			left: 14px !important;
+   		}
+		#content > #sidebar .sidebar_item:NOT(:last-child) svg:NOT(.MiniIcon--large):NOT(.ArrowRightMiniIcon) {
+		    top: 6px;
+		    left: 12px;
+		}
+		#content > #sidebar .sidebar_item:NOT(:last-child) span {
+			top: 4px;
+			left: 32px;
+		}
+		#content > #sidebar .sidebar_item svg {
+			position: absolute;
+		    height: 20px;
+			width: 20px;
+			fill: rgb(162, 160, 162);
+		}
+		#content > #sidebar .sidebar_item span {
+			position: absolute;
+			color: rgb(245, 244, 243);
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 22px;
+			margin-left: 8px;
+			letter-spacing: -0.3px;
+		}
+		#content > #sidebar .separator {
+			height: 1px;
+			width: 100%;		
+			border-top: 1px solid rgb(66, 66, 68);
+			margin: 12px 0 8px;
+		}
+		#content > #sidebar .category {
+			position: relative;
+			font-size: 14px;
+			font-weight: 500;
+			color: rgb(245, 244, 243);
+		    padding: 12px 0 10px 24px;
+		}
+		#content > #sidebar .category .PlusMiniIcon {
+			position: absolute;
+    		top: 16px;
+   			right: 20px;
+   			fill: rgb(162, 160, 162);
+			width: 12px;
+			height: 12px;
+		}
+		#content > #sidebar .category.with_gt {
+		
+		}
+		#content > #sidebar .sidebar_item:last-child > div {
+			position: relative;
+		}
+		#content > #sidebar .sidebar_item:last-child > div > svg {
+		    top: 9px;
+		    left: 61px;
+			width: 16px;
+			height: 16px;
+		}
+		#content > #sidebar .sidebar_item:last-child > div > span {
+			font-size: 14px;
+		    top: 5px;
+		    left: 77px;
+		    letter-spacing: -0.3px;
+		}
+		#content > #sidebar .sidebar_item:last-child {
+			position: absolute;
+    		bottom: 8px;
+    		width: 100%;
+    		height: 68px;
+			border-top: 1px solid rgb(66, 66, 68);
+		}
+		#content > #sidebar .sidebar_item:last-child > div {
+			width: 208px;
+			height: 36px;
+			border: 1px solid rgb(86, 85, 87);
+			border-radius: 6px;
+			/* background-color: rgb(255, 255, 255, 0.11); */
+			padding: 16px 16px;
+			margin: 16px;
+		}
+		svg.MiniIcon.MiniIcon--large { width: 24px !important; height: 24px !important; }
+		svg.PortfolioNavIcon { fill-rule: evenodd; }
+		svg.ColorFillIcon--colorAqua { fill: rgb(158, 231, 227) !important; }
+		svg.ColorFillIcon--colorMagenta { fill: rgb(249, 170, 239) !important; }
+		svg.ColorFillIcon--colorIndigo { fill: rgb(166, 159, 243) !important; }
+		svg.ArrowRightMiniIcon { }
+		svg.UserFillIcon { width:16px !important; height: 16px !important; }
+		div { border: 1px solid red; }
+		.fl { float: left; }
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="menu_button">
+			<svg class="Icon BurgerExpand" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h29a1.5 1.5 0 1 1 0 3h-29A1.5 1.5 0 0 1 0 4.5ZM30.5 15h-29a1.5 1.5 0 1 0 0 3h29a1.5 1.5 0 1 0 0-3Zm0 12h-29a1.5 1.5 0 1 0 0 3h29a1.5 1.5 0 1 0 0-3Z"></path></svg>
+		</div>
+		<div id="creation_button">
+			<div>
+				<svg class="MiniIcon OmnibuttonButtonCard-icon PlusMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+			</div>
+			<span>생성</span>
+		</div>
+		<div id="search_div">
+			<svg class="Icon TopbarSearchTypeahead-icon--isInverse TopbarSearchTypeahead-icon MagnifyerIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M13.999 28c3.5 0 6.697-1.3 9.154-3.432l6.139 6.139a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414l-6.139-6.139A13.93 13.93 0 0 0 27.999 14c0-7.72-6.28-14-14-14s-14 6.28-14 14 6.28 14 14 14Zm0-26c6.617 0 12 5.383 12 12s-5.383 12-12 12-12-5.383-12-12 5.383-12 12-12Z"></path></svg>
+			<span>검색</span>
+		</div>
+		<div id="experience25">
+			체험 25일 남음
+		</div>
+		<div id="charge_info">
+			<span>청구 정보 추가</span>
+		</div>
+		<div id="question_button">
+			<svg class="MiniIcon QuestionMarkMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.749 20a1.75 1.75 0 1 1-3.499.001A1.75 1.75 0 0 1 13.75 20Zm-1.75-18c-4.139 0-6 3-6 5.131V8a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-.869c0-.45.509-2.131 3-2.131 2.783 0 3 2.095 3 2.736 0 1.375-1.021 2.073-1.463 2.311-1.209.651-3.037 1.635-3.037 4.347V15.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1.106c0-.835.276-1.068 1.461-1.705C16.863 11.665 18 9.813 18 7.737c0-2.763-1.878-5.737-6-5.737Z"></path></svg>
+		</div>
+		<div id="me_button" style="background-image: url('https://s3.us-east-1.amazonaws.com/asana-user-private-us-east-1/assets/1208631811152676/profile_photos/1208631809111502/629b06f79f08400c639b3b99258ca592_36x36.png')">
+		</div>
+		<svg class="MiniIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+	</div>
+	<div id="content">
+		<div id="sidebar" class="fl">
+			<div class="sidebar_item active">
+				<svg class="NavIcon HomeNavIcon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M37.9,15L22.2,3.8c-1.3-1-3.1-1-4.4-0.1L2.2,14.4c-0.7,0.5-0.9,1.4-0.4,2.1c0.5,0.7,1.4,0.9,2.1,0.4L6,15.4v12.3c0,4.6,3.7,8.3,8.3,8.3h11.4c4.6,0,8.3-3.7,8.3-8.3V15.9l2.1,1.5c0.3,0.2,0.6,0.3,0.9,0.3c0.5,0,0.9-0.2,1.2-0.6C38.7,16.4,38.5,15.5,37.9,15z M31,27.7c0,2.9-2.4,5.3-5.3,5.3H14.3C11.4,33,9,30.6,9,27.7V13.3l10.6-7.2c0.2-0.2,0.5-0.2,0.8,0L31,13.7V27.7z"></path></svg>
+				<span>홈</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon CheckNavIcon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20,2.5C10.4,2.5,2.5,10.4,2.5,20S10.4,37.5,20,37.5S37.5,29.6,37.5,20S29.6,2.5,20,2.5z M20,34.5C12,34.5,5.5,28,5.5,20S12,5.5,20,5.5S34.5,12,34.5,20S28,34.5,20,34.5z M27.7,15c0.6,0.6,0.6,1.5,0,2.1l-10,10c-0.2,0.2-0.6,0.3-1,0.3c-0.4,0-0.8-0.1-1.1-0.4l-4.1-4.1c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l3.1,3.1l8.9-8.9C26.2,14.4,27.1,14.4,27.7,15z"></path></svg>
+				<span>내 작업</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="CompoundNavIcon BellNotificationCompoundIcon SidebarTopNavLinks-bellNotificationCompoundIcon--red" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M31 14a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" class="CompoundNavIcon-outer"></path><path d="M15.422 34h9.156A4.998 4.998 0 0 1 20 37a4.998 4.998 0 0 1-4.578-3Zm20.037-9.007A5.483 5.483 0 0 1 34 21.263v-2.7a1.5 1.5 0 0 0-3 0v2.7a8.48 8.48 0 0 0 2.254 5.765l.813.882a.62.62 0 0 1 .117.701.62.62 0 0 1-.595.39H6.41a.621.621 0 0 1-.595-.39.623.623 0 0 1 .118-.702l.812-.88a8.482 8.482 0 0 0 2.254-5.766V16a10.976 10.976 0 0 1 10.5-10.989 1.499 1.499 0 0 0 1.431-1.565c-.036-.827-.719-1.499-1.565-1.431A13.97 13.97 0 0 0 6 16v5.263a5.484 5.484 0 0 1-1.459 3.731l-.812.88a3.6 3.6 0 0 0-.662 3.939A3.603 3.603 0 0 0 6.41 32h27.18a3.603 3.603 0 0 0 3.343-2.187 3.6 3.6 0 0 0-.661-3.938l-.813-.882Z" class="CompoundNavIcon-inner"></path></svg>
+				<span>수신함</span>
+			</div>
+			<div class="separator"></div>
+			<div class="category with_plus">
+				<span>인사이트</span>
+				<svg class="MiniIcon PlusMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon ReportingNavIcon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M34.5,6c-2.48,0-4.5,2.02-4.5,4.5,0,1.13.43,2.14,1.11,2.93l-4.28,7.55s-.03.06-.04.09c-.26-.05-.52-.08-.79-.08-.85,0-1.64.25-2.32.66l-4.46-3.65c.17-.48.28-.98.28-1.51,0-2.48-2.02-4.5-4.5-4.5s-4.5,2.02-4.5,4.5c0,.94.29,1.81.79,2.54l-4.51,6.17c-.41-.12-.83-.21-1.28-.21-2.48,0-4.5,2.02-4.5,4.5s2.02,4.5,4.5,4.5,4.5-2.02,4.5-4.5c0-.94-.29-1.81-.79-2.54l4.51-6.17c.41.12.83.21,1.28.21.85,0,1.64-.25,2.32-.66l4.46,3.65c-.17.48-.28.98-.28,1.51,0,2.48,2.02,4.5,4.5,4.5s4.5-2.02,4.5-4.5c0-1.13-.43-2.15-1.12-2.94.02-.03.05-.06.07-.09l4.27-7.54c.26.05.51.08.78.08,2.48,0,4.5-2.02,4.5-4.5s-2.02-4.5-4.5-4.5ZM5.5,31c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Zm9.5-13c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Zm11,9c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Zm8.5-15c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5.67,1.5,1.5-.67,1.5-1.5,1.5Z"></path></svg>
+				<span>보고서</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon PortfolioNavIcon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M35,12c1.7,0,3,1.3,3,3v16c0,2.8-2.2,5-5,5H7c-2.8,0-5-2.2-5-5V7c0-1.7,1.3-3,3-3h11.9c0.4,0,0.8,0.2,0.9,0.6  l2.4,5.6c0.5,1.1,1.6,1.8,2.8,1.8H35z M35,15v16c0,1.1-0.9,2-2,2H7c-1.1,0-2-0.9-2-2V15H35z M17.8,12c-0.1-0.2-0.2-0.4-0.3-0.7  L15.6,7H5v5H17.8z"></path></svg>
+				<span>포트폴리오</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="NavIcon GoalNavIcon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M35.6,30.1l-6.2-9.6C31,18.5,32,15.9,32,13c0-6.6-5.4-12-12-12C13.4,1,8,6.4,8,13c0,2.9,1,5.5,2.7,7.6l-6.2,9.6  c-1.2,1.8-1.3,4-0.2,5.9c1,1.9,2.9,3,5.1,3h21.5c2.1,0,4-1.1,5.1-3S36.7,31.9,35.6,30.1z M11,13c0-5,4-9,9-9c5,0,9,4,9,9  c0,1.8-0.5,3.5-1.4,4.9l-2.7-4.2c-1.1-1.6-2.9-2.6-4.8-2.6c-1.9,0-3.7,1-4.8,2.6l-2.7,4.2C11.5,16.5,11,14.8,11,13z M25.5,20.2  C23.9,21.3,22.1,22,20,22s-3.9-0.7-5.5-1.9l3.2-4.8c0.5-0.8,1.4-1.2,2.3-1.2c0.9,0,1.8,0.5,2.3,1.2L25.5,20.2z M33.2,34.6  c-0.5,0.9-1.4,1.4-2.4,1.4H9.2c-1,0-1.9-0.5-2.4-1.4c-0.5-0.9-0.4-1.9,0.1-2.8l6-9.1c2,1.5,4.4,2.3,7.1,2.3c2.7,0,5.1-0.9,7.1-2.3  l6,9.1C33.6,32.6,33.7,33.7,33.2,34.6z"></path></svg>
+				<span>목표</span>
+			</div>
+			<div class="category with_plus">
+				<span>프로젝트</span>
+				<svg class="MiniIcon PlusMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,10V4c0-1.1,0.9-2,2-2s2,0.9,2,2v6h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6H4c-1.1,0-2-0.9-2-2s0.9-2,2-2H10z"></path></svg>
+			</div>
+			<div class="sidebar_item">
+				<svg class="MiniIcon--large MiniIcon ColorFillIcon ColorFillIcon--colorAqua SmallSquircleMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.4,4h3.2c2.2,0,3,0.2,3.9,0.7c0.8,0.4,1.5,1.1,1.9,1.9s0.7,1.6,0.7,3.9v3.2c0,2.2-0.2,3-0.7,3.9c-0.4,0.8-1.1,1.5-1.9,1.9s-1.6,0.7-3.9,0.7h-3.2c-2.2,0-3-0.2-3.9-0.7c-0.8-0.4-1.5-1.1-1.9-1.9c-0.4-1-0.6-1.8-0.6-4v-3.2c0-2.2,0.2-3,0.7-3.9C5.1,5.7,5.8,5,6.6,4.6C7.4,4.2,8.2,4,10.4,4z"></path></svg>
+				<span>협업툴 개발</span>
+			</div>
+			<div class="sidebar_item">
+				<svg class="MiniIcon--large MiniIcon ColorFillIcon ColorFillIcon--colorMagenta SmallSquircleMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.4,4h3.2c2.2,0,3,0.2,3.9,0.7c0.8,0.4,1.5,1.1,1.9,1.9s0.7,1.6,0.7,3.9v3.2c0,2.2-0.2,3-0.7,3.9c-0.4,0.8-1.1,1.5-1.9,1.9s-1.6,0.7-3.9,0.7h-3.2c-2.2,0-3-0.2-3.9-0.7c-0.8-0.4-1.5-1.1-1.9-1.9c-0.4-1-0.6-1.8-0.6-4v-3.2c0-2.2,0.2-3,0.7-3.9C5.1,5.7,5.8,5,6.6,4.6C7.4,4.2,8.2,4,10.4,4z"></path></svg>
+				<span>개발자로 취업하기</span>
+			</div>
+			<div class="sidebar_item with_gt">
+				<svg class="PortfolioColorIcon-duotoneBaseLayer ColorFillIcon ColorFillIcon--colorIndigo" viewBox="0 0 20 20" aria-labelledby="titlelui_46" role="img" focusable="false"><title id="titlelui_46">포트폴리오</title><path d="M 0 2.5 C 0 1.65 0.65 1 1.5 1 H 7.7 C 7.9 1 8.05 1.1 8.15 1.3 L 9.6 4.2 C 9.85 4.7 10.35 5.05 10.95 5.05 H 18.5 C 19.35 5.05 20 5.7 20 6.55 V 16.55 C 20 17.95 18.9 19.05 17.5 19.05 H 2.5 C 1.1 19.05 0 17.95 0 16.55 V 2.5 Z"></path></svg>
+				<!-- <svg class="PortfolioColorIcon-duotoneTopLayer" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M 1.5 1 C 0.65 1 0 1.65 0 2.5 V 7.5 C 0 6.65 0.65 6 1.5 6 H 18.5 C 19.35 6 20 6.65 20 7.5 V 6.5 C 20 5.65 19.35 5 18.5 5 H 10.95 C 10.4 5 9.85 4.7 9.6 4.15 L 8.15 1.25 C 8.05 1.1 7.9 1 7.7 1 H 1.5 Z"></path></svg> -->
+				<span>취업</span>
+				<svg class="MiniIcon--small MiniIcon SidebarFlyoutSplitDropdownButton-flyoutChevron ArrowRightMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+			</div>
+			<div class="sidebar_item with_gt">
+				<svg class="PortfolioColorIcon-duotoneBaseLayer ColorFillIcon ColorFillIcon--colorMagenta" viewBox="0 0 20 20" aria-labelledby="titlelui_49" role="img" focusable="false"><title id="titlelui_49">포트폴리오</title><path d="M 0 2.5 C 0 1.65 0.65 1 1.5 1 H 7.7 C 7.9 1 8.05 1.1 8.15 1.3 L 9.6 4.2 C 9.85 4.7 10.35 5.05 10.95 5.05 H 18.5 C 19.35 5.05 20 5.7 20 6.55 V 16.55 C 20 17.95 18.9 19.05 17.5 19.05 H 2.5 C 1.1 19.05 0 17.95 0 16.55 V 2.5 Z"></path></svg>
+				<!-- <svg class="PortfolioColorIcon-duotoneTopLayer" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M 1.5 1 C 0.65 1 0 1.65 0 2.5 V 7.5 C 0 6.65 0.65 6 1.5 6 H 18.5 C 19.35 6 20 6.65 20 7.5 V 6.5 C 20 5.65 19.35 5 18.5 5 H 10.95 C 10.4 5 9.85 4.7 9.6 4.15 L 8.15 1.25 C 8.05 1.1 7.9 1 7.7 1 H 1.5 Z"></path></svg> -->
+				<span>개발</span>
+				<svg class="MiniIcon--small MiniIcon SidebarFlyoutSplitDropdownButton-flyoutChevron ArrowRightMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+			</div>
+			<div class="category">
+				<span>팀</span>
+			</div>
+			<div class="sidebar_item with_gt">
+				<svg class="Icon SidebarItemIcon--iconWithoutCustomizationColor UserFillIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M31,30H11c-.552,0-1-.448-1-1v-2c0-3.866,3.134-7,7-7h8c3.866,0,7,3.134,7,7v2c0,.552-.448,1-1,1Zm-23-3c0-2.029,.676-3.901,1.814-5.407,.495-.656,.023-1.593-.799-1.593h-2.015c-3.866,0-7,3.134-7,7v2c0,.552,.448,1,1,1H7c.552,0,1-.448,1-1v-2ZM28.5,10c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5,3.358,7.5,7.5,7.5,7.5-3.358,7.5-7.5Zm-17,0c0-2.125,.698-4.087,1.878-5.67,.431-.579,.176-1.413-.522-1.594-1.074-.278-2.24-.324-3.45-.067-2.917,.619-5.248,2.996-5.779,5.93-.86,4.758,2.773,8.901,7.373,8.901,.632,0,1.245-.08,1.831-.23,.71-.181,.984-1.013,.546-1.601-1.179-1.582-1.877-3.544-1.877-5.669Z"></path></svg>
+				<span>내 작업 공간</span>
+				<svg class="MiniIcon--small MiniIcon SidebarFlyoutSplitDropdownButton-flyoutChevron ArrowRightMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.148 3.885A1.5 1.5 0 1 0 7.85 5.813l5.19 6.186-5.19 6.186a1.499 1.499 0 0 0 1.148 2.464c.428 0 .854-.182 1.15-.536l6-7.15a1.5 1.5 0 0 0 0-1.929l-6-7.149Z"></path></svg>
+			</div>
+			<div class="sidebar_item">
+				<div>
+					<svg class="Icon ButtonThemeablePresentation-leftIcon SidebarInvite-icon EmailIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M25.998 4h-20c-3.309 0-6 2.691-6 6v12c0 3.309 2.691 6 6 6h20c3.31 0 6-2.691 6-6V10c0-3.309-2.69-6-6-6Zm-20 2h20c.74 0 1.424.215 2.02.567L16.704 17.879a1 1 0 0 1-1.414 0L3.98 6.567A3.96 3.96 0 0 1 6 6Zm24 16c0 2.206-1.794 4-4 4h-20c-2.206 0-4-1.794-4-4V10c0-.74.215-1.424.567-2.019l11.312 11.313a2.993 2.993 0 0 0 2.121.876 2.99 2.99 0 0 0 2.121-.877L29.431 7.981A3.96 3.96 0 0 1 29.998 10v12Z"></path></svg>
+					<span>팀원 초대</span>
+				</div>
+			</div>			
+		</div>
+		
+		<div id="main" class="fl">
+			<div id="something" style="height: 1500px; width: 100%;"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</body>
+</html>

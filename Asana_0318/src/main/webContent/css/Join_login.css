@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.mark {
+	margin-top: 18px;
+	margin-left: 15px;
+}
+
+.title {
+	margin-top: 14px;
+	margin-left: 740px;
+}
+
+.start_login {
+	position: absolute;
+	top: 115%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+}
+
+.kakao_login {
+	width: 568px;
+	height: 40px;
+	display: flex;
+	border-color: #fee500;
+	background-color: #fee500;
+	align-items: center;
+	justify-content: center;
+	margin-left: 654px;
+	margin-top: 80px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.kakao_logo {
+	width: 20px;
+	height: 20px;
+	fill: none;
+	margin-right: 4px;
+}
+
+.naver_login {
+	width: 568px;
+	height: 40px;
+	display: flex;
+	border-color: #31c800;
+	background-color: #31c800;
+	align-items: center;
+	justify-content: center;
+	margin-left: 654px;
+	margin-top: 147px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.naver_login>img {
+	margin-right: 4px;
+	width: 28px;
+	height: 28px;
+}
+
+.naver_login>span {
+	margin-top: 5px;
+}
+
+.line_left {
+	width: 271px;
+	border: 1px solid #6d6e6f;
+	position: absolute;
+	top: 213%;
+	left: 656px;
+}
+
+.line_right {
+	width: 254px;
+	border: 1px solid #6d6e6f;
+	position: absolute;
+	top: 213%;
+	right: 36.5%;
+}
+
+.line_in_span {
+	position: absolute;
+	right: 50%;
+	top: 210%;
+}
+
+.email_span {
+	position: absolute;
+	right: 53.5%;
+	top: 239%;
+	font-size: 13px;
+}
+
+.pw_span {
+	position: absolute;
+	right: 63.9%;
+	top: 280%;
+	font-size: 13px;
+}
+
+.email_input {
+	position: absolute;
+	right: 36.5%;
+	top: 249%;
+}
+
+.pw_input {
+	position: absolute;
+	right: 36.5%;
+	top: 290%;
+}
+
+.email {
+	width: 572px;
+	height: 50px;
+	border-radius: 14px;
+	border: 1px solid #cfcbcb;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.pw {
+	width: 572px;
+	height: 50px;
+	border-radius: 14px;
+	border: 1px solid #cfcbcb;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.send_bt {
+	position: absolute;
+	right: 66.5%;
+	top: 338%;
+}
+
+.send_bt:hover {
+	cursor: pointer;
+}
+
+.send_bt_input {
+	width: 572px;
+	height: 50px;
+	border-radius: 14px;
+	border: 1px solid #cfcbcb;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	z-index: 1;
+	position: absolute;
+}
+
+.circle1 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 393px;
+}
+
+.circle2 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 137px;
+}
+
+.circle3 {
+	float: left;
+	margin-top: 174px;
+	margin-left: 137px;
+}
+
+.circle1_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.circle2_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.circle3_span {
+	margin-top: -37px;
+	margin-left: 42px;
+}
+
+.move {
+	position: absolute;
+	top: 328%;
+	left: -33px;
+}

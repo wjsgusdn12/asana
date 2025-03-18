@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+	width: 1887px;
+}
+* {
+
+	box-sizing: border-box;
+}
+.add_member_displayblock{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.add_member_content{
+	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	width:560px;
+	height:710px;
+	margin:auto;
+	border:1px solid;
+	border-radius:12px;
+}
+.add_member_child01{
+	align-items: center;
+	gap: 250px;
+	display:flex;
+	width:560px;
+	height:64px;
+	padding:0 24px;
+	border-bottom:1px solid #edeae9;
+}
+.add_member_child01 > span{
+	font-size:20px;
+	line-height:28px;
+	font-weight:500;
+
+}
+.add_member_child01_icon{
+	right: 11px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+	width:68px;
+	height:28px;
+	margin:0 0 0 16px;
+}
+.add_member_child01_icon > svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+
+}
+.add_member_child02{
+	border-radius:6px;
+	border-bottom:1px solid #edeae9;
+	width:560px;
+	height:162px;
+	padding:24px;
+
+}
+.add_member_child02_01{
+	width:512px;
+	height:28px;
+	margin-bottom:8px;
+}
+.add_member_child02_02{
+	gap: 6px;
+	display:flex;
+	width:512px;
+	height:36px;
+}
+.add_member_child02_03{
+	margin-top: 15px;
+	width:512px;
+	height:22px;
+}
+.add_member_child02_01 span{
+	font-size: 16px;
+    line-height: 20px;
+    font-weight:500;
+
+}
+.add_member_child02_02 input{
+	border-radius:6px;
+	width:314px;
+	height:34px;
+	padding: 6px;
+	border:1px solid #cfcbcb;
+}
+
+.role_button{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+	margin-right: 5px;
+	width:148px;
+	height:34px;
+	border-radius:6px;
+	border:1px solid #cfcbcb;
+}
+.role_button span{
+	font-size:12px;
+	line-height:28px;
+	color:#6d6e6f;
+
+}
+.role_button > svg{
+	fill:#6d6e6f;
+	width:12px;
+	height:12px;
+}
+.role_button_child01{
+	display:none;
+	width:280px;
+	height:299px;
+	padding:4px 0;
+	border-radius:6px;
+	border : 1px solid #edeae9;
+}
+.role_button_child01_01{
+	display: flex;
+	width:280px;
+	height:66px;
+	padding:2px 10px;
+	border-bottom:1px solid #edeae9;
+}
+
+
+.add_member_child02_03 > span{
+	font-size:14px;
+	line-height:22px;
+}
+.add_member_child02_02 > button{
+	background-color:white;
+	width: 56px;
+    height: 34px;
+    border-radius:6px;
+    border:1px solid  #edeae9;
+}
+
+.add_member_child03{
+	width:560px;
+	height:121px;
+	padding:24px 24px 16px;
+
+}
+.add_member_child03_01{
+	width:512px;
+	height:24px;
+	margin:0 0 8px;
+}
+.add_member_child03_02{
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	align-items: center;
+    gap: 260px;
+	display:flex;
+	width:512px;
+	height:48px;
+	
+}
+.add_member_child03_01 > span{
+	font-size:16px;
+	line-height:24px;
+	font-weight:500;
+}
+
+.role_button_child01_01_01{
+	width:15px;
+	height:58px;
+}
+.role_button_child01_01_02{
+	width:232px;
+	height:58px;
+
+}
+.role_button_child01_01_01 > svg{
+	width:12px;
+	height:12px;
+	fill:#1e1f21;
+}
+.role_button_child01_span1{
+	font-size:14px;
+	line-height:22px;
+}
+.role_button_child01_span2{
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+}
+.add_member_child03_02_left{
+	display: flex;
+    align-items: center;
+    gap: 10px;
+	width: 220px;
+    height: 35px;
+}
+.add_member_child03_02_left > svg{
+	margin-left: 9px;
+	width:16px;
+	height:16px;
+	fill:#1e1f21;
+}
+.add_member_child03_02_left > span{
+	font-size: 14px;
+    line-height: 22px;
+}
+.add_member_child03_02_right{
+	width:20px;
+	height:20px;
+}
+.add_member_child03_02_right > svg{
+	width:12px;
+	height:12px;
+}
+.access_setting_option{
+	display:none;
+	padding:4px 0;
+	width:512px;
+	height:113px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+}
+.access_setting_option_member{
+	display: flex;
+	width:495px;
+	height:48px;
+	padding: 2px 10px;
+
+}
+.access_setting_option_member_left{
+	width:45px;
+	height:40px;
+}
+.access_setting_option_member_left > svg{
+	width:14px;
+	height:14px;
+	fill:#1e1f21;
+
+}
+.access_setting_option_member_right{
+	width:423px;
+	height:40px;
+}
+.access_setting_option_member_right01{
+	font-size:14px;
+	line-height:22px;
+	font-weight:400;
+	color:#1e1f21;
+}
+.access_setting_option_member_right02{
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+
+}
+.access_setting_02{
+	padding-left: 21px;
+}
+.add_member_child04{
+	display: flex;
+    gap: 407px;
+	width:543px;
+	height:28px;
+	padding:0 24px 8px;
+
+}
+.add_member_child04 > span{
+	font-size:16px;
+	line-height:20px;
+	font-weight:500;
+}
+.add_member_child04_01{
+	font-size:14px;
+	color:#4464bb;
+
+}
+.add_member_child05{
+	display: flex;
+	align-items: center;
+    gap: 13px;
+	width:543px;
+	height:50px;
+	padding:0 24px;
+}
+.icon_user_back > svg{
+	width:16px;
+	height:16px;
+	fill:#fff;
+}
+.icon_user_back{
+	padding: 4px;
+	width:28px;
+	height:28px;
+	border-radius:50%;
+	background-color:#afabac;
+	border:1px solid #6d6e6f;
+
+
+}
+.add_member_child05 >span{
+	font-size:14px;
+	line-heihgt:22px;
+}
+.add_member_role{
+	position: absolute;
+    right: 19px;
+    border:1px solid  rgb(255,255,255,1);
+}
+.access_setting_scroll{
+	width:557px;
+	height:380px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.add_member_child06{
+	align-items: center;
+	display: flex;
+	width:543px;
+	height:50px;
+	padding:0 24px;
+
+}
+.add_member_child06_child_left >  img{
+	margin-right: 19px;
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+.add_member_child06_child_center > span:nth-child(1){
+	font-size:14px;
+	line-height:22px;
+}
+.add_member_child06_child_center > span:nth-child(3){
+	font-size:12px;
+	line-height:18px;
+	color:#6d6e6f;
+}
+.add_member_child07{
+	margin-top: 28px;
+	width:560px;
+	height:69px;
+	padding: 16px 24px;
+	border-top:1px solid #cfcbcb;
+}
+.link_button{
+	gap: 10px;
+    align-items: center;
+    display: flex;
+	right: 19px;
+    position: absolute;
+	border: 1px solid #cfcbcb;
+    border-radius: 6px;
+	width:161px;
+	height:36px;
+}
+.link_button > svg{
+	margin: 6px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+.link_button > span{
+	font-size:14px;
+	line-height:36px;
+
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="add_member_displayblock">
+	<div class="add_member_content">
+		<div class="add_member_child01">
+			<span>협업툴 개발(1) 공유</span>
+			<div  class="add_member_child01_icon">
+				<svg class="Icon SettingsIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M25.999 3c-2.967 0-5.43 2.167-5.91 5H3a1 1 0 1 0 0 2h17.09c.478 2.833 2.942 5 5.91 5 3.309 0 6-2.691 6-6s-2.691-6-6-6Zm0 10c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4Zm-20 16c2.967 0 5.43-2.167 5.91-5h17.09a1 1 0 1 0 0-2h-17.09c-.478-2.833-2.942-5-5.91-5-3.309 0-6 2.691-6 6s2.691 6 6 6Zm0-10c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4Z"></path></svg>
+				<svg class="Icon XIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M18.1,16L27,7.1c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L16,13.9l-8.9-9C6.5,4.3,5.6,4.3,5,4.9S4.4,6.4,5,7l8.9,8.9L5,24.8c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l8.9-8.9l8.9,8.9c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L18.1,16z"></path></svg>
+			
+			</div>
+		</div>
+		<div class="add_member_child02">
+				<div class="add_member_child02_01">
+					<span>이메일로 초대</span>
+				</div>
+				<div class="add_member_child02_02">
+					<input placeholder="이름 또는 이메일로 멤버 추가 ..."/>
+					<div class="role_button">
+						<span>프로젝트 관리자</span>
+						<svg class="MiniIcon ButtonThemeablePresentation-rightIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+					</div>	
+					<div class="role_button_child01">
+						<div class="role_button_child01_01">
+							<div class="role_button_child01_01_01">
+								<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+							</div>
+							<div class="role_button_child01_01_02">
+								<span class="role_button_child01_span1">프로젝트 관리자</span>
+								<br/>
+								<span  class="role_button_child01_span2">설정을 변경하고 프로젝트를 수정하거나 삭제할 수 있는 모든 엑세스 권한.</span>
+							</div>
+						</div>
+						<div class="role_button_child01_01">
+							<div class="role_button_child01_01_01">
+								<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+							</div>
+							<div class="role_button_child01_01_02">
+								<span class="role_button_child01_span1">편집자</span>
+								<br/>
+								<span class="role_button_child01_span2">프로젝트에 있는 모든 것을 추가 , 편집 , 삭제 할 수 있습니다.</span>
+							</div>
+						</div>
+						<div class="role_button_child01_01">
+							<div class="role_button_child01_01_01">
+								<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+							</div>
+							<div class="role_button_child01_01_02">
+								<span class="role_button_child01_span1">댓글 작성자</span>
+								<br/>
+								<span class="role_button_child01_span2">댓글을 작성할 수 있지만 프로젝트에 있는 내용은 편집할 수 없습니다.</span>
+							</div>
+						</div>
+						<div class="role_button_child01_01">
+							<div class="role_button_child01_01_01">
+								<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+							</div>
+							<div class="role_button_child01_01_02">
+								<span class="role_button_child01_span1">조회자</span>
+								<br/>
+								<span class="role_button_child01_span2">볼 수는 있지만 댓글을 추가하거나 프로젝트를 편집할 수는 없습니다.</span>
+							</div>
+						</div>
+					</div>
+					<button>초대</button>
+				</div>
+				<div class="add_member_child02_03">
+					<input type="checkbox" name="alarm" value="check"/>
+					<span>프로젝트에 작업이 초대될 때 알림</span>
+				</div>
+		</div>
+		<div class="access_setting_scroll">
+			<div class="add_member_child03">
+				<div class="add_member_child03_01">
+					<span>엑세스 설정</span>
+				</div>
+				<div  class="add_member_child03_02">
+					<div class="add_member_child03_02_left">
+						<svg class="Icon PrivacyDropdown-buttonIcon LockIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M25.999 10h-2V8c0-4.411-3.589-8-8-8s-8 3.589-8 8v2h-2c-2.206 0-4 1.794-4 4v10c0 2.206 1.794 4 4 4h20c2.206 0 4-1.794 4-4V14c0-2.206-1.794-4-4-4Zm-16-2c0-3.309 2.691-6 6-6s6 2.691 6 6v2h-12V8Zm18 16c0 1.103-.897 2-2 2h-20c-1.103 0-2-.897-2-2V14c0-1.103.897-2 2-2h20c1.103 0 2 .897 2 2v10Z"></path></svg>
+						<span>멤버들에게만 공개</span>
+					</div>
+					<div class="add_member_child03_02_right">
+						<svg class="MiniIcon ButtonThemeablePresentation-rightIcon PrivacyDropdown-buttonRightIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+					</div>
+				</div>
+				<div class="access_setting_option">
+					<div  class="access_setting_option_member">
+						<div class="access_setting_option_member_left access_setting_02">
+							<svg class="Icon PrivacyDropdown-optionIcon UsersIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M21,18c-4.411,0-8-3.589-8-8S16.589,2,21,2s8,3.589,8,8-3.589,8-8,8Zm0-14c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm11,25v-2c0-3.86-3.141-7-7-7h-8c-3.859,0-7,3.14-7,7v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-2.757,2.243-5,5-5h8c2.757,0,5,2.243,5,5v2c0,.552,.447,1,1,1s1-.448,1-1ZM12,17c0-.552-.447-1-1-1-3.309,0-6-2.691-6-6s2.691-6,6-6c.553,0,1-.448,1-1s-.447-1-1-1C6.589,2,3,5.589,3,10s3.589,8,8,8c.553,0,1-.448,1-1ZM2,29v-2c0-2.757,2.243-5,5-5h2c.553,0,1-.448,1-1s-.447-1-1-1h-2C3.141,20,0,23.14,0,27v2C0,29.552,.447,30,1,30s1-.448,1-1Z"></path></svg>
+						</div>
+						<div class="access_setting_option_member_right">
+							<span class="access_setting_option_member_right01">내 작업 공간</span>
+							<br/>
+							<span class="access_setting_option_member_right02">작업 공간의 모든 사용자가 이 프로젝트를 찾아 액세스할 수 있습니다.</span>
+						</div>
+				   </div>
+					<div  class="access_setting_option_member">
+						<div class="access_setting_option_member_left">
+							<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+							<svg class="Icon PrivacyDropdown-buttonIcon LockIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M25.999 10h-2V8c0-4.411-3.589-8-8-8s-8 3.589-8 8v2h-2c-2.206 0-4 1.794-4 4v10c0 2.206 1.794 4 4 4h20c2.206 0 4-1.794 4-4V14c0-2.206-1.794-4-4-4Zm-16-2c0-3.309 2.691-6 6-6s6 2.691 6 6v2h-12V8Zm18 16c0 1.103-.897 2-2 2h-20c-1.103 0-2-.897-2-2V14c0-1.103.897-2 2-2h20c1.103 0 2 .897 2 2v10Z"></path></svg>
+						</div>
+						<div class="access_setting_option_member_right">
+							<span class="access_setting_option_member_right01">멤버들에게만 공개</span>
+							<br/>
+							<span class="access_setting_option_member_right02">오직 초대받은 멤버만 이 프로젝트를 찾아 엑세스할 수 있습니다.</span>
+						</div>
+				   </div>
+				</div>
+			</div>
+			<div class="add_member_child04">
+				<span>멤버</span>
+				<div class="add_member_child04_01">알림관리</div>
+			</div>
+			<div class="add_member_child05">
+				<div class="icon_user_back">
+					<svg class="Icon UsersIcon" viewBox="0 0 32 32" aria-labelledby="titlelui_1702" role="img" focusable="false"><title id="titlelui_1702">UsersIcon</title><path d="M21,18c-4.411,0-8-3.589-8-8S16.589,2,21,2s8,3.589,8,8-3.589,8-8,8Zm0-14c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm11,25v-2c0-3.86-3.141-7-7-7h-8c-3.859,0-7,3.14-7,7v2c0,.552,.447,1,1,1s1-.448,1-1v-2c0-2.757,2.243-5,5-5h8c2.757,0,5,2.243,5,5v2c0,.552,.447,1,1,1s1-.448,1-1ZM12,17c0-.552-.447-1-1-1-3.309,0-6-2.691-6-6s2.691-6,6-6c.553,0,1-.448,1-1s-.447-1-1-1C6.589,2,3,5.589,3,10s3.589,8,8,8c.553,0,1-.448,1-1ZM2,29v-2c0-2.757,2.243-5,5-5h2c.553,0,1-.448,1-1s-.447-1-1-1h-2C3.141,20,0,23.14,0,27v2C0,29.552,.447,30,1,30s1-.448,1-1Z"></path></svg>
+				</div>
+				<span>작업의 협업 참여자</span>
+				<div class="role_button add_member_role">
+					<span>프로젝트 관리자</span>
+					<svg class="MiniIcon ButtonThemeablePresentation-rightIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+				</div>
+				<div class="role_button_child01">
+							<div class="role_button_child01_01">
+								<div class="role_button_child01_01_01">
+									<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+								</div>
+								<div class="role_button_child01_01_02">
+									<span class="role_button_child01_span1">프로젝트 관리자</span>
+									<br/>
+									<span  class="role_button_child01_span2">설정을 변경하고 프로젝트를 수정하거나 삭제할 수 있는 모든 엑세스 권한.</span>
+								</div>
+							</div>
+							<div class="role_button_child01_01">
+								<div class="role_button_child01_01_01">
+									<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+								</div>
+								<div class="role_button_child01_01_02">
+									<span class="role_button_child01_span1">편집자</span>
+									<br/>
+									<span class="role_button_child01_span2">프로젝트에 있는 모든 것을 추가 , 편집 , 삭제 할 수 있습니다.</span>
+								</div>
+							</div>
+							<div class="role_button_child01_01">
+								<div class="role_button_child01_01_01">
+									<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+								</div>
+								<div class="role_button_child01_01_02">
+									<span class="role_button_child01_span1">댓글 작성자</span>
+									<br/>
+									<span class="role_button_child01_span2">댓글을 작성할 수 있지만 프로젝트에 있는 내용은 편집할 수 없습니다.</span>
+								</div>
+							</div>
+							<div class="role_button_child01_01">
+								<div class="role_button_child01_01_01">
+									<svg class="MiniIcon CheckMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.439 5.439 8 16.878l-3.939-3.939A1.5 1.5 0 1 0 1.94 15.06l5 5c.293.293.677.439 1.061.439.384 0 .768-.146 1.061-.439l12.5-12.5a1.5 1.5 0 1 0-2.121-2.121h-.002Z"></path></svg>
+								</div>
+								<div class="role_button_child01_01_02">
+									<span class="role_button_child01_span1">조회자</span>
+									<br/>
+									<span class="role_button_child01_span2">볼 수는 있지만 댓글을 추가하거나 프로젝트를 편집할 수는 없습니다.</span>
+								</div>
+							</div>
+						</div>	
+			</div>
+			<div class="add_member_child06">
+				<div class="add_member_child06_child_left">
+						<img src="img01/짱구1.jpg"></img>
+				</div>
+				<div class="add_member_child06_child_center">
+					<span>지숭</span>
+					<br/>
+					<span>asanajisoo@gmail.com</span>
+				</div>
+				<div class="role_button add_member_role">
+					<span>프로젝트 관리자</span>
+					<svg class="MiniIcon ButtonThemeablePresentation-rightIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+				</div>
+			</div>
+			<div class="add_member_child06">
+				<div class="add_member_child06_child_left">
+						<img src="img01/짱구2.jpg"></img>
+				</div>
+				<div class="add_member_child06_child_center">
+					<span>길주</span>
+					<br/>
+					<span>zingh1113@gmail.com</span>
+				</div>
+				<div class="role_button add_member_role">
+					<span>프로젝트 관리자</span>
+					<svg class="MiniIcon ButtonThemeablePresentation-rightIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+				</div>
+			</div>
+			<div class="add_member_child06">
+				<div class="add_member_child06_child_left">
+						<img src="img01/철수.png"></img>
+				</div>
+				<div class="add_member_child06_child_center">
+					<span>현우</span>
+					<br/>
+					<span>gusdntkd2@gmail.com</span>
+				</div>
+				<div class="role_button add_member_role">
+					<span>프로젝트 관리자</span>
+					<svg class="MiniIcon ButtonThemeablePresentation-rightIcon ArrowDownMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18.185 7.851-6.186 5.191-6.186-5.191a1.499 1.499 0 1 0-1.928 2.298l7.15 6a1.498 1.498 0 0 0 1.928 0l7.15-6a1.5 1.5 0 0 0-1.928-2.298Z"></path></svg>
+				</div>
+			</div>
+		</div>
+		<div class="add_member_child07">
+			<div class="link_button">
+				<svg class="MiniIcon ButtonThemeablePresentation-leftIcon LinkMiniIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.654 9.345a6.872 6.872 0 0 1 0 9.71L11.72 21.99a6.848 6.848 0 0 1-4.855 2.008 6.84 6.84 0 0 1-4.854-2.008 6.817 6.817 0 0 1-2.012-4.855c0-1.834.714-3.559 2.012-4.854l1.781-1.782a.999.999 0 1 1 1.414 1.414l-1.781 1.781A4.833 4.833 0 0 0 2 17.134c0 1.3.506 2.523 1.426 3.442A4.835 4.835 0 0 0 6.865 22a4.838 4.838 0 0 0 3.441-1.424l2.934-2.934a4.872 4.872 0 0 0-1.186-7.755 1 1 0 1 1 .928-1.773 6.862 6.862 0 0 1 1.672 1.231Zm-2.377-7.334L9.343 4.946a6.872 6.872 0 0 0 1.672 10.941 1 1 0 0 0 .928-1.772 4.872 4.872 0 0 1-1.186-7.755l2.934-2.933A4.836 4.836 0 0 1 17.132 2c1.3 0 2.521.506 3.44 1.425a4.833 4.833 0 0 1 1.426 3.44 4.833 4.833 0 0 1-1.426 3.441l-1.781 1.782a.999.999 0 1 0 1.414 1.415l1.781-1.782a6.817 6.817 0 0 0 2.012-4.855 6.816 6.816 0 0 0-2.012-4.856 6.873 6.873 0 0 0-9.709 0Z"></path></svg>
+				<span>프로젝트 링크복사</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

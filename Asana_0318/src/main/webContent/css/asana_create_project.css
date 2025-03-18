@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.whole-div {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-div {
+	width: 100%;
+	height: 64px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px 0px 20px;
+}
+
+.under-div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Icon {
+	width: 20px;
+	height: 20px;
+	fill: gray;
+}
+
+.Icon-back {
+	width: 20px;
+	height: 20px;
+	fill: gray;
+}
+
+.Icon-back:hover,.Icon-close:hover{
+	cursor:pointer;
+	background-color:#f9f8f8;
+	border-radius:3px;
+	fill:black;
+}
+
+.Icon-close {
+	width: 20px;
+	height: 20px;
+	fill: gray;
+}
+
+.Icon-Back {
+	margin-left: 30px;
+}
+
+.Icon-Cancle {
+	margin-right: 30px;
+}
+
+.content {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	height: 320px;
+	justify-content: space-between;
+}
+
+.text32 {
+	font-size: 32px;
+	margin-bottom: 15px;
+}
+
+.text20 {
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+
+.NewProject {
+	width: 122px;
+	height: 122px;
+	border: 1px dashed gray;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.PlusIcon {
+	width: 32px;
+	height: 32px;
+	fill: gray;
+}
+
+.bin-project {
+	margin: 5px 0px;
+}
+
+.first-start {
+	font-size: 12px;
+	color: gray;
+}
+
+.three-in-one-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.three-in-one-box:hover {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 145px;
+	height: 225px;
+	cursor: pointer;
+	background-color: #f9f8f8;
+	border-radius: 20px;
+}

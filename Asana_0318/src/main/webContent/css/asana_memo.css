@@ -1,0 +1,444 @@
+@charset "UTF-8";
+
+.invite_input_text_area{
+	font-size: 17px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 0 30px 0;
+}
+
+.input_email_div {
+	width: auto;
+	height: 25px;
+	display: flex;
+	gap: 5px;
+	background-color: #e9e9e9;
+	justify-content: space-evenly;
+	font-size: 15px;
+	align-items: center;
+	border-radius: 5px;
+	margin: 3px;
+	padding:0px 10px 0px 10px;
+}
+
+/* 개목보메파모 호버 */
+.over_view_button:hover, .list_view_button:hover, .board_view_button:hover,
+	.message_view_button:hover, .file_view_button:hover, .memo_view_button:hover
+	{
+	cursor: pointer;
+	background-color: #EAEAEA;
+	border-radius: 5px;
+	fill: black;
+	color: black;
+}
+
+.over_view_button, .list_view_button, .board_view_button,
+	.message_view_button, .memo_view_button, .file_view_button {
+	width: 60px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.memo_view_button{
+	color:black;
+	fill:black;
+	border-bottom:2px solid black;
+}
+.file_page_outline_view_list {
+	height: 40px;
+	font-size: 14px;
+	color: grey;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-left: -10px;
+}
+/* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */
+.star-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.star-center-on {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon20-star {
+	width: 17px;
+	height: 17px;
+	fill: gray;
+}
+
+.icon20-star-on {
+	width: 17px;
+	height: 17px;
+	display: none;
+	fill: #fcbd01;
+}
+
+.star-center.on>.icon20-star-on {
+	display: inline;
+}
+
+.star-center.on>.icon20-star {
+	display: none;
+}
+
+.star-center:not(.on)>.icon20-star-on {
+	display: none;
+}
+
+.star-center:not(.on)>.icon20-star {
+	display: inline;
+}
+
+.star-center:hover {
+	cursor: pointer;
+	background-color: #EAEAEA;
+	border-radius: 5px;
+}
+/* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */ /* 별모양 css */
+	/* 프로필이미지 여러 동글이 */
+.file_page_share_button {
+	cursor: pointer;
+	border-radius: 6px;
+	gap: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 58px;
+	height: 28px;
+	background-color: #4573d2;
+	font-size: 12px;
+	color: white;
+}
+.file_page_project_name_div {
+	display: flex;
+	align-items: center;
+	margin-top: 7px;
+}
+.img-small {
+	width: 30px;
+	height: 30px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+.MiniIcon32 {
+	width: 32px;
+	height: 32px;
+}
+svg.MiniIcon16 {
+	width: 16px;
+	height: 16px;
+}
+	/* 프로필이미지 여러 동글이 */
+.list-image {
+	position: relative;
+	height: 61px;
+	display: flex;
+	align-items: center;
+}
+.small_profile_images_div {
+	margin-right: 10px;
+}
+
+.small_profile_images_div:hover {
+	cursor: pointer;
+}
+/* 메인단 맨위 맨왼쪽 프로젝트 경로 */
+.portfolio_link_name {
+	font-size: 14px;
+	color: grey;
+}
+/* 메인단 맨위 맨왼쪽 프로젝트 경로 호버 */
+.portfolio_link_name:hover {
+	color: blue;
+	border-bottom: 1px solid blue;
+	cursor: pointer;
+}
+.MiniIcon {
+	width: 12px;
+	height: 12px;
+}
+/********************************* 초대 팝업창 창 *************************************/
+.invite_email_remove_button_outline{
+	fill:lightgray;
+}
+.invite_email_remove_button_inline{
+	fill:black;
+}
+.invite_email_remove_button:hover{
+	cursor:pointer;
+	border-radius:50%;
+}
+.popup_EmailInput:hover{
+	outline:3px solid #3f66ba;
+}
+.popup_ProjectInput:focus{
+	outline:3px solid #3f66ba;
+}
+.popup_invite_whole-div {
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30, 31, 33, .75);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.popup_Invite {
+	background-color: white;
+	width: 560px;
+	height: 410px;
+	border-radius: 10px;
+}
+
+.popup_InviteTitle {
+	width: 560px;
+	height: 64px;
+	padding: 0px 24px;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid lightgray;
+}
+
+.popup_InviteContent {
+	width: 560px;
+	height: 346px;
+	padding: 24px;
+}
+
+.popup_invite_XIcon {
+	width: 16px;
+	height: 16px;
+	fill: gray;
+}
+
+.popup_invite_x_icon_div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 27px;
+	width: 27px;
+}
+
+.popup_invite_XIcon:hover, .popup_invite_x_icon_div:hover {
+	cursor: pointer;
+	background-color: #EAEAEA;
+	border-radius: 5px;
+}
+
+.popup_EmailInput {
+	width: 512px;
+	min-height: 100px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+
+.popup_ProjectInput {
+	width: 510px;
+	height: 34px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+
+.popup_invite_text {
+	font-size: 12px;
+	color: gray;
+	margin-bottom: 10px;
+}
+
+.popup_invite_button {
+	width: 68px;
+	height: 36px;
+	padding: 0 12px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	background-color: white;
+	color: gray;
+	margin-left: 445px;
+}
+.popup_invite_button.on{
+	cursor:pointer;
+	background-color:#3f66ba;
+	color:white;
+}
+/********************************* 초대 팝업창 창 *************************************/
+
+/* 상단바 생성 팝업창 기본 오프 처리*/
+.create_something_popup {
+	width: 165px;
+	height: 200px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+	font-size:15px;
+	position: fixed;
+	z-index: 100;
+	margin: 2px 0 0 135px;
+	display:flex;
+	flex-direction: column;
+	padding: 5px;
+	justify-content: center;
+	display:none;
+}
+
+/* 상단바 생성 팝업창 온 처리 */
+.create_something_popup.on{
+	display:block;
+}
+
+/* 상단바 팝업창 생성 리스트 */
+.popup_create_work,
+.popup_create_project,
+.popup_create_message,
+.popup_create_portfolio,
+.popup_create_invite{
+	width:100%;
+	height:20%;
+	display:flex;
+	align-items:center;
+}
+
+/* 상단바 생성리스트 svg */
+.topbar_popup_approve,
+.topbar_popup_project,
+.topbar_popup_message,
+.topbar_popup_portfolio,
+.topbar_popup_invite{
+	width:17px;
+	height:17px;
+	fill:gray;
+	margin:0px 10px 0px 5px;
+}
+
+/* 상단바 생성 팝업창 호버 */
+.popup_create_work:hover,
+.popup_create_project:hover,
+.popup_create_message:hover,
+.popup_create_portfolio:hover,
+.popup_create_invite:hover{
+	cursor:pointer;
+	background-color:#EAEAEA;
+}
+
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+	}
+	body{
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	}
+	.top-div{
+		width:100%;
+		height:49px;
+		background-color:#353535;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	.under-div{
+		width: 100%;
+	    height: 95%;
+	    border: 1px solid black;
+	    background-color: white;
+	    display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: column;
+	}
+	.sidebar{
+		width:240px;
+		height:95%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		background-color:#353535;
+	}
+	.main-top{
+		width:87%;
+		height:114px;
+		background-color:white;
+		border-bottom:1px solid #EAEAEA;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	.main-date{
+		width:87%;
+		height:58px;
+		border-top:1px solid #EAEAEA;
+		border-bottom:1px solid #EAEAEA;
+		display:flex;
+		justify-content: flex-end;
+    	align-items: center;
+    	color:#8C8C8C;
+    	padding: 0 17px 0 0;
+    	font-size:12px;
+	}
+	.select{
+		border:none;
+		color:#8C8C8C;
+		margin-right:9px;
+		font-size:12px;
+	}
+	.date-text{
+		border-left:1px solid #EAEAEA;
+		padding: 0 0 0 11px;
+	}
+	.main{
+		width:87%;
+		height:90%;
+		display:flex;
+		flex-direction: column;
+    	align-items: center;
+	}
+	.main-title{
+	    width: 87%;
+	    height: 32px;
+	    margin: 40px 0px;
+	    padding: 0px 540px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	.title{
+		width:624px;
+		height:32px;
+		border: none;
+    	outline: none;
+    	font-size:24px;
+    	margin-top: 20px;
+	}
+	.main-content{
+		width:87%;
+		height:612px;
+		padding-left: 540px;
+	}
+	.content{
+		width:624px;
+		height:500px;
+		border: none;
+    	outline: none;
+    	font-size:15px;
+	}

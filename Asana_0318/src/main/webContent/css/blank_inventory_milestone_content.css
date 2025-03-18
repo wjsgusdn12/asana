@@ -1,0 +1,1584 @@
+@charset "UTF-8";
+
+
+*{
+	box-sizing:border-box;
+}
+body{
+	width: 1887px;
+}
+.full_screen{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+ .blank_milestone{
+	z-index: 500;
+	display:none;
+	width: 701px;
+    height: 870px;
+	position:absolute;
+	right: 0;
+    top: 49px;
+	background-color:white;
+	border-radius:4px;
+}
+
+
+
+
+ .blank_milestone_header{
+	border-bottom:1px solid #edeae9;
+	display: flex;
+    align-items: center;
+	width:701px;
+	height:57px;
+	padding:0 24px;
+}
+ .blank_complete_btn{
+	width:73px;
+	height:28px;
+	padding:0 8px;
+	background-color:#e8e8e896;
+	border-radius:6px;
+	border:1px solid #a8a8a8;;
+
+}
+ .blank_complete_btn > span{
+	color:#303a36;
+	font-size: 12px;
+    line-height: 28px;
+}
+
+ .blank_complete_btn > svg{
+	width:12px;
+	height:12px;
+	fill:#767575;;
+}
+ .blank_milestone_header_right{
+ 	display:none;
+    align-items: center;
+    top: 9px;
+    gap: 3px;
+	position:absolute;
+	right:1px;
+	width:252px;
+	height:57px;
+}
+ .blank_milestone_header_right > div{
+	width:32px;
+	height:32px;
+	
+
+}
+ .blank_milestone_header_right svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+
+}
+ .blank_milestone_content{
+	overflow-x: hidden;
+    overflow-y: scroll;
+	width: 700px;
+    height: 643px;
+}
+ .blank_milestone_content_child01{
+	width:700px;
+	height: 148px;
+}
+ .blank_milestone_content_child02{
+	width:652px;
+	height:341px;
+}
+ .blank_milestone_content_child03{
+	width:845px;
+	height:45px;
+
+}
+ .blank_milestone_content_child01_01{
+	width:700px;
+	height:44px;
+	background-color:#f9f8f8;
+	display:flex;
+	padding: 0 24px;
+    align-items: center;
+    gap: 8px;
+}
+
+ .blank_milestone_content_child01_01 > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+}
+
+ .blank_milestone_content_child01_01 > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#1e1f21;
+
+}
+ .blank_release_btn{
+	position: absolute;
+    right: 6px;
+	width:54px;
+	height:36px;
+	padding:0 12px;
+	margin:0 0 0 8px;
+}
+ .blank_release_btn > span{
+	color:#6d6e6f;
+	font-size: 14px;
+    line-height: 36px;
+}
+ .blank_milestone_content_child01_02{
+	margin-top: 16px;
+	display: flex;
+    align-items: center;
+    gap: 8px;
+	width:652px;
+	height:22px;
+	padding:4px 24px;
+}
+ .blank_milestone_content_child01_02 > svg{
+	width:16px;
+	height:16px;
+	fill:#58a182;
+}
+ .blank_milestone_content_child01_02 > span{
+	font-size: 14px;
+	line-height: 22px;
+	color:#6d6e6f;
+}
+ .blank_milestone_content_child01_03{
+	margin: 12px 0 8px 0;
+	width:652px;
+	height:46px;
+	padding: 0 24px;
+}
+ .blank_milestone_content_title > input{
+	border: none;
+	width:652px;
+	height:46px;
+	padding:6px 12px;
+	font-size:24px;
+	font-weight:500;
+	line-height:32px;
+}
+
+
+ .blank_milestone_content_child01_03 span{
+	font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+ .blank_rowstructure{
+	margin-top: 15px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+}
+
+ .blank_rowstructure_title{
+	width: 152px;
+	height:36px
+}
+
+ .blank_rowstructure_title > span{
+	font-size: 12px;
+    line-height: 18px;
+}
+ .blank_manager_right{
+	align-items: center;
+	display: flex;
+	gap:8px;
+	width:717px;
+	height:36px;
+
+}
+
+
+ .blank_no_contact_person{
+	left: -49px;
+    position: relative;
+    display: flex;
+	color: #6d6e6f;
+    font-size: 14px;
+	display:none;
+	align-items: center;
+	gap:8px;
+	width: 150px;
+	height:36px;
+
+}
+
+ .blank_no_contact_person_UserIcon{
+	height: 28px;
+    border: 1px dashed #6d6e6f;
+    border-radius: 50%;
+	width:28px;
+}
+
+ .blank_no_contact_person_UserIcon > svg{
+	fill: #6d6e6f;
+    margin: 3px 0 0 5px;
+	width:16px;
+	height:16px;
+	
+}
+
+
+
+ .blank_manager_right img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+
+ .blank_manager_right span{
+	font-size:14px;
+	color:#1e1f21;
+}
+
+ .blank_manager_right svg{
+	position: relative;
+    left: 11px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+
+}
+
+
+ .blank_noContactPerson_clickPopUp{
+	z-index:103;
+	background: white;
+	left: 123px;
+    top: 222px;
+    position: absolute;
+	width:450px;
+	height:245px;
+	display:none;
+	
+}
+ .blank_noContactPerson_clickPopUp_inputDiv{
+	width:450px;
+	height:36px;
+}
+
+ .blank_noContactPerson_input{
+	border: 1px solid #4464bb;
+    border-width: 4px;
+	gap: 9px;
+    width: 250px;
+    height: 40px;
+	display:flex;
+	border-radius:6px;
+	
+}
+ .blank_noContactPerson_input_svg{
+	padding: 4px;
+    margin: 3px;
+	width:28px;
+	height:28px;
+	border: 1px dashed;
+	border-radius:50%;
+}
+
+ .blank_noContactPerson_input_svg > svg{
+	width:16px;
+	height:16px;
+}
+
+ .blank_noContactPerson_input > input{
+	border: none;
+	font-size:13px;
+}
+
+ .blank_noContactPerson_clickPopUp_member{
+	margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid;
+	width:450px;
+	height:160px;
+}
+
+ .blank_noContactPerson_clickPopUp_member_list{
+	border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+	width:450px;
+	height:40px;
+}
+
+ .blank_noContactPerson_clickPopUp_member_list > img{
+	margin-left: 10px;
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+
+ .blank_noContactPerson_clickPopUp_member_list_name{
+	font-size:14px;
+}
+
+ .blank_noContactPerson_clickPopUp_member_list_email{
+	font-size:12px;
+}
+
+ .blank_Invite_by_email{
+	align-items: center;
+    display: flex;
+    gap: 10px;
+	font-size: 14px;
+    color: #3f6ac4;
+	width:450px;
+	height:40px;
+	
+}
+ .blank_Invite_by_email > img{
+	margin-left: 10px;
+	width:25px;
+	height:25px;
+	
+}
+
+ .blank_no_deadline{
+	left: -46px;
+    position: relative;
+    display: flex;
+    color: #6d6e6f;
+    font-size: 14px;
+    align-items: center;
+    gap: 8px;
+    width: 150px;
+    height: 36px;
+}
+
+ .blank_no_deadline_svg{
+	height: 28px;
+    border: 1px dashed #6d6e6f;
+    border-radius: 50%;
+    width: 28px;
+}
+
+ .blank_no_deadline_svg > svg{
+	fill: #6d6e6f;
+    margin: 5px 0 0 5px;
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+
+
+ .blank_deadline_right img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+
+ .blank_deadline_right span{
+	font-size:14px;
+	color:#1e1f21;
+}
+
+ .blank_deadline_right svg{
+	position: relative;
+    left: 11px;
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+
+}
+
+ .blank_deadline_right{
+	align-items: center;
+	display: none;
+	gap:8px;
+	width:717px;
+	height:36px;
+
+}
+
+ .second{
+	width:28px;
+	height:28px;
+	border:1px solid #6d6e6f;
+	border-radius:50%;
+
+}
+
+ .blank_second > svg{
+	width:16px;
+	height:16px;
+	fill:#6d6e6f;
+	position: relative;
+    top: 3px;
+    left: 5px;
+}
+
+ .blank_rowstructure_02{
+	margin-top: 15px;
+	width:652px;
+	height:68px;
+	padding:0 24px;
+	display:flex;
+}
+ .blank_rowstructure_02 >span{
+    font-size: 12px;
+    line-height: 18px;
+}
+ .blank_rowstructure_02 > .blank_rowstructure_title_02{
+	width:152px;
+	height:64px;
+}
+ .blank_rowstructure_02 > .blank_rowstructure_title_02 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+ .blank_rowstructure_02 >.blank_manager_right_02{
+	width:717px;
+	height:68px;
+}
+ .blank_project_add_title{
+	padding-left: 3px;
+	margin-bottom: 8px;
+	display: flex;
+    align-items: center;
+    gap: 6px;
+	width:220px;
+	height:24px;
+	border-radius:4px;
+	background-color:rgba(55, 23, 23, .05);
+
+}
+ .blank_manager_right_02 .HighlightSol_MiniIcon{
+	width:12px;
+	height:12px;
+	fill:#f26fb2;
+
+}
+ .blank_manager_right_02 span{
+	font-size: 14px;
+    line-height: 24px;
+    color:#1e1f21;
+
+}
+ .blank_section{
+	width: 69px;
+}
+ .blank_section > span{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+
+}
+ .blank_section > svg{
+	position: relative;
+    left: 11px;
+    width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+
+
+
+}
+ .blank_delete_project_svg{
+	width:16px;
+	height:12px;
+	fill:#6d6e6f;
+}
+
+ .blank_project_add_title_under_projectAddBtn{
+	display:none;
+	position: relative;
+	width:105px;
+	height:28px;
+	font-weight: 500;
+	font-size: 12px;
+    line-height: 28px;
+}
+
+ .blank_AddProject_click_Projectlist{
+	display: none;
+	top: 320px;
+	z-index: 103;
+    position: absolute;
+    background: white;
+	width:507px;
+	height:226px;
+}
+
+ .blank_AddProject_click_Projectlist > input{
+	border: 1px solid #4464bb;
+    border-width: 4px;
+	border-radius: 6px;
+	width:507px;
+	height:36px;
+	padding:6px 12px;
+}
+ .blank_AddProject_click_Projectlist_projectName{
+	border-radius: 3px;
+    border: 1px solid;
+    overflow-y: scroll;
+    overflow-x: hidden;
+	width:433px;
+	height:190px;
+}
+
+ .blank_AddProject_click_Projectlist_projectdiv{
+	font-size: 14px;
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid;
+	width:416px;
+	height:40px;
+}
+
+
+ .blank_small_XThickMiniIcon{
+	width: 12px;
+    height: 12px;
+    fill: #6d6e6f;
+}
+
+ .blank_rowstructure_03{
+	position: relative;
+    align-items: center;
+	width:652px;
+	height: 117px;
+	padding:0 24px;
+}
+
+ .blank_rowstructure_title_03{
+	width: 139.41px;
+}
+
+ .blank_rowstructure_title_03 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+
+ .blank_manager_right_03{
+	font-size: 12px;
+    line-height: 28px;
+    color: #6d6e6f;
+    cursor:pointer;
+}
+
+
+
+ .blank_clickingDependencies{
+	position: absolute;
+	display: none;
+	top: 5px;
+    left: 128px;
+    z-index: 104;
+    background: white;
+	width:507px;
+	height:222px;
+}
+
+/* 선행작업 조회  *//* 선행작업 조회  *//* 선행작업 조회  */
+.blank_dependency_list_parent{
+	overflow-x: hidden;
+    overflow-y: auto;   /*scroll;*/
+    height: 115px;
+    width: 300px;
+    top: 1px;
+    left: 111px;
+    position: absolute;
+	
+	
+	
+}
+ .blank_prior_work{
+	display:none;
+	background: rgba(55, 23, 23, .05);
+    border-radius: 6px;
+	width:278px;
+	height:28px;
+	
+}
+
+ .blank_prior_work_type{
+	font-size: 14px;
+    padding-left: 9px;
+    display: flex;
+    align-items: center;
+	color:#f1bd6c;
+	width:86px;
+	height:28px;
+	float:left;
+}
+
+ .blank_prior_work_title{
+	font-size: 14px;
+    display: flex;
+    align-items: center;
+	width:155px;
+	height:28px;
+	float:left;
+}
+
+ .blank_prior_delBtn{
+ 	cursor:pointer;
+ 	padding-top: 4px;
+	width:15px;
+	height:15px;
+	float:left;
+}
+
+ .blank_prior_delBtn > svg{
+	width:17px;
+	height:17px;
+}
+
+ .blank_prior_delBtn > svg > .CompoundIcon-outer{
+	fill: #00000000;
+    stroke: #00000000;
+}
+
+/* 선행작업 조회  *//* 선행작업 조회  *//* 선행작업 조회  */
+
+ .blank_dependent_tasks{
+	display:none;
+	background: rgba(55, 23, 23, .05);
+    position: absolute;
+    border-radius: 6px;
+	width:278px;
+	height:28px;
+	
+}
+
+ .blank_dependent_tasks_type{
+	font-size: 14px;
+    padding-left: 9px;
+    display: flex;
+    align-items: center;
+	color:#f1bd6c;
+	width:86px;
+	height:28px;
+	float:left;
+}
+
+ .blank_dependent_tasks_title{
+	font-size: 14px;
+    display: flex;
+    align-items: center;
+	width:155px;
+	height:28px;
+	float:left;
+}
+
+ .blank_dependent_tasks_delBtn{
+ 	cursor:pointer;
+	padding-top: 4px;
+	width:15px;
+	height:15px;
+	float:left;
+}
+
+ .blank_dependent_tasks_delBtn > svg{
+	width:17px;
+	height:17px;
+}
+
+ .blank_dependent_tasks_delBtn > svg > .CompoundIcon-outer{
+	fill: #00000000;
+    stroke: #00000000;
+}
+
+
+
+/* 선행작업 조회  *//* 선행작업 조회  *//* 선행작업 조회  */
+
+ .blank_selectTask{
+	display: flex;
+	width:507px;
+	height:32px;
+}
+
+ .blank_typeOfWork{
+	display:none;
+	color:#986516;
+	gap: 6px;
+    align-items: center;
+    font-size: 12px;
+	width:98px;
+	height:28px;
+}
+
+ .blank_typeOfWork.on{
+	display:block;
+}
+
+ .blank_typeOfWork > svg{
+	fill:#986516;
+	width:12px;
+	height:12px;
+}
+
+ .blank_preceding_typeOfWork{
+	display:none;
+	color:#986516;
+	gap: 6px;
+    align-items: center;
+    font-size: 12px;
+	width:98px;
+	height:28px;
+}
+
+ .blank_preceding_typeOfWork.on{
+	display:block;
+}
+
+ .blank_preceding_typeOfWork > svg{
+	fill:#986516;
+	width:12px;
+	height:12px;
+}
+
+
+ .blank_selectTask > input{
+	cursor:pointer;
+	border: 1px solid #4464bb;
+    border-width: 4px;
+	border-radius: 6px;
+	width:403px;
+	height:33px;
+}
+
+ .blank_clickingDependencies_list{
+	overflow-x: hidden;
+    overflow-y: scroll;
+    left: 98px;
+    position: absolute;
+    border-radius: 6px;
+    border: 1px solid  #edeae9;
+	width:450px;
+	height:190px;
+}
+
+ .blank_clickingDependencies_list_workSelect{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+	width:446px;
+	height:40px;
+	padding:0 16px 0 12px;
+}
+
+ .blank_clickingDependencies_list_workSelect_svg > svg{
+	width:14px;
+}
+
+ .blank_clickingDependencies_list_workSelect_project{
+	font-size: 12px;
+    color: #6d6e6f;
+}
+
+ .blank_clickingDependencies_list_workSelect_svg .CompoundIcon-outer{
+	 fill: transparent;
+	 stroke:#6d6e6f; 
+}
+
+ .blank_clickingDependencies_list_workSelect_svg .milestone_CompoundIcon-outer{
+	fill :transparent;
+	stroke: #58a182;
+	
+}
+
+ .blank_clickingDependencies_list_workSelect_svg .milestone_CompoundIcon-inner{
+	 fill:transparent;
+}
+
+ .blank_typeOfWork_select{
+	display:none;
+	border-radius: 4px;
+    border: 1px solid #edeae9;
+	width:160px;
+	height:80px;
+	cursor:pointer;
+}
+
+
+
+
+ .blank_typeOfWork_select_list{
+	margin-left: 10px;
+	gap: 10px;
+    display: flex;
+    align-items: center;
+	font-size:14px;
+	width:160px;
+	height:36px;
+}
+
+ .blank_typeOfWork_select_list > svg{
+	width:16px;
+	height:16px;
+}
+
+ .blank_typeOfWork_select_list:nth-child(1) > svg{
+	fill:#986516;
+}
+
+ .blank_typeOfWork_select_list:nth-child(1) {
+	color:#986516;
+}
+
+ .blank_typeOfWork_select_list:nth-child(2) > svg{
+	fill:#c92f54;;
+}
+
+ .blank_typeOfWork_select_list:nth-child(2) {
+	color:#c92f54;;
+}
+
+ .blank_preceding_typeOfWork_select_list{
+	margin-left: 10px;
+	gap: 10px;
+    display: flex;
+    align-items: center;
+	font-size:14px;
+	width:160px;
+	height:36px;
+}
+
+ .blank_preceding_typeOfWork_select_list > svg{
+	width:16px;
+	height:16px;
+}
+
+ .blank_preceding_typeOfWork_select_list:nth-child(1) > svg{
+	fill:#986516;
+}
+
+ .blank_preceding_typeOfWork_select_list:nth-child(1) {
+	color:#986516;
+}
+
+ .blank_preceding_typeOfWork_select_list:nth-child(2) > svg{
+	fill:#c92f54;;
+}
+
+ .blank_preceding_typeOfWork_select_list:nth-child(2) {
+	color:#c92f54;;
+}
+
+
+
+
+
+
+ .blank_rowstructure_04{
+	display: flex;
+    align-items: center;
+	width:652px;
+	height:36px;
+	padding:0 24px;
+}
+
+ .blank_rowstructure_title_04{
+	width: 139.41px;
+
+
+}
+ .blank_rowstructure_title_04 > span{
+	font-size: 12px;
+    line-height: 18px;
+
+}
+
+ .blank_rowstructure_05{
+	margin-bottom: 20px;
+	width:652px;
+	height:97px;
+	padding:0 24px;
+}
+
+ .blank_rowstructure_05 > textarea{
+	border: none;
+	font-size:14px;
+	width:652px;
+	height:97px;
+
+}
+
+/*수정중 */
+
+ .blank_Add_subtask_parent{
+	position: relative;
+	display: flex;
+	width:683px;
+	height:36px;
+}
+
+
+ .blank_Add_subtask{
+	background-color: #f1f2fc;
+	display: flex;
+    align-items: center;
+    gap: 13px;
+	width:683px;
+	height:36px;
+}
+
+ .blank_Add_subtask_checkSvg{
+	width:40px;
+	margin-left: 24px;
+}
+
+ .blank_Add_subtask_checkSvg  .blank_check_CompoundIcon-outer{
+	fill:#fff;
+    stroke: #6d6e6f;
+}
+
+ .blank_Add_subtask_checkSvg  .blank_check_CompoundIcon-inner{
+	fill: #6d6e6f;
+}
+
+ .blank_Add_subtask_checkSvg > svg{
+	width:20px;
+}
+
+ .blank_Add_subtask_title{
+	width: 507px;
+}
+
+ .blank_Add_subtask_title > input{
+	border: none;
+	width: 82px;
+    height: 28px;
+}
+
+ .blank_Add_subtask_deadline{
+	width:28px;
+	height:28px;
+	border:1px dashed #6d6e6f;
+	border-radius:50%;
+}
+
+ .blank_Add_subtask_deadline > svg{
+	width:16px;
+	fill: #6d6e6f;
+    margin: 5px;
+}
+
+ .blank_Add_subtask_manager{
+	width:28px;
+	height:28px;
+	border:1px dashed #6d6e6f;
+	border-radius:50%;
+	
+}
+
+ .blank_Add_subtask_manager > svg{
+	width:16px;
+	fill: #6d6e6f;
+    margin: 5px;
+}
+
+/*저장될때 수정중 *//*수정중 */
+
+ .blank_Add_subtask_save_parent{
+	position: relative;
+	width:683px;
+	height:36px;
+}
+
+
+ .blank_Add_subtask_save{
+	position: relative;
+    background: #fff;
+    border-top: 1px solid #edeae9;
+    border-bottom: 1px solid #edeae9;
+	display: none;
+    align-items: center;
+    gap: 13px;
+	width:683px;
+	height:36px;
+}
+
+/*
+
+ .Add_subtask_save:hover .Add_subtask_save_deadline{
+	display:block;
+}
+
+ .Add_subtask_save:hover .Add_subtask_save_manager{
+	display:block;
+}
+
+*/
+
+
+
+ .blank_Add_subtask_checkSvg_save{
+	width:40px;
+	margin-left: 24px;
+}
+
+ .blank_Add_subtask_checkSvg_save  .blank_check_CompoundIcon-outer{
+	fill:#fff;
+    stroke: #6d6e6f;
+}
+
+ .blank_Add_subtask_checkSvg_save  .blank_check_CompoundIcon-inner{
+	fill: #6d6e6f;
+}
+
+ .blank_Add_subtask_checkSvg_save > svg{
+	width:20px;
+}
+
+ .blank_Add_subtask_save_title{
+	width: 507px;
+}
+
+ .blank_Add_subtask_save_title > input{
+	border: none;
+	width: 82px;
+    height: 28px;
+}
+
+ .blank_Add_subtask_save_deadline{
+	display:block;
+	left: 603px;
+    position: absolute;
+	width:28px;
+	height:28px;
+	border:1px dashed #6d6e6f;
+	border-radius:50%;
+}
+
+ .blank_Add_subtask_save_deadline > svg{
+	width:16px;
+	fill: #6d6e6f;
+    margin: 5px;
+}
+
+ .blank_Add_subtask_save_manager{
+	display:block;
+	left: 647px;
+    position: absolute;
+	width:28px;
+	height:28px;
+	border:1px dashed #6d6e6f;
+	border-radius:50%;
+	
+}
+
+ .blank_Add_subtask_save_manager > svg{
+	width:16px;
+	fill: #6d6e6f;
+    margin: 5px;
+}
+
+
+/*저장될때 수정중 *//*수정중 */
+
+ .blank_assignmentOfmanager{
+	display:none;
+	position: absolute;
+	right:8px;
+	z-index: 200;
+	border-radius: 4px;
+    border: 1px solid #edeae9;
+    top: 33px;
+    background: white;
+	width:394px;
+	height:90px;
+	padding:16px;
+}
+
+ .blank_assignmentOfmanager_title{
+	margin-bottom: 5px;
+    gap: 82px;
+    align-items: center;
+    display: flex;
+	width:362px;
+	height:18px;
+}
+
+ .blank_assignmentOfmanager_title > span{
+	width: 261px;
+	font-size:12px;
+}
+
+ .blank_assignmentOfmanager_title > svg{
+	width:14px;
+}
+
+ .blank_assignmentOfmanager_select{
+	gap: 10px;
+    display: flex;
+    align-items: center;
+	font-size:14px;
+	width:362px;
+	height:36px;
+}
+
+ .blank_assignmentOfmanager_select_input{
+	width:200px;
+	height:36px;
+}
+
+ .blank_assignmentOfmanager_select_input > input{
+	border: 1px solid #edeae9;
+    border-radius: 4px;
+    width: 200px;
+    height: 36px;
+    font-size: 14px;
+}
+
+ .blank_assignmentOfmanager_select_input > svg{
+	width:12px;
+	display:none;
+}
+
+ .blank_assignmentOfmanager_select_assignedToMe{
+	padding-top: 7px;
+    border: 1px solid #edeae9;
+    border-radius: 4px;
+	width:99px;
+	height:36px;
+	padding:0 12px;
+	font-size:13px;
+}
+
+ .blank_assignmentOfmanager_list{
+	position: absolute;
+	display:none;
+	top: 112px;
+	right: 204px;
+	z-index:200;
+    border-radius: 4px;
+    border: 1px solid #edeae9;
+    background: white;
+	width:450px;
+	height:160px;
+}
+
+ .blank_assignmentOfmanager_list_select{
+	align-items: center;
+    display: flex;
+	width:450px;
+	height:40px;
+	padding : 0 16px 0 12px;
+}
+
+ .blank_assignmentOfmanager_list_select > img{
+	margin: 10px;
+	width:24px;
+	height:24px;
+	border-radius:50%;
+	
+}
+
+ .blank_assignmentOfmanager_list_select_memberName{
+	width: 45px;
+	font-size:14px;
+	
+}
+
+ .blank_assignmentOfmanager_list_select_memberEmail{
+	width: 200px;
+	font-size:12px;
+}
+
+ .blank_invite_team_members_by_email{
+	gap: 11px;
+    align-items: center;
+    display: flex;
+    border-top: 1px solid #edeae9;
+	width: 450px;
+    height: 40px;
+    padding: 0 16px 0 12px;
+	
+}
+
+ .blank_invite_team_members_by_email > svg{
+	margin-left: 15px;
+	width:14px;
+	fill:#4573d2; 
+}
+
+ .blank_invite_team_members_by_email > span{
+	font-size:14px;
+	color:#4573d2; 
+}
+
+ .blank_rowstructure_06{
+	width:652px;
+	height:45px;
+	padding:0 24px;
+	margin-bottom:20px;
+	margin-top:15px;
+
+}
+
+ .blank_rowstructure_06 > button{
+ 	display:none;
+	width:112px;
+	height:28px;
+	border:1px solid #cfcbcb;
+	border-radius:6px;
+	background-color:#f9f8f8;
+
+}
+
+ .blank_rowstructure_06 > button > svg{
+	width:12px;
+	height:12px;
+	fill:#6d6e6f;
+
+}
+
+ .blank_rowstructure_06 > button > span{
+	font-size: 12px;
+    line-height: 28px;
+}
+
+ .blank_comment{
+ 	display:none;
+	width:700px;
+	height:170px;
+	background-color:#f9f8f8;
+	padding:0 24px;
+}
+
+ .blank_comment_title{
+	padding-top: 16px;
+    padding-bottom: 8px;
+	width:652px;
+	height: 57px;
+	border-bottom:1px solid #edeae9;
+}
+
+ .blank_comment_title > span{
+	font-size: 14px;
+    line-height: 22px;
+    font-weight:500;
+
+}
+
+ .blank_comment_story{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:44px;
+	padding:4px 0;
+
+}
+
+ .blank_profile_img> img{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+
+ .blank_profile_name{
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+    font-weight:700;
+
+}
+
+ .blank_comment_story > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color:#6d6e6f;
+}
+
+ .blank_milestone_update_date{
+	font-size: 12px;
+	color:#6d6e6f;
+}
+
+ .blank_feedblockstroy{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+	width:652px;
+	height:64px;
+	display:flex;
+
+}
+
+ .blank_feedblockstroy_complete > svg{
+	width:32px;
+	height:32px;
+	fill:#58a182;
+
+}
+
+ .blank_feedblockstroy_name{
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+    font-weight: 700;
+}
+
+ .blank_feedblockstroy > div:nth-child(3){
+	font-size: 14px;
+    line-height: 22px;
+    color: #0d7f56;
+}
+
+ .blank_feedblockstroy_update_date{
+	font-size:12px;
+	color:#0d7f56;
+
+}
+
+ .blank_milestone_footer{
+	border-top:1px solid #edeae9;
+	width:700px;
+	height:170spx;
+	background-color:#f9f8f8;
+}
+
+
+ .blank_milestone_comment_content{
+	width: 700px;
+    height: 120px;
+	padding:8px 24px;
+	display:flex;
+}
+
+ .blank_milestone_comment_content > div:nth-child(1){
+ 	display:none;
+	width: 36px;
+    height: 48px;
+}
+
+ .blank_milestone_comment_input{
+	width:824px;
+	height:96px;
+}
+
+ .blank_milestone_comment_input > textarea{
+	display:none;
+	width:824px;
+	height:96px;
+}
+
+ .blank_milestone_comment_input{
+	width:826px;
+	height:104px;
+}
+
+.blank_milestone_comment_input_child02{
+	display:none;
+	
+}
+
+ .blank_milestone_comment_input_child02 > textarea{
+	width: 614px;
+    height: 96px;
+    padding: 8px 0;
+	border:1px solid #565557;
+	border-radius:6px;
+	
+}
+
+ .blank_milestone_Participants{
+	padding: 4px 24px 5px 64px;
+    align-items: center;
+    gap: 9px;
+	width:700px;
+	height:49px;
+	display:block;
+
+}
+
+ .blank_milestone_Participants_child01{
+ 	display:none;
+	width:65.28px;
+	height:15px;
+	margin:4px 4px 4px 0;
+	font-size:12px;
+	color:#a2a0a2;
+}
+
+
+ .blank_collaboration_profile{
+	align-items: center;
+    gap: 6px;
+	width:134px;
+	height:30px;
+	display:none;
+}
+
+ .blank_collaboration_profile img{
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+}
+
+ .blank_add_collaboration_profile{
+	padding: 0 0 0 5px;
+	width:24px;
+	height:24px;
+	border-radius:50%;	
+	border:1px dashed #a2a0a2;
+
+}
+
+ .blank_add_collaboration_profile >svg{
+	width:12px;
+	height:12px;
+	fill: #6d6e6f;
+
+}
+
+ .blank_plus_icon_coooperation > svg{
+	margin-left: 12px;
+	width:12px;
+	height:12px;
+	fill: #6d6e6f;
+
+}
+
+ .blank_milestone_transparent_screen{
+	background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   /*  z-index: 102; */
+    display:none;
+}
+
+
+ .blank_milestone_Participants_child03{
+ 	display:none;
+	position: absolute;
+    right: 23px;
+	width:135px;
+	height:36px;
+}
+
+ .blank_milestone_Participants_child03 > svg{
+	width:16px;
+	height:16px;
+	fill:#a2a0a2;
+}
+
+ .blank_milestone_Participants_child03 >span{
+	font-weight: 500;
+	font-size: 14px;
+    line-height: 36px;
+    color:#a2a0a2;
+
+}
+
+/********************************** 협업참여자 text *******************************************/
+ .blank_show_cooperation{
+   
+    position: absolute;
+    left: 138px;
+    height: 37px;
+    background-color: white;
+    border: 3px solid #4464bb;
+    border-radius: 8px;
+    width: 534px;
+    align-items: center;
+    display: none;
+}
+ #blank_plus_cooperation{
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+ .blank_cooperation_profile{
+    display: flex;
+    flex-shrink: 0;
+    width: 66px;
+    background-color: #efefef;
+}
+ .blank_cooperation_name{
+    display: flex;
+    font-size: 15px;
+}
+ .blank_cooperation_profile > .writer_profile_img{
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+}
+ .blank_bi-x{
+    cursor: pointer;
+}
+
+ .blank_assignmentOfmanager_list{
+	left: 221px;
+	top:94px;
+    border-radius: 4px;
+    border: 1px solid #edeae9;
+    background: white;
+    position: absolute;
+    width: 450px;
+    height: 162px;
+    margin: 20px 0px 0 -72px;
+    display: none;
+ }
+ .blank_assignmentOfmanager_list_select{
+    align-items: center;
+     display: flex;
+    width:450px;
+    height:40px;
+    padding : 0 16px 0 12px;
+ }
+ .blank_assignmentOfmanager_list_select:hover{
+    background-color: rgba(55, 23, 23, .05);
+    cursor: pointer;
+ }
+ .blank_assignmentOfmanager_list_select > img{
+    margin: 10px;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    
+ }
+ 
+ .blank_assignmentOfmanager_list_select_memberName{
+    width: 45px;
+    font-size:14px;
+    
+ }
+ 
+ .blank_assignmentOfmanager_list_select_memberEmail{
+    width: 200px;
+    font-size:12px;
+ }
+
+/************************************* 협업참여자 초대 ***************************************/
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+<%@page import="dao.PortfolioDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	PortfolioDao dao = new PortfolioDao();
+	int memberIdx = 2;
+	try{
+		memberIdx = Integer.parseInt(request.getParameter("member_idx"));
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아사나 포트폴리오 생성하기</title>
+<link rel="stylesheet" href="css/asana_create_portfolio.css"/>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+	$(function() {
+		$(".title").keyup(function() {
+			if ($(this).val().length == 0) {
+				$(".no-title-text").css('display', 'block');
+				$(".CreateButton").removeClass("on");
+			} else if ($(this).val().length > 0) {
+				$(".no-title-text").css('display', 'none');
+				$(".CreateButton").addClass("on");
+			}
+		});
+		$(".Icon-Back").click(function(){
+			history.back();
+		});
+		$(".Icon-Cancle").click(function(){
+			history.back();
+		});
+		$(".CreateButton").click(function(){
+			alert("생성");
+		});
+	});
+</script>
+
+</head>
+<body>
+	<div class="whole-div">
+		<div class="top-div">
+			<div role="button" aria-label="뒤로 이동" tabindex="0" class="Icon-Back">
+				<svg class="Icon" viewBox="0 0 32 32" aria-hidden="true"
+					focusable="false">
+			<path
+						d="M29 16.5a1.5 1.5 0 0 0-1.5-1.5H7.621l7.439-7.439a1.5 1.5 0 1 0-2.121-2.121l-10 10a1.5 1.5 0 0 0 0 2.121l10 10c.293.293.677.439 1.061.439a1.5 1.5 0 0 0 1.061-2.56l-7.439-7.439h19.879a1.5 1.5 0 0 0 1.5-1.5L29 16.5Z"></path></svg>
+			</div>
+			<div role="button" aria-label="닫기" tabindex="0" class="Icon-Cancle">
+				<svg class="Icon" viewBox="0 0 32 32" aria-hidden="true"
+					focusable="false">
+			<path
+						d="M18.1,16L27,7.1c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L16,13.9l-8.9-9C6.5,4.3,5.6,4.3,5,4.9S4.4,6.4,5,7l8.9,8.9L5,24.8c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l8.9-8.9l8.9,8.9c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L18.1,16z"></path></svg>
+			</div>
+		</div>
+		<div class="under-div">
+			<div class="content">
+				<div class="main-content">
+					<div class="font32">새 포트폴리오</div>
+					<div class="font12">포트폴리오 이름</div>
+					<form action="asana_create_portfolio_action.jsp?member_idx=<%=memberIdx %>" method="post" class="portfolio_info_form">
+						<div>
+							<input class="title" type="text" name="portfolio_name" /><br/>
+							<div class="no-title-text" style="color: red; font-size: 12px;">
+								포트폴리오 이름이 필요합니다
+							</div>
+						</div>
+						<div class="font12">보기</div>
+						<div class="listBox">
+							<div class="BoxImage">
+								<img class="LogoImage" alt="" src="https://d3ki9tyy5l5ruj.cloudfront.net/obj/8101993eb31d0de88ea18fe53fc8e58a1b8988be/nux_project_list.svg">
+							</div>
+							<div class="BoxText">목록</div>
+						</div>
+						<div>
+							<button class="CreateButton">생성</button>
+						</div>
+					</form>
+				</div>
+				<div class="main-image">
+					<img src="img\PortfolioView.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
