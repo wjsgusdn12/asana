@@ -576,7 +576,7 @@
 	})
 	//알림을 조회 : 토스터를 사용 //알림을 조회 : 토스터를 사용 
 
-	let webSocket = new WebSocket("ws://localhost:9090/Asana_0318/broadcasting") //서버와 연결 
+	let webSocket = new WebSocket("ws://localhost:9091/Asana/broadcasting") //서버와 연결 
 	webSocket.onmessage = function(e){
 //		alert("서버로부터의 메시지 : " + e.data);
 		// e.data = "새알림_3_message://프로젝트 협업방법의 상태를 업데이트 했습니다."
@@ -611,7 +611,7 @@
 		console.log("연결되었습니다.")
 	}
 	webSocket.onerror = function(e){
-		//alert("error ! ");
+		console.log("error ! ");
 	}
 	
 	
