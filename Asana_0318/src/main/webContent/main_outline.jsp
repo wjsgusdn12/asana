@@ -634,7 +634,7 @@
 					let statusName = data.statusName;
 					let statusCharColor = data.statusChar;
 					$(".status_update_content_right_child01_title").find("span:nth-child(2)").html(projectstatusdateFormatPost);
-					$(".status_update_content_right_child02").find("img").attr("src","img01/" + profileImg);
+					$(".status_update_content_right_child02").find("img").attr("src","img/" + profileImg);
 					$(".status_update_content_right_text01").html(nickName);
 					$(".status_update_name").find("span").html(statusName);
 					$(".status_update_name").css("background" , backgroundColor);
@@ -666,7 +666,7 @@
 					let statusCharColor = data.statusChar;
 					
 					$(".status_update_content_right_child01_title").find("span:nth-child(2)").html(projectstatusdateFormatPost);
-					$(".status_update_content_right_child02").find("img").attr("src","img01/" + profileImg);
+					$(".status_update_content_right_child02").find("img").attr("src","img/" + profileImg);
 					$(".status_update_content_right_text01").html(nickName);
 					$(".status_update_name").find("span").html(statusName);
 					$(".status_update_name").css("background" , backgroundColor);
@@ -1185,7 +1185,7 @@
 					let str =`<div class="member_profile_view_save_parent" idx="`+jsonArr[i].memberIdx+`">
 								<div id="member_profile_view_save">
 									<div id="member_profile_save">
-										<img src="img01/`+ jsonArr[i].profileImg+`"/>
+										<img src="img/`+ jsonArr[i].profileImg+`"/>
 									</div>
 									<div id="member_profile_name1_save">
 										<div id="member_profile_name_save">
@@ -1211,7 +1211,7 @@
 						let strDiv02 = `<div class="Parent_of_the_popup_manager" memberidx="`+jsonArr[i].memberIdx+`">
 							<div class="add_member_child06">
 							<div class="add_member_child06_child_left">
-								<img src="img01/`+jsonArr[i].profileImg+`"></img>
+								<img src="img/`+jsonArr[i].profileImg+`"></img>
 							</div>
 							<div class="add_member_child06_child_center">
 								<span>`+jsonArr[i].nickName+`</span> <br /> 
@@ -1297,7 +1297,7 @@
 							let searchDiv=`
 											<div class="member_search_box_list" idx="`+jsonArr[i].memberIdx+`">
 												<div class="member_search_box_img">
-													<img src="img01/`+jsonArr[i].profileImg+`"/>
+													<img src="img/`+jsonArr[i].profileImg+`"/>
 												</div>
 												<div class="member_search_box_text">
 													<span>`+jsonArr[i].nickName+`</span><br/>
@@ -1366,7 +1366,7 @@
 					<div class="Parent_of_the_popup_manager" memberidx="`+memberIdx+`">
 						<div class="add_member_child06">
 						<div class="add_member_child06_child_left">
-							<img src="img01/`+profileImg+`"></img>
+							<img src="img/`+profileImg+`"></img>
 						</div>
 						<div class="add_member_child06_child_center">
 							<span>`+nickName+`</span> <br /> <span>`+email+`</span>
@@ -1432,7 +1432,7 @@
 					idx="`+memberIdx+`">
 					<div id="member_profile_view_save">
 						<div id="member_profile_save">
-							<img src="img01/`+profileImg+`" />
+							<img src="img/`+profileImg+`" />
 						</div>
 						<div id="member_profile_name1_save">
 							<div id="member_profile_name_save">
@@ -1552,7 +1552,7 @@
 									<span>FY`+goalDetailjsonArr[i].ficalYear+` `+goalDetailjsonArr[i].projectPeriodName+`</span> 
 								</div>
 								<div class="click_profile_img">
-									<img src="img01/`+goalDetailjsonArr[i].profileImg+`" />
+									<img src="img/`+goalDetailjsonArr[i].profileImg+`" />
 								</div>
 							</div>`;
 							$(".connected_goal_click_content_child_parent").append(str);
@@ -1678,7 +1678,7 @@
 											<span>FY`+goalDetailjsonArr[i].ficalYear+` `+goalDetailjsonArr[i].projectPeriodName+`</span> 
 										</div>
 										<div class="click_profile_img">
-											<img src="img01/`+goalDetailjsonArr[i].profileImg+`" />
+											<img src="img/`+goalDetailjsonArr[i].profileImg+`" />
 										</div>
 									</div>`;
 									$(".connected_goal_click_content_child_parent").append(str);
@@ -2095,7 +2095,7 @@
 						
 						str+=
 						`<div class="connected_portfolio2_child3">
-							<img src="img01/`+portfoliolist[i].memberprofileImg+`" class="portfolio_parent"></img>
+							<img src="img/`+portfoliolist[i].memberprofileImg+`" class="portfolio_parent"></img>
 						</div>
 						<div class="connected_portfolio2_child4_parent">
 							<div class="connected_portfolio2_child4">
@@ -2172,7 +2172,7 @@
 						
 						str+=
 						`<div class="connected_portfolio2_child3">
-							<img src="img01/`+portfoliolist[i].memberprofileImg+`" class="portfolio_parent"></img>
+							<img src="img/`+portfoliolist[i].memberprofileImg+`" class="portfolio_parent"></img>
 						</div>
 						<div class="connected_portfolio2_child4_parent">
 							<div class="connected_portfolio2_child4">
@@ -2569,11 +2569,11 @@
 						</div>
 						<div style="width: auto;" class="list-image">
 							<img style="z-index: 4;" class="img-small"
-								src="..\..\img01\짱구1.jpg"> <img
+								src="..\..\img\짱구1.jpg"> <img
 								style="z-index: 3; margin-left: -10px;" class="img-small"
-								src="..\..\img01\짱구2.jpg"> <img
+								src="..\..\img\짱구2.jpg"> <img
 								style="z-index: 2; margin-left: -10px;" class="img-small"
-								src="..\..\img01\철수.png">
+								src="..\..\img\철수.png">
 						</div>
 						<div id="share_button">
 							<svg class="MiniIcon LockFillMiniIcon" viewBox="0 0 24 24"
@@ -2592,7 +2592,7 @@
 						</div>
 					</div>
 					<div id="header2">
-						<img src="img01/초록색2.png"></img>
+						<img src="img/초록색2.png"></img>
 						<div id="project_title">
 							<span>${name}</span>
 							<svg class="first_icon" style="margin-top: 7px;"
@@ -2879,7 +2879,7 @@
 										idx="<%=participantsIdx%>">
 										<div id="member_profile_view_save">
 											<div id="member_profile_save">
-												<img src="img01/<%=participantsIdxDto.getProfileImg()%>" />
+												<img src="img/<%=participantsIdxDto.getProfileImg()%>" />
 											</div>
 											<div id="member_profile_name1_save">
 												<div id="member_profile_name_save">
@@ -2935,7 +2935,7 @@
 													<span>FY25 상반기</span> <span>계획대로 진행 중 </span>
 												</div>
 												<div class="click_profile_img">
-													<img src="../../img01/짱구1.jpg" />
+													<img src="../../img/짱구1.jpg" />
 												</div> -->
 											</div>
 											<div class="connected_goal_click_content_child">
@@ -2951,7 +2951,7 @@
 													<span>FY25 상반기</span> <span>계획대로 진행 중 </span>
 												</div>
 												<div class="click_profile_img">
-													<img src="../../img01/짱구1.jpg" />
+													<img src="../../img/짱구1.jpg" />
 												</div> -->
 											</div>
 										</div>
@@ -3084,7 +3084,7 @@
 												<span>FY24 4분기</span>
 											</div>
 											<div id="profile_img">
-												<img src="img01/<%=memberdto.getProfileImg()%>"/>
+												<img src="img/<%=memberdto.getProfileImg()%>"/>
 											</div>
 										</div>
 										<%
@@ -3109,7 +3109,7 @@
 												<span>FY24 4분기</span>
 											</div>
 											<div id="profile_img">
-												<img src="img01/<%=memberdto.getProfileImg()%>"/>
+												<img src="img/<%=memberdto.getProfileImg()%>"/>
 											</div>
 										</div>
 										<%
@@ -3365,7 +3365,7 @@
 												<%} %>
 										
 												<div class="connected_portfolio2_child3">
-													<img src="img01/<%=authorProfile %>" class="portfolio_parent"></img>
+													<img src="img/<%=authorProfile %>" class="portfolio_parent"></img>
 												</div>
 												<div class="connected_portfolio2_child4_parent">
 													<div class="connected_portfolio2_child4">
@@ -3401,7 +3401,7 @@
 													</span>
 												</div>
 												<div class="connected_portfolio2_child3">
-													<img src="img01/<%=authorProfile %>" class="portfolio_parent"></img>
+													<img src="img/<%=authorProfile %>" class="portfolio_parent"></img>
 												</div>
 												<div class="connected_portfolio2_child4_parent">
 													<div class="connected_portfolio2_child4">
@@ -3438,7 +3438,7 @@
 								<div class="core_resources_02">
 									<div class="core_resources_03">
 										<div class="core_resources_04">
-											<img src="img01/01.png"></img>
+											<img src="img/01.png"></img>
 										</div>
 										<div class="core_resources_05">
 											<span>프로젝트 브리프와 도움이 되는 리소스를 사용하여 공유된 비전을 중심으로 팀을
@@ -3547,7 +3547,7 @@
 											%> <%=newFormatDate%> <%}%>
 										</span>
 									</div>
-									<img class="profile_img" src="img01/<%=profileImg%>"></img>
+									<img class="profile_img" src="img/<%=profileImg%>"></img>
 								</div>
 								<%
 								}
@@ -3574,7 +3574,7 @@
 									<div class="milestone_content1_child03">
 										<span>12월 7일</span>
 									</div>
-									<img class="profile_img" src="img01/짱구2.jpg"></img>
+									<img class="profile_img" src="img/짱구2.jpg"></img>
 								</div> -->
 							</div>
 							<div class="blank_margin"></div>
@@ -3753,7 +3753,7 @@
 											class="status_update_content02_span02">요약</span>
 									</div>
 									<div class="status_update_content03">
-										<img src="img01/${memberAllDto.profileImg}"></img>
+										<img src="img/${memberAllDto.profileImg}"></img>
 										<div class="status_update_content04">
 											<span class="status_update_content04_span1">
 											${memberAllDto.nickname}
@@ -4051,7 +4051,7 @@
 									</div>
 									<div class="activityfeed_timeline_child03">
 										<div class="member_profile">
-											<img src="img01/<%=memberAllDto03.getProfileImg()%>"/>
+											<img src="img/<%=memberAllDto03.getProfileImg()%>"/>
 										</div>
 									</div>
 								</div>
@@ -4246,7 +4246,7 @@
 				<div class="member_search_box">
 				<!-- 	<div class="member_search_box_list">
 							<div class="member_search_box_img">
-								<img src="img01/짱구1.jpg"/>
+								<img src="img/짱구1.jpg"/>
 							</div>
 							<div class="member_search_box_text">
 								<span>지숭</span><br/>
@@ -4450,7 +4450,7 @@
 			<div class="Parent_of_the_popup_manager" memberidx="<%=participantsIdx%>">
 				<div class="add_member_child06">
 					<div class="add_member_child06_child_left">
-						<img src="img01/<%=projectMemberAllDto.getProfileImg()%>"></img>
+						<img src="img/<%=projectMemberAllDto.getProfileImg()%>"></img>
 					</div>
 					<div class="add_member_child06_child_center">
 						<span><%=projectMemberAllDto.getNickname()%></span> <br /> <span><%=projectMemberAllDto.getEmail()%></span>
@@ -4522,7 +4522,7 @@
 			<div class="Parent_of_the_popup_manager">
 				<div class="add_member_child06">
 					<div class="add_member_child06_child_left">
-						<img src="img01/철수.png"></img>
+						<img src="img/철수.png"></img>
 					</div>
 					<div class="add_member_child06_child_center">
 						<span>현우</span> <br /> <span>gusdntkd2@gmail.com</span>
@@ -4613,7 +4613,7 @@
 			</div>
 			<div class="member_alarm_user_check">
 				<div class="member_alarm_user_check_01">
-					<img src="img01/짱구1.jpg"></img>
+					<img src="img/짱구1.jpg"></img>
 				</div>
 				<div class="member_alarm_user_check_02">
 					<span>지숭</span> <br /> <span>asanajisoo02@gmail.com</span>
@@ -4629,7 +4629,7 @@
 			</div>
 			<div class="member_alarm_user_check">
 				<div class="member_alarm_user_check_01">
-					<img src="img01/짱구2.jpg"></img>
+					<img src="img/짱구2.jpg"></img>
 				</div>
 				<div class="member_alarm_user_check_02">
 					<span>길주</span> <br /> <span>wjdrlfwn217@gmail.com</span>
@@ -4642,7 +4642,7 @@
 			</div>
 			<div class="member_alarm_user_check">
 				<div class="member_alarm_user_check_01">
-					<img src="img01/철수.png"></img>
+					<img src="img/철수.png"></img>
 				</div>
 				<div class="member_alarm_user_check_02">
 					<span>현우</span> <br /> <span>hyunwooasana@gmail.com</span>
@@ -4772,7 +4772,7 @@
 						</div>
 					</div>
 					<div class="status_update_content_right_child02">
-						<img src="img01/짱구1.jpg"></img>
+						<img src="img/짱구1.jpg"></img>
 						<div class="status_update_content_right_child02_text">
 							<span class="status_update_content_right_text01">지숭</span> <span
 								class="status_update_content_right_text02">27일 전</span>
@@ -4792,7 +4792,7 @@
 				<div class="status_update_content_comment_main">
 					<div class="status_update_content_comment_parent01">
 						<div class="status_update_content_comment_parent01_child01">
-							<img src="img01/짱구1.jpg"></img>
+							<img src="img/짱구1.jpg"></img>
 						</div>
 						<div class="status_update_content_comment_parent01_child02">
 							<textarea placeholder="메세지에 답장하기 ..."></textarea>
@@ -4804,7 +4804,7 @@
 						</div>
 						<div class="status_update_content_comment_parent02_child02">
 							<div>
-								<img src="img01/짱구1.jpg"></img>
+								<img src="img/짱구1.jpg"></img>
 							</div>
 							<div class="add_participant">
 								<svg class="MiniIcon UserMiniIcon" viewBox="0 0 24 24"

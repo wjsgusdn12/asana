@@ -277,7 +277,7 @@
 						            '<div class="comments" comment_idx="' + data.commentIdx + '" writer_idx="' + data.memberIdx + '" member_idx="' + memberIdx + '">' +
 						                '<div class="comments_header">' +
 						                    '<div class="comments_profile">' +
-						                        '<img src="' + data.profile + '"/>' +
+						                        '<img src="img/' + data.profile + '"/>' +
 						                    '</div>' +
 						                    '<div class="comments_nickname">' +
 						                        '<span>' + data.nickname + '</span>' +
@@ -713,12 +713,12 @@
 					success: function(data){
 						if(data.profile == null){data.profile = "Unknown.png";}
 						let str = '<div class="message_idx_last_profile" member_idx="' + memberIdx + '">' +
-			              				'<img src="' + data.profile + '"/>' +
+			              				'<img src="img/' + data.profile + '"/>' +
 			          			  '</div>';
 						self.closest(".message_idx").find(".message_cooperation_container").append(str);
 						
 						 let cooperationStr = '<div class="cooperation_profile" member_idx="' + memberIdx + '">' +
-		                         '<img class="writer_profile_img" src="' + data.profile + '">' +
+		                         '<img class="writer_profile_img" src="img/' + data.profile + '">' +
 		                         '<div class="cooperation_name">' +
 		                             '<span>' + data.nickname + '</span>' +
 		                             '<i class="bi-x"></i>' +
@@ -790,11 +790,11 @@
 					success:function(data){
 						if(data.profile == null){data.profile = "Unknown.png";}
 						let str = '<div class="message_idx_last_profile" member_idx="' + memberIdx + '">' +
-          							'<img src="' + data.profile + '"/>' +
+          							'<img src="img/' + data.profile + '"/>' +
       			 				 '</div>';
       			 		self.closest(".message_idx").find(".message_cooperation_container").append(str);
       			 		let cooperationStr = '<div class="cooperation_profile" member_idx="' + memberIdx + '">' +
-		                        '<img class="writer_profile_img" src="' + data.profile + '">' +
+		                        '<img class="writer_profile_img" src="img/' + data.profile + '">' +
 		                        '<div class="cooperation_name">' +
 		                            '<span>' + data.nickname + '</span>' +
 		                            '<i class="bi-x"></i>' +
@@ -1559,7 +1559,7 @@
 <div class="me_button_popup">
 	<div class="popup_profile">
 		<div>
-			<img class="popup_profile_img" src="${myProfile}"/>
+			<img class="popup_profile_img" src="img/${myProfile}"/>
 		</div>
 		<div>내 작업 공간</div>
 		<div class="popup_email_font">${myEmail}</div>
@@ -1773,7 +1773,7 @@
 						
 						<div class="message_view">
 							<div class="message_send">
-								<img src="${myProfile}"/>
+								<img src="img/${myProfile}"/>
 								<div class="message_send_click">
 									<div class="send">
 									<span>멤버에게 메시지 보내기</span>
@@ -1803,7 +1803,7 @@
 										<input type="text" value="<%=dto.getTitle() %>" placeholder="제목 입력" name="message_title" id="message_title"/>
 									</div>
 									<div class="start_date">
-									<img class="writer_profile_img" src="<%=profile%>"/>
+									<img class="writer_profile_img" src="img/<%=profile%>"/>
 									<div class="writer_profile_button">
 									<button><%=dto.getMemberDto().getNickname()%></button>
 									</div>
@@ -1814,7 +1814,7 @@
 									</div>
 									<div class="message_content">
 									<div style="position:relative;">
-									<img class="message_content_profile" src="<%=profile%>" />
+									<img class="message_content_profile" src="img/<%=profile%>" />
 									<div class="message_content_name"><span class="message_comments_writer"><%=dto.getMemberDto().getNickname() %></span>
 										<span style="font-size: 12px; color: gray; margin-top: 2px; margin-left: 5px;"><li><%=dto.getwriteDate() %><!-- 4일 전 --></li></span>
 										<div class="likes_count m">
@@ -1868,7 +1868,7 @@
 								<div class="comments" comment_idx = "<%=cdto.getCommentIdx()%>" writer_idx = "<%=cdto.getMemberIdx()%>" member_idx = "${memberIdx}">
 									<div class="comments_header">
 									<div class="comments_profile">
-										<img src="<%=cProfile%>"/>
+										<img src="img/<%=cProfile%>"/>
 									</div>
 									<div class="comments_nickname">
 										<span><%=cdto.getMemberDto().getNickname() %></span>
@@ -1919,7 +1919,7 @@
 									</div>
 							</div>
 								<div class="message_idx_bottom">
-									<img class="message_bottom_profile" src="${myProfile}"/>
+									<img class="message_bottom_profile" src="img/${myProfile}"/>
 									<textarea class="textarea_message" placeholder="메시지에 답장하기..." rows="7" cols="64"></textarea>
 									<button class="textarea_message_btn" onclick="return message_comment_check(<%=dto.getMessageIdx()%>);">보내기</button>
 								<div class="last_bottom">
@@ -1933,7 +1933,7 @@
 								if(mcProfile==null){mcProfile = "Unknown.png";}
 							%>
 								<div class="message_idx_last_profile" member_idx="<%=mcDto.getMemberDto().getMemberIdx()%>">
-								<img src="<%=mcProfile%>"/>
+								<img src="img/<%=mcProfile%>"/>
 								</div>
 								<%} %>
 								</div>
@@ -1949,7 +1949,7 @@
 									<%for(MessageCooperationDto mcDto : listMessageCooperation) {String mcProfile = mcDto.getMemberDto().getProfileImg();%>
 									<%if(mcProfile == null){mcProfile="Unknown.png";} %>
 										<div class="cooperation_profile" member_idx="<%=mcDto.getMemberDto().getMemberIdx()%>">
-											<img class="writer_profile_img" src="<%=mcProfile%>">
+											<img class="writer_profile_img" src="img/<%=mcProfile%>">
 											<div class="cooperation_name">
 											<span><%=mcDto.getMemberDto().getNickname() %></span>
 											<i class="bi-x"></i>
@@ -1966,7 +1966,7 @@
 									if(mwProfile == null){mwProfile = "Unknown.png";}
 									%>
 										<div class="assignmentOfmanager_list_select" member_idx="<%=mdto.getMemberDto().getMemberIdx()%>">
-										<img src="<%=mwProfile%>">
+										<img src="img/<%=mwProfile%>">
 										<div class="assignmentOfmanager_list_select_memberName"><%=mdto.getMemberDto().getNickname() %></div>
 										<div class="assignmentOfmanager_list_select_memberEmail"><%=mdto.getMemberDto().getEmail() %></div>
 										</div>

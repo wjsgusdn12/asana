@@ -645,7 +645,7 @@
 					
 					if(wamlist.nickName !=null){
 						$(".manager_right").attr("manageridx", wamlist.memberIdx);
-						$(".manager_right_img > img").attr({src:"img01/"+wamlist.memberProfileImg});
+						$(".manager_right_img > img").attr({src:"img/"+wamlist.memberProfileImg});
 						$(".manager_right > span").text(wamlist.nickName);
 					}else {
 						$(".no_contact_person").css("display" , "flex");
@@ -1294,7 +1294,7 @@
 						<div
 							class="boardcardLayout_assigneeduedateactions_profile_img">
 							
-							<img src="img01/`+completeobj[i].profileimg+`" />
+							<img src="img/`+completeobj[i].profileimg+`" />
 						</div>
 						<div class="boardcardLayout_assigneeduedateactions_deadline">
 							`+completeobj[i].deadlineformatDate+`
@@ -1328,7 +1328,7 @@
 							<div
 								class="boardcardLayout_assigneeduedateactions_profile_img">
 								
-								<img src="img01/`+runningobj[i].profileimg+`" />
+								<img src="img/`+runningobj[i].profileimg+`" />
 							</div>
 							<div class="boardcardLayout_assigneeduedateactions_deadline">
 								`+runningobj[i].deadlineformatDate+`
@@ -1370,7 +1370,7 @@
 					<div class="boardcardLayout_assigneeduedateactions">
 						<div
 							class="boardcardLayout_assigneeduedateactions_profile_img">
-							<img src="img01/`+allobj[i].profileimg+`" />
+							<img src="img/`+allobj[i].profileimg+`" />
 						</div>
 						<div class="boardcardLayout_assigneeduedateactions_deadline">
 							`+allobj[i].deadlineformatDate+`
@@ -1427,7 +1427,7 @@
 							<div
 								class="boardcardLayout_assigneeduedateactions_profile_img">
 								
-								<img src="img01/`+profileimg+`" />
+								<img src="img/`+profileimg+`" />
 							</div>
 							<div class="boardcardLayout_assigneeduedateactions_deadline">
 								`+deadlineDate+`
@@ -1823,17 +1823,17 @@
 							</div>
 							<div class="assignmentOfmanager_list">
 								<div class="assignmentOfmanager_list_select">
-									<img src="../../img01/짱구1.jpg">
+									<img src="../../img/짱구1.jpg">
 									<div class="assignmentOfmanager_list_select_memberName">지숭</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
 								<div class="assignmentOfmanager_list_select">
-									<img src="../../img01/짱구2.jpg">
+									<img src="../../img/짱구2.jpg">
 									<div class="assignmentOfmanager_list_select_memberName">현우</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
 								<div class="assignmentOfmanager_list_select">
-									<img src="../../img01/철수.png">
+									<img src="../../img/철수.png">
 									<div class="assignmentOfmanager_list_select_memberName">길주</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
@@ -2246,11 +2246,11 @@
 						<%}%>
 						<div style="width: auto;" class="list-image">
 							<img style="z-index: 4;" class="img-small"
-								src="..\..\img01\짱구1.jpg"> <img
+								src="..\..\img\짱구1.jpg"> <img
 								style="z-index: 3; margin-left: -10px;" class="img-small"
-								src="..\..\img01\짱구2.jpg"> <img
+								src="..\..\img\짱구2.jpg"> <img
 								style="z-index: 2; margin-left: -10px;" class="img-small"
-								src="..\..\img01\철수.png">
+								src="..\..\img\철수.png">
 						</div>
 						<div id="share_button">
 							<svg class="MiniIcon LockFillMiniIcon" viewBox="0 0 24 24"
@@ -2269,7 +2269,7 @@
 						</div>
 					</div>
 					<div id="header2">
-						<img src="img01/초록색2.png"></img>
+						<img src="img/초록색2.png"></img>
 						<div id="project_title">
 							<span>${projectAllDto.name}</span>
 							<svg class="first_icon" style="margin-top: 7px;"
@@ -2608,7 +2608,7 @@
 													<%int memberIdx = dto.getManagerIdx(); //담당자 idx 
 													MemberAllDto memberAllDto = memberDao.getMemberAllDto(memberIdx);
 													%>
-													<img src="img01/<%=memberAllDto.getProfileImg()%>"/>
+													<img src="img/<%=memberAllDto.getProfileImg()%>"/>
 												</div>
 												<div class="boardcardLayout_assigneeduedateactions_deadline">
 													<%String deadlineDate = dto.getDeadlineDate();  //마감일 
@@ -2675,7 +2675,7 @@
 													<%int memberIdx = runningdto.getManagerIdx(); //담당자 idx 
 													MemberAllDto memberAllDto = memberDao.getMemberAllDto(memberIdx);
 													%>
-													<img src="img01/<%=memberAllDto.getProfileImg()%>"/>
+													<img src="img/<%=memberAllDto.getProfileImg()%>"/>
 												</div>
 												<div class="boardcardLayout_assigneeduedateactions_deadline">
 													<%String deadlineDate02 = runningdto.getDeadlineDate();  //마감일 
@@ -2749,7 +2749,7 @@
 													<%int memberIdx = wamAllSectionDto.getManagerIdx(); //담당자 idx 
 													MemberAllDto memberAllDto = memberDao.getMemberAllDto(memberIdx);
 													%>
-													<img src="img01/<%=memberAllDto.getProfileImg() %>" />
+													<img src="img/<%=memberAllDto.getProfileImg() %>" />
 												</div>
 												<div class="boardcardLayout_assigneeduedateactions_deadline">
 													<%String deadlineDate03 = wamAllSectionDto.getDeadlineDate();  //마감일 
@@ -2863,7 +2863,7 @@
 						</div>
 						<div class="manager_right" manageridx="">
 							<div class="manager_right_img">
-								<img src="img01/철수.png"></img>
+								<img src="img/철수.png"></img>
 							</div>
 							<span>현우</span>
 							<svg class="wam_contact_person_svg" viewBox="0 0 24 24"
@@ -2897,22 +2897,22 @@
 							</div>
 							<div class="noContactPerson_clickPopUp_member">
 								<div class="noContactPerson_clickPopUp_member_list">
-									<img src="../../img01/짱구1.jpg" />
+									<img src="../../img/짱구1.jpg" />
 									<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
 									<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
 								</div>
 								<div class="noContactPerson_clickPopUp_member_list">
-									<img src="../../img01/짱구1.jpg" />
+									<img src="../../img/짱구1.jpg" />
 									<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
 									<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
 								</div>
 								<div class="noContactPerson_clickPopUp_member_list">
-									<img src="../../img01/짱구1.jpg" />
+									<img src="../../img/짱구1.jpg" />
 									<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
 									<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
 								</div>
 								<div class="Invite_by_email">
-									<img src="../../img01/free-icon-mail-646094.png" /> 이메일로 팀원초대
+									<img src="../../img/free-icon-mail-646094.png" /> 이메일로 팀원초대
 								</div>
 							</div>
 						</div>
@@ -3256,17 +3256,17 @@
 							</div>
 							<div class="assignmentOfmanager_list">
 								<div class="assignmentOfmanager_list_select">
-									<img src="../../img01/짱구1.jpg">
+									<img src="../../img/짱구1.jpg">
 									<div class="assignmentOfmanager_list_select_memberName">지숭</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
 								<div class="assignmentOfmanager_list_select">
-									<img src="../../img01/짱구2.jpg">
+									<img src="../../img/짱구2.jpg">
 									<div class="assignmentOfmanager_list_select_memberName">현우</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
 								<div class="assignmentOfmanager_list_select">
-									<img src="../../img01/철수.png">
+									<img src="../../img/철수.png">
 									<div class="assignmentOfmanager_list_select_memberName">길주</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
@@ -3302,7 +3302,7 @@
 						</div>
 						<div class="comment_story">
 							<div class="profile_img">
-								<img src="../img01/짱구1.jpg"></img>
+								<img src="../img/짱구1.jpg"></img>
 							</div>
 							<div class="profile_name">지숭</div>
 							<div>님이 이 작업을 생성했습니다</div>
@@ -3332,7 +3332,7 @@
 			<div class="milestone_footer">
 				<div class="milestone_comment_content">
 					<div class="profile_img">
-						<img src="../img01/짱구1.jpg"></img>
+						<img src="../img/짱구1.jpg"></img>
 					</div>
 					<div class="milestone_comment_input_child02">
 						<textarea>댓글추가</textarea>
@@ -3342,10 +3342,10 @@
 					<div class="milestone_Participants_child01">협업 참여자</div>
 					<div class="collaboration_profile">
 						<div>
-							<img src="img01/짱구1.jpg"></img>
+							<img src="img/짱구1.jpg"></img>
 						</div>
 						<div>
-							<img src="img01/철수.jpeg"></img>
+							<img src="img/철수.jpeg"></img>
 						</div>
 						<div>
 							<svg class="HighlightSol MiniIcon UserMiniIcon"
@@ -3503,7 +3503,7 @@
 						
 						<div class="blank_manager_right" manageridx="">
 							<div class="blank_manager_right_img">
-								<img src="img01/${memberAllDto.profileImg}"></img>
+								<img src="img/${memberAllDto.profileImg}"></img>
 							</div>
 							<span>${memberAllDto.nickname}</span>
 							<svg class="blank_wam_contact_person_svg" viewBox="0 0 24 24"
@@ -3537,22 +3537,22 @@
 							</div>
 							<div class="blank_noContactPerson_clickPopUp_member">
 								<div class="blank_noContactPerson_clickPopUp_member_list">
-									<img src="../../img01/짱구1.jpg" />
+									<img src="../../img/짱구1.jpg" />
 									<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
 									<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
 								</div>
 								<div class="blank_noContactPerson_clickPopUp_member_list">
-									<img src="../../img01/짱구1.jpg" />
+									<img src="../../img/짱구1.jpg" />
 									<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
 									<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
 								</div>
 								<div class="blank_noContactPerson_clickPopUp_member_list">
-									<img src="../../img01/짱구1.jpg" />
+									<img src="../../img/짱구1.jpg" />
 									<div class="noContactPerson_clickPopUp_member_list_name">지숭</div>
 									<div class="noContactPerson_clickPopUp_member_list_email">jisooasana02@gmail.com</div>
 								</div>
 								<div class="blank_Invite_by_email">
-									<img src="../../img01/free-icon-mail-646094.png" /> 이메일로 팀원초대
+									<img src="../../img/free-icon-mail-646094.png" /> 이메일로 팀원초대
 								</div>
 							</div>
 						</div>
@@ -3907,17 +3907,17 @@
 							</div>
 							<div class="blank_assignmentOfmanager_list">
 								<div class="blank_assignmentOfmanager_list_select">
-									<img src="../../img01/짱구1.jpg">
+									<img src="../../img/짱구1.jpg">
 									<div class="assignmentOfmanager_list_select_memberName">지숭</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
 								<div class="blank_assignmentOfmanager_list_select">
-									<img src="../../img01/짱구2.jpg">
+									<img src="../../img/짱구2.jpg">
 									<div class="assignmentOfmanager_list_select_memberName">현우</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
 								<div class="blank_assignmentOfmanager_list_select">
-									<img src="../../img01/철수.png">
+									<img src="../../img/철수.png">
 									<div class="assignmentOfmanager_list_select_memberName">길주</div>
 									<div class="assignmentOfmanager_list_select_memberEmail">jisooasana02@gmail.com</div>
 								</div>
@@ -3953,7 +3953,7 @@
 						</div>
 						<div class="blank_comment_story">
 							<div class="blank_profile_img">
-								<img src="../img01/짱구1.jpg"></img>
+								<img src="../img/짱구1.jpg"></img>
 							</div>
 							<div class="blank_profile_name">지숭</div>
 							<div>님이 이 작업을 생성했습니다</div>
@@ -3983,7 +3983,7 @@
 			<div class="blank_milestone_footer">
 				<div class="blank_milestone_comment_content">
 					<div class="blank_profile_img">
-						<img src="../img01/짱구1.jpg"></img>
+						<img src="../img/짱구1.jpg"></img>
 					</div>
 					<div class="blank_milestone_comment_input_child02">
 						<textarea>댓글추가</textarea>
@@ -3993,10 +3993,10 @@
 					<div class="blank_milestone_Participants_child01">협업 참여자</div>
 					<div class="blank_collaboration_profile">
 						<div>
-							<img src="img01/짱구1.jpg"></img>
+							<img src="img/짱구1.jpg"></img>
 						</div>
 						<div>
-							<img src="img01/철수.jpeg"></img>
+							<img src="img/철수.jpeg"></img>
 						</div>
 						<div>
 							<svg class="HighlightSol MiniIcon UserMiniIcon"
