@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+            
+    
     <wb-module deploy-name="Asana_0318">
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                        
+        
         <wb-resource deploy-path="/" source-path="/src/main/webContent"/>
-        <property name="context-root" value="Asana_0318"/>
+                        
+        
         <property name="java-output-path" value="/Asana_0318/build/classes"/>
+        <property name="context-root" value="Asana_0318"/>
+                    
+    
     </wb-module>
+        
+
 </project-modules>

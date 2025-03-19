@@ -62,7 +62,7 @@
 	});
 	/*********************************** 요소 클릭시 어느 페이지로 이동할지 *************************************/
 	/*************************************** 메모 웹소캣 코드 *****************************************/
-	let webSocket = new WebSocket("ws://localhost:9090/Asana_0318/broadcasting")
+	let webSocket = new WebSocket("ws://localhost:9091/Asana_0318/broadcasting")
 	webSocket.onmessage = function(e){
 		// ------> e.data = "title:///메모idx///타이틀문자열"
 		// -------> e.data = "content:///메모idx///컨텐트문자열"
